@@ -11,6 +11,10 @@ class Router{
         };
     }
 
+    public function __set($url, $action){
+        $this->routes["_"][BASEURI.$url] = $action;
+    }
+    
     public function add($url, $action){
         $this->routes["_"][BASEURI.$url] = $action;
     }
