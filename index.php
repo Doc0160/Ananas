@@ -12,7 +12,8 @@ if(isset($_GET["__page__"])) {
         case "GET":
             switch($_GET["__page__"]) {
                 default:
-                    if(!@require_once("./view/".$_GET["__page__"].".php")) {
+                    if(!file_exists("./view/".$_GET["__page__"].".php") ||
+                       !@require_once("./view/".$_GET["__page__"].".php")) {
                         header("Location: http://localhost/ananas/");
                     }
                     break;
@@ -22,7 +23,8 @@ if(isset($_GET["__page__"])) {
         case "post":
             switch($_GET["__page__"]) {
                 default:
-                    if(!@require_once("./view/".$_GET["__page__"].".php")) {
+                    if(!file_exists("./view/".$_GET["__page__"].".php") ||
+                       !@require_once("./view/".$_GET["__page__"].".php")) {
                         header("Location: http://localhost/ananas/");
                     }
                     break;
