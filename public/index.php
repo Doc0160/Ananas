@@ -31,6 +31,12 @@ $router->add('/connexion/',function() use ($view){
     $view->display('footer.php');
 });
 
+$router->add('/inscription/',function() use ($view){
+    $view->display('header.php');
+    $view->display('connexion.php');
+    $view->display('footer.php');
+});
+
 $router->add('/deconnexion/',function() use ($view){
     $view->display('header.php');
     $view->display('deconnexion.php');
