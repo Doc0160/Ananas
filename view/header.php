@@ -23,7 +23,7 @@
              flex: 1 0 auto;
          }
 
-         nav, .page-footer, .waves-button-input input[type="submit"] {
+         nav, .page-footer, .waves-effect {
              background: #c2242a;
          }
          
@@ -35,12 +35,12 @@
         <nav>
             <div class="nav-wrapper">
                 <?php if(!empty($_SESSION["username"])) { ?>
-                    <a href="#" data-activates="slide-out" class="button-collapse" style="display: block !important;">
+                    <a href="#!" data-activates="slide-out" class="button-collapse" style="display: block !important;">
                         <i class="material-icons">menu</i>
                     </a>
                 <?php } ?>
-                <a href="#"><img src="http://localhost/ananas/logo.png" height="60px;"></a>
-                <a href="#" class="brand-logo">Ananas</a>
+                <a href="http://localhost/ananas/"><img src="http://localhost/ananas/logo.png" height="60px;"></a>
+                <a href="http://localhost/ananas/" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <?php if(empty($_SESSION["username"])) { ?>
                         <li><a href="http://localhost/ananas/inscription/">S'inscrire</a></li>
