@@ -7,7 +7,7 @@ session_start();
 header('Content-Type: text/html; charset=utf-8');
 
 require_once("./class/singletonPDO.php");
-require_once("./view/header.php");
+require_once("./views/header.php");
 
 // primitive router
 if(isset($_GET["__page__"])) {
@@ -62,6 +62,6 @@ if(isset($_GET["__page__"])) {
 <?php 
 }
 
-require_once("./view/footer.php");
+require_once("./views/footer.php");
 
 ?>
