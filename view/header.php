@@ -11,6 +11,8 @@
 
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="http://localhost/ananas/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="http://localhost/ananas/favicon.ico" type="image/x-icon">
         <style>
          body {
              display: flex;
@@ -27,19 +29,25 @@
 
         <nav>
             <div class="nav-wrapper">
-                <a href="#" data-activates="slide-out" class="button-collapse" style="display: block !important;">
-                    <i class="material-icons">menu</i>
-                </a>
+                <?php if(!empty($_SESSION["username"])) { ?>
+                    <a href="#" data-activates="slide-out" class="button-collapse" style="display: block !important;">
+                        <i class="material-icons">menu</i>
+                    </a>
+                <?php } ?>
                 <a href="#"><img src="http://localhost/ananas/logo.png" height="60px;"></a>
                 <a href="#" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
+                    <?php if(empty($_SESSION["username"])) { ?>
+                        <li><a href="http://localhost/ananas/inscription/">S'inscrire</a></li>
+                        <li><a href="http://localhost/ananas/connexion/">Se connecter</a></li>
+                    <?php } else { ?>
+                        <li><a href="http://localhost/ananas/deconnexion/">Se deconnecter</a></li>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
         
+        <?php if(!empty($_SESSION["username"])) { ?>
         <ul id="slide-out" class="side-nav">
             <li><div class="userView">
                 <div class="background">
@@ -55,6 +63,7 @@
             <li><a class="subheader">Subheader</a></li>
             <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
         </ul>
+        <?php } ?>
         
         
         <div class="container main">

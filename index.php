@@ -11,7 +11,9 @@ if(isset($_GET["__page__"])) {
         case "GET":
             switch($_GET["__page__"]) {
                 default:
-                    require("./view/".$_GET["__page__"].".php");
+                    if(!@require_once("./view/".$_GET["__page__"].".php")) {
+                        header("Location: http://localhost/ananas/");
+                    }
                     break;
             }
             break;
@@ -19,7 +21,7 @@ if(isset($_GET["__page__"])) {
             echo "post";
             break;
         default:
-            echo "error";
+            header("Location: http://localhost/ananas/");
             break;
     }
     
