@@ -23,7 +23,7 @@
              flex: 1 0 auto;
          }
 
-         nav, .page-footer {
+         nav, .page-footer, btn {
              background: #c2242a;
          }
          
