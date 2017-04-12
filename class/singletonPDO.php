@@ -1,8 +1,6 @@
 <?php
 
-namespace PDO;
-
-final class singleton{
+final class singletonPDO{
     private static $PDOInstance = null;
     private static $dsn         = null;
     private static $username    = null;
@@ -38,6 +36,6 @@ final class singleton{
     }
 }
 
-singleton::setConfig('mysql:host=localhost;dbname=users;charset=latin1', 'root', '');
+singletonPDO::setConfig('mysql:host=localhost;port=3306;dbname=ananas;charset=utf-8', 'root', '');
 
 ?>

@@ -5,7 +5,7 @@
         <title>Ananas Corp.</title>
         <meta charset="utf-8">
         <!--Import Google Icon Font-->
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="http://localhost/ananas/materialize/MaterialIcons.css" rel="stylesheet">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="http://localhost/ananas/materialize/css/materialize.min.css"  media="screen,projection"/>
 
@@ -27,8 +27,10 @@
 
         <nav>
             <div class="nav-wrapper">
-                <a href="#" data-activates="slide-out" class="button-collapse" style="display: block !important;"><i class="material-icons">menu</i></a>
-                <img src="logo.png" height="60px;">
+                <a href="#" data-activates="slide-out" class="button-collapse" style="display: block !important;">
+                    <i class="material-icons">menu</i>
+                </a>
+                <a href="#"><img src="http://localhost/ananas/logo.png" height="60px;"></a>
                 <a href="#" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="sass.html">Sass</a></li>
@@ -37,12 +39,11 @@
                 </ul>
             </div>
         </nav>
-
         
         <ul id="slide-out" class="side-nav">
             <li><div class="userView">
                 <div class="background">
-                    <img src="http://materializecss.com/images//office.jpg">
+                    <img src="http://materializecss.com/images/office.jpg">
                 </div>
                 <a href="#!user"><img class="circle" src="http://materializecss.com/images/yuna.jpg"></a>
                 <a href="#!name"><span class="white-text name">John Doe</span></a>
