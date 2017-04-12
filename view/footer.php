@@ -14,10 +14,10 @@
                 <h5 class="white-text">Links</h5>
                 <ul>
                     <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+                        <a class="grey-text text-lighten-3" href="https://moodle-exia.cesi.fr/course/view.php?id=631">Moodle</a>
                     </li>
                     <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 2</a>
+                        <a class="grey-text text-lighten-3" href="https://github.com/Doc0160/Ananas">Github</a>
                     </li>
                     <li>
                         <a class="grey-text text-lighten-3" href="#!">Link 3</a>
