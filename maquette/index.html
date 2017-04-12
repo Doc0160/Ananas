@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Ananas Corp.</title>
         <meta charset="utf-8">
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -23,6 +24,7 @@
     </head>
 
     <body>
+
         <nav>
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Ananas</a>
@@ -131,12 +133,13 @@
                 </div>
             </div>
         </footer>
+        
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
         <script>
          $(document).ready(function(){
-             $('.carousel').carousel();
+             $('.carousel').carousel({fullWidth: true});
          });
         </script>
     </body>
