@@ -12,7 +12,6 @@ $autoloader->register('viewloader', function(){
 
 header('Content-Type: text/html; charset=utf-8');
 
-require_once("../core/session/session.php");
 $session = new session();
 
 require_once("../class/singletonPDO.php");
