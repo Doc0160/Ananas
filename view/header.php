@@ -23,7 +23,7 @@
              flex: 1 0 auto;
          }
 
-         nav, .page-footer, btn {
+         nav, .page-footer, .waves-button-input input[type="submit"] {
              background: #c2242a;
          }
          
