@@ -19,6 +19,10 @@ class Router{
         $this->notFound = $action;
     }
 
+    public function redirect($page) {
+        header('Location: '.BASEURI.$page);
+    }
+
     public function dispatch(){
         foreach ($this->routes as $url => $action) {
             if( $url == $_SERVER['REQUEST_URI'] ){

@@ -37,8 +37,8 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="http://localhost/ananas/materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="<?php echo ROOTURL; ?>/materialize/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="<?php echo ROOTURL; ?>/materialize/js/materialize.min.js"></script>
 <script>
  $(document).ready(function(){
      $('.carousel').carousel();

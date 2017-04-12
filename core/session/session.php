@@ -34,6 +34,10 @@ class session {
         return $error;
     }
 
+    public function has_error() {
+        return isset($_SESSION['__error__']);
+    }
+
     public function start() {
         if(!isset($_SESSION)){
             session_name("ananas");
@@ -43,6 +47,7 @@ class session {
 
     public function destroy() {
         if(isset($_SESSION)){
+            $_SESSION = [];
             session_destroy();
         }
     }

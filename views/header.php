@@ -4,11 +4,11 @@
     <head>
         <title>Ananas Corp.</title>
         <meta charset="utf-8">
-        <link href="http://localhost/ananas/materialize/MaterialIcons.css" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="http://localhost/ananas/materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link href="<?php echo ROOTURL; ?>/materialize/MaterialIcons.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="<?php echo ROOTURL; ?>/materialize/css/materialize.min.css" media="screen,projection"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="shortcut icon" href="http://localhost/ananas/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="http://localhost/ananas/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="<?php echo ROOTURL; ?>/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="<?php echo ROOTURL; ?>/favicon.ico" type="image/x-icon">
         <style>
          body {
              display: flex;
@@ -30,33 +30,33 @@
 
         <nav>
             <div class="nav-wrapper">
-                <?php if(!empty($_SESSION["username"])) { ?>
+                <?php if(!empty($_SESSION)) { ?>
                     <a href="#!" data-activates="slide-out" class="button-collapse" style="display: block !important;">
                         <i class="material-icons">menu</i>
                     </a>
                 <?php } ?>
-                <a href="http://localhost/ananas/">
-                    <img src="http://localhost/ananas/logo.png" height="60px;">
+                <a href="<?php echo ROOTURL; ?>">
+                    <img src="<?php echo ROOTURL; ?>/logo.png" height="60px;">
                 </a>
-                <a href="http://localhost/ananas/" class="brand-logo">Ananas</a>
+                <a href="<?php echo ROOTURL; ?>" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <?php if(empty($_SESSION["username"])) { ?>
+                    <?php if(empty($_SESSION)) { ?>
                         <li>
-                            <a href="http://localhost/ananas/inscription/">S'inscrire</a>
+                            <a href="<?php echo ROOTURL; ?>/inscription/">S'inscrire</a>
                         </li>
                         <li>
-                            <a href="http://localhost/ananas/connexion/">Se connecter</a>
+                            <a href="<?php echo ROOTURL; ?>/connexion/">Se connecter</a>
                         </li>
                     <?php } else { ?>
                         <li>
-                            <a href="http://localhost/ananas/deconnexion/">Se deconnecter</a>
+                            <a href="<?php echo ROOTURL; ?>/deconnexion/">Se deconnecter</a>
                         </li>
                     <?php } ?>
                 </ul>
             </div>
         </nav>
         
-        <?php if(!empty($_SESSION["username"])) { ?>
+        <?php if(!empty($_SESSION)) { ?>
             <ul id="slide-out" class="side-nav">
                 <li>
                     <div class="userView">
@@ -76,10 +76,10 @@
                 </li>
                 <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
                 <li><a href="#!">Second Link</a></li>
-            <li><div class="divider"></div></li>
-            <li><a class="subheader">Subheader</a></li>
-            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-        </ul>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Subheader</a></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+            </ul>
         <?php } ?>
         
         

@@ -1,9 +1,3 @@
-<?php
-
-$_SESSION["username"] = "bite";
-
-?>
-
 <div class="row"></div>
 
 <div class="row">
@@ -15,7 +9,7 @@ $_SESSION["username"] = "bite";
         </ul>
     </div>
     <div id="connextion" class="col l6 offset-l3 m12">
-        <form>
+        <form action="<?php echo ROOTURL; ?>/connexion" method="post">
             <div class="row">
                 <div class="input-field col s12">
                     <input id="email" type="email" class="validate">
@@ -37,7 +31,7 @@ $_SESSION["username"] = "bite";
     </div>
 
     <div id="inscription" class="col l6 offset-l3 m12">
-        <form>
+        <form action="" method="post">
             <div class="row">
                 <div class="input-field col s6">
                     <input id="first_name" type="text" class="validate">
