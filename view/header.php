@@ -4,12 +4,8 @@
     <head>
         <title>Ananas Corp.</title>
         <meta charset="utf-8">
-        <!--Import Google Icon Font-->
         <link href="http://localhost/ananas/materialize/MaterialIcons.css" rel="stylesheet">
-        <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="http://localhost/ananas/materialize/css/materialize.min.css"  media="screen,projection"/>
-
-        <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" href="http://localhost/ananas/favicon.ico" type="image/x-icon">
         <link rel="icon" href="http://localhost/ananas/favicon.ico" type="image/x-icon">
@@ -43,10 +39,16 @@
                 <a href="http://localhost/ananas/" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <?php if(empty($_SESSION["username"])) { ?>
-                        <li><a href="http://localhost/ananas/inscription/">S'inscrire</a></li>
-                        <li><a href="http://localhost/ananas/connexion/">Se connecter</a></li>
+                        <li>
+                            <a href="http://localhost/ananas/inscription/">S'inscrire</a>
+                        </li>
+                        <li>
+                            <a href="http://localhost/ananas/connexion/">Se connecter</a>
+                        </li>
                     <?php } else { ?>
-                        <li><a href="http://localhost/ananas/deconnexion/">Se deconnecter</a></li>
+                        <li>
+                            <a href="http://localhost/ananas/deconnexion/">Se deconnecter</a>
+                        </li>
                     <?php } ?>
                 </ul>
             </div>
