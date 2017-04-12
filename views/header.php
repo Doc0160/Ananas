@@ -5,7 +5,7 @@
         <title>Ananas Corp.</title>
         <meta charset="utf-8">
         <link href="<?php echo ROOTURL; ?>/materialize/MaterialIcons.css" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="<?php echo ROOTURL; ?>/materialize/css/materialize.min.css" media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="<?php echo ROOTURL; ?>/materialize/css/materialize.min.css" media="screen"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" href="<?php echo ROOTURL; ?>/favicon.ico" type="image/x-icon">
         <link rel="icon" href="<?php echo ROOTURL; ?>/favicon.ico" type="image/x-icon">
@@ -19,8 +19,12 @@
              flex: 1 0 auto;
          }
 
-         nav, .page-footer, .waves-effect {
+         nav, .page-footer, .btn {
              background: #c2242a;
+         }
+
+         .btn:hover {
+             background: #000000;
          }
          
         </style>
@@ -36,10 +40,10 @@
                     </a>
                 <?php } ?>
                 <a href="<?php echo ROOTURL; ?>">
-                    <img src="<?php echo ROOTURL; ?>/logo.png" height="60px;">
+                    <img alt="logo" src="<?php echo ROOTURL; ?>/logo.png" style="height:60px;">
                 </a>
                 <a href="<?php echo ROOTURL; ?>" class="brand-logo">Ananas</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <ul id="nav-mobile" class="right">
                     <?php if(empty($_SESSION)) { ?>
                         <li>
                             <a href="<?php echo ROOTURL; ?>/inscription/">S'inscrire</a>

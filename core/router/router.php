@@ -19,6 +19,14 @@ class Router{
         $this->routes["_"][BASEURI.$url] = $action;
     }
 
+    public function get($url, $action){
+        $this->routes["GET"][BASEURI.$url] = $action;
+    }
+
+    public function post($url, $action){
+        $this->routes["POST"][BASEURI.$url] = $action;
+    }
+
     public function addWithMethod($method, $url, $action){
         $this->routes[$method][BASEURI.$url] = $action;
     }
