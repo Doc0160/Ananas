@@ -3,7 +3,7 @@ session_name("ananas");
 session_start();
 
 require_once("./class/singletonPDO.php");
-require_once("./header.php");
+require_once("./view/header.php");
 
 // primitive router
 if(isset($_GET["__page__"])) {
@@ -11,7 +11,6 @@ if(isset($_GET["__page__"])) {
         case "GET":
             switch($_GET["__page__"]) {
                 default:
-                    //echo "./view/".$_GET["__page__"].".php";
                     require("./view/".$_GET["__page__"].".php");
                     break;
             }
@@ -40,6 +39,6 @@ if(isset($_GET["__page__"])) {
 <?php 
 }
 
-require_once("./footer.php");
+require_once("./view/footer.php");
 
 ?>
