@@ -31,5 +31,16 @@ $router->add('/connexion/',function() use ($view){
     $view->display('footer.php');
 });
 
+$router->add('/deconnexion/',function() use ($view){
+    $view->display('header.php');
+    $view->display('deconnexion.php');
+    $view->display('footer.php');
+});
+
+
+$router->setNotFound(function($url) use ($view){
+    $view->display('404.php');
+});
+
 $router->dispatch();
 
