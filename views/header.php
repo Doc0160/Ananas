@@ -35,7 +35,9 @@
                         <i class="material-icons">menu</i>
                     </a>
                 <?php } ?>
-                <a href="http://localhost/ananas/"><img src="http://localhost/ananas/logo.png" height="60px;"></a>
+                <a href="http://localhost/ananas/">
+                    <img src="http://localhost/ananas/logo.png" height="60px;">
+                </a>
                 <a href="http://localhost/ananas/" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <?php if(empty($_SESSION["username"])) { ?>

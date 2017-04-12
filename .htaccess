@@ -1,6 +1,7 @@
 Options +FollowSymlinks
 RewriteEngine On
-RewriteRule ^([A-Za-z0-9]+)/$ /ananas/index.php?__page__=$1 [L]
-RewriteRule ^([A-Za-z0-9]+)/([A-Za-z0-9]+)$ /ananas/index.php?__page__=$1&__subpage__=$2 [L]
+RewriteRule ^$ /ananas/public/index.php [L]
+RewriteRule ^([A-Za-z0-9]+)/$ /ananas/public/index.php?__page__=$1 [L]
+#RewriteRule ^([A-Za-z0-9]+)/([A-Za-z0-9]+)$ /ananas/public/index.php?__page__=$1&__subpage__=$2 [L]
 
 
