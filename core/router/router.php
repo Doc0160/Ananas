@@ -12,7 +12,11 @@ class Router{
     }
 
     public function add($url, $action){
-        $this->routes[BASEURI.$url] = $action;
+        $this->routes["_"][BASEURI.$url] = $action;
+    }
+
+    public function addWithMethod($method, $url, $action){
+        $this->routes[$method][BASEURI.$url] = $action;
     }
 
     public function setNotFound($action){
@@ -24,7 +28,14 @@ class Router{
     }
 
     public function dispatch(){
-        foreach ($this->routes as $url => $action) {
+        if(isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
+            foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $url => $action) {
+                if( $url == $_SERVER['REQUEST_URI'] ){
+                    return $action();
+                }
+            }
+        }
+        foreach ($this->routes["_"] as $url => $action) {
             if( $url == $_SERVER['REQUEST_URI'] ){
                 return $action();
             }

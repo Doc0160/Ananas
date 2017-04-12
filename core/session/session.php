@@ -1,12 +1,12 @@
 <?php
 
-class session {
+class Session {
     public function __construct(){
         $this->start();
     }
     
     public function __get ($name) {
-        return $_SESSION[$name];
+        return (isset($_SESSION[$name])) ? $_SESSION[$name] : null;
     }
 
     public function  __set ($name, $value) {

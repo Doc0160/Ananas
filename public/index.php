@@ -12,7 +12,7 @@ $autoloader->register('viewloader', function(){
 
 header('Content-Type: text/html; charset=utf-8');
 
-$session = new session();
+$session = new Session();
 
 require_once("../class/singletonPDO.php");
 
