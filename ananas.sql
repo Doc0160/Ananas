@@ -53,6 +53,7 @@ FOREIGN KEY (`id_activity`) REFERENCES activity(`id`)
 CREATE TABLE `goodies` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `price` float NOT NULL,
+`name` varchar(255) NOT NULL,
 `picture` varchar(255),
 `description` varchar(2048) NOT NULL,
 
