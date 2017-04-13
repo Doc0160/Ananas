@@ -119,6 +119,10 @@ FOREIGN KEY (`id_groupe`) REFERENCES groupe(`id`)
 
 INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
 VALUES ('JPBDE', 'Jean-Paul BDE', '?', 'a@b.c', 1);
+INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
+VALUES ('JPCESI', 'Jack-Pierre CESI', '?', 'a@b.c', 2);
+INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
+VALUES ('Peni', 'penisland', '?', 'a@b.c', 3);
 
 CREATE TABLE `groupe` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
