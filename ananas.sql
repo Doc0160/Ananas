@@ -57,6 +57,9 @@ CREATE TABLE `activity` (
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `activity` (`date`, `regular`, `prix`, `name`, `description`)
+VALUES (CURRENT_TIMESTAMP, NULL, 10.1, 'BDE', 'open BDE for my banana');
+
 CREATE TABLE `activity_inscription` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `id_activity` int(11) UNSIGNED NOT NULL,
