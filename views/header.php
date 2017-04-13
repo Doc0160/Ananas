@@ -24,7 +24,7 @@
                 <a href="<?php echo ROOTURL; ?>">
                     <img alt="logo" src="<?php echo ROOTURL; ?>/logo.png" style="height:60px;">
                 </a>
-                <a href="<?php echo ROOTURL; ?>" class="brand-logo">Ananas</a>
+                <a href="<?php echo ROOTURL; ?>" class="brand-logo">Site Web BDE</a>
                 <ul id="nav-mobile" class="right">
                     <?php if(!$data["session"]->has_data()) { ?>
                         <li>

@@ -41,7 +41,10 @@
 <script type="text/javascript" src="<?php echo ROOTURL; ?>/materialize/js/materialize.min.js"></script>
 <script>
  $(document).ready(function(){
-     $('.carousel').carousel();
+     $('.carousel').carousel({fullWidth: true});
+     setTimeout(function(){
+        $('.carousel').carousel('next');
+     }, 250);
      $(".button-collapse").sideNav();
  });
 </script>

@@ -24,10 +24,10 @@ $router->setNotFound(function($url) use ($view){
     $view->display('404.php');
 });
 
-$router->add('/',function() use ($view, $session){
-	var_dump($_SESSION);
+$router->add('/',function() use ($view, $session, $database){
     $view->display('header.php', ["session" => $_SESSION]);
     $view->display('tralala.php', ['test' => $session->email]);
+    require('../controllers/caroussel_dl.php');
     $view->display('footer.php');
 });
 
