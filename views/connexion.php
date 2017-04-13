@@ -11,6 +11,7 @@
 
     <div id="connexion" class="col l6 offset-l3 m12 active">
         <form action="<?php echo ROOTURL; ?>/connexion/" method="post">
+            <div class="row"></div>
             <div class="row">
                 <div class="input-field col s12">
                     <input id="email" type="email" name="email" class="validate">
@@ -36,6 +37,7 @@
 
     <div id="inscription" class="col l6 offset-l3 m12">
         <form action="" method="post">
+            <div class="row"></div>
             <div class="row">
                 <div class="input-field col s6">
                     <input id="first_name" type="text" class="validate">

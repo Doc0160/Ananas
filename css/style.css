@@ -1,0 +1,18 @@
+body {
+             display: flex;
+             min-height: 100vh;
+             flex-direction: column;
+         }
+         
+         .main {
+             flex: 1 0 auto;
+         }
+
+         nav, .page-footer, .btn, .background {
+             background: #c2242a;
+         }
+
+         .btn:hover {
+             background: #000000;
+         }
+         

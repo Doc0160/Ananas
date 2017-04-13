@@ -6,29 +6,10 @@
         <meta charset="utf-8">
         <link href="<?php echo ROOTURL; ?>/materialize/MaterialIcons.css" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="<?php echo ROOTURL; ?>/materialize/css/materialize.min.css" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="<?php echo ROOTURL; ?>/css/style.css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="shortcut icon" href="<?php echo ROOTURL; ?>/favicon.ico" type="image/x-icon">
         <link rel="icon" href="<?php echo ROOTURL; ?>/favicon.ico" type="image/x-icon">
-        <style>
-         body {
-             display: flex;
-             min-height: 100vh;
-             flex-direction: column;
-         }
-         
-         .main {
-             flex: 1 0 auto;
-         }
-
-         nav, .page-footer, .btn {
-             background: #c2242a;
-         }
-
-         .btn:hover {
-             background: #000000;
-         }
-         
-        </style>
     </head>
 
     <body>
@@ -66,17 +47,23 @@
                 <li>
                     <div class="userView">
                         <div class="background">
-                            <img src="http://materializecss.com/images/office.jpg">
                         </div>
+                        <div class="row">
+                        <div class="col s6">
                         <a href="#!user">
                             <img class="circle" src="http://materializecss.com/images/yuna.jpg">
                         </a>
+                        </div>
+
+                        <div class="col s6">
                         <a href="#!name">
-                            <span class="white-text name">John Doe</span>
+                            <span class="white-text name"><?php echo $data['session']->username; ?></span>
                         </a>
                         <a href="#!email">
-                            <span class="white-text email">jdandturk@gmail.com</span>
+                            <span class="white-text email"><?php echo $data['session']->email; ?></span>
                         </a>
+                        </div>
+                        </div>
                     </div>
                 </li>
                 <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>

@@ -26,7 +26,7 @@ $router->setNotFound(function($url) use ($view){
 
 $router->add('/',function() use ($view, $session){
 	var_dump($_SESSION);
-    $view->display('header.php');
+    $view->display('header.php', ["session" => $_SESSION]);
     $view->display('tralala.php', ['test' => $session->email]);
     $view->display('footer.php');
 });
