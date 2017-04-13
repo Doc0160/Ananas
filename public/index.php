@@ -13,6 +13,7 @@ $autoloader->register('viewloader', function(){
 header('Content-Type: text/html; charset=utf-8');
 
 $session = new Session();
+$database = new Database();
 
 $view = new View(new ViewLoader(BASEPATH.'/views/'));
 $router = new Router();
