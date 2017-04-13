@@ -50,7 +50,10 @@ VALUES ('JPBDE', 'Jean-Paul BDE', '?', 'a@b.c1', 1),
 CREATE TABLE `activity` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `date` timestamp,
-`regular` int(11),
+`regular` int(11) UNSIGNED,
+`prix` int(11) UNSIGNED,
+`name` varchar(255),
+`description` varchar(2048),
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -73,8 +76,11 @@ PRIMARY KEY (`id`)
 CREATE TABLE `activity_vote` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `id_activity` int(11) UNSIGNED NOT NULL,
+`id_user` int(11) UNSIGNED NOT NULL,
 PRIMARY KEY (`id`),
-CONSTRAINT `a_v_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CONSTRAINT `a_v_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `a_v_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `a_v_ibfk_3` UNIQUE (`id_activity`, `id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
