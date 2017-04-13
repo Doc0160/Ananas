@@ -1,18 +1,17 @@
 body {
-             display: flex;
-             min-height: 100vh;
-             flex-direction: column;
-         }
-         
-         .main {
-             flex: 1 0 auto;
-         }
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
 
-         nav, .page-footer, .btn, .background {
-             background: #c2242a;
-         }
+.main {
+    flex: 1 0 auto;
+}
 
-         .btn:hover {
-             background: #000000;
-         }
-         
+nav, .page-footer, .btn, .background {
+    background: #c2242a;
+}
+
+.btn:hover {
+    background: #000000;
+}

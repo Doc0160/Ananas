@@ -49,20 +49,20 @@
                         <div class="background">
                         </div>
                         <div class="row">
-                        <div class="col s6">
-                        <a href="#!user">
-                            <img class="circle" src="http://materializecss.com/images/yuna.jpg">
-                        </a>
-                        </div>
+                            <div class="col s6">
+                                <a href="#!user">
+                                    <img class="circle" src="http://materializecss.com/images/yuna.jpg">
+                                </a>
+                            </div>
 
-                        <div class="col s6">
-                        <a href="#!name">
-                            <span class="white-text name"><?php echo $data['session']->username; ?></span>
-                        </a>
-                        <a href="#!email">
-                            <span class="white-text email"><?php echo $data['session']->email; ?></span>
-                        </a>
-                        </div>
+                            <div class="col s6">
+                                <a href="#!name">
+                                    <span class="white-text name"><?php echo $data['session']->username; ?></span>
+                                </a>
+                                <a href="#!email">
+                                    <span class="white-text email"><?php echo $data['session']->email; ?></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </li>
