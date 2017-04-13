@@ -24,15 +24,15 @@ $router->setNotFound(function($url) use ($view){
     $view->display('404.php');
 });
 
-$router->add('/',function() use ($view){
+$router->add('/',function() use ($view, $session){
+	var_dump($_SESSION);
     $view->display('header.php');
-    $view->display('tralala.php', ['test' => "<b>ayayaya</b>"]);
+    $view->display('tralala.php', ['test' => $session->email]);
     $view->display('footer.php');
 });
 
-$router->post('/connexion/',function() use ($session){
-    $session->username = "bite";
-    Router::redirect("/");
+$router->post('/connexion/',function() use ($session, $view, $database){
+    require('../controllers/login.php');
 });
 
 $router->get('/connexion/',function() use ($view){

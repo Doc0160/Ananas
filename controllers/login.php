@@ -2,10 +2,10 @@
 
 		if (!empty($_POST['email']) && !empty($_POST['pass']))
 		{
-			$username = htmlspecialchars($_POST['email']);
+			$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
 			$pass = hash("sha256", $_POST['pass'], false);
 
-			$records = $db->prepare('SELECT id,email,pass FROM membres WHERE email = :email AND pass = :pass');
+			$records = $database->prepare('SELECT * FROM user WHERE email = :email AND pass = :pass');
 			$records->bindParam(':email', $email, PDO::PARAM_STR);
 			$records->bindParam(':pass', $pass, PDO::PARAM_STR);
 			$records->execute();
@@ -16,16 +16,19 @@
 				$session->email = $results["email"];
 				$session->username = $results["username"];
 				$session->id = $results["id"];
+				Router::redirect("/");
 			}
 			else
 			{
-				$error_log = "E-Mail ou mot de passe invalide.";
+				Router::redirect("/connexion/");
+				setcookie("error","E-Mail ou mot de passe invalide.",time()+60*60);
 			}
 		}
 		else
 		{
-			$error_empty = "Tous les champs doivent être remplis.";
+				Router::redirect("/connexion/");
+				setcookie("error","Tous les champs doivent être remplis.",time()+60*60);
 		}
-	}
+	
 
 ?>
