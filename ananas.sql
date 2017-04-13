@@ -139,21 +139,6 @@ CONSTRAINT `p_l_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE 
 CONSTRAINT `p_l_ibfk_3` UNIQUE (`id_photo`, `id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*
-CREATE TABLE `permission` (
-`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-`name` varchar(255) NOT NULL UNIQUE,
-`value` int(11) NOT NULL UNIQUE,
-
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-INSERT INTO `permission` (`name`, `value`) VALUES ('suggest an activity', '1');
-INSERT INTO `permission` (`name`, `value`) VALUES ('modify activity', '2');
-INSERT INTO `permission` (`name`, `value`) VALUES ('modify group', '4');
-*/
-/* ... maybe not in sql ? / hardcoded in php ... */
-
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
