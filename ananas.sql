@@ -72,7 +72,7 @@ CREATE TABLE `activity_suggestion` (
 `description` varchar(2048) NOT NULL,
 `ìd_user` int(11) UNSIGNED,
 PRIMARY KEY (`id`),
-CONSTRAINT `a_s_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `a_s_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;x
 
 CREATE TABLE `activity_vote` (
