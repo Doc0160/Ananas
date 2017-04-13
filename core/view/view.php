@@ -8,7 +8,8 @@ class View{
 
     private function sanitize(array &$data) {
         foreach($data as $key => &$value) {
-            if(is_null($value)) {
+            if(is_null($value) ||
+               is_callable($value)) {
                 unset($value);
                 
             } elseif(is_array($value)) {
