@@ -21,6 +21,10 @@ class Session {
         return isset($_SESSION[$name]);
     }
 
+    public function has_data(): bool {
+        return count($_SESSION) > 0;
+    }
+    
     public function set_error(string $error) {
         if(isset($_SESSION['__error__'])) {
             throw new Exception("Last error wasn't treated: ".$_SESSION['error']);

@@ -15,7 +15,9 @@ header('Content-Type: text/html; charset=utf-8');
 $session = new Session();
 $database = Database::getInstance();
 
-$view = new View(new ViewLoader(BASEPATH.'/views/'));
+$view = new View(new ViewLoader(BASEPATH.'/views/'), [
+    'session' => $session,
+]);
 $router = new Router();
 
 $router->setNotFound(function($url) use ($view){

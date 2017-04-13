@@ -2,8 +2,11 @@
 
 class View{
 
-    public function __construct(ViewLoader $viewLoader) {
+    private $context;
+    
+    public function __construct(ViewLoader $viewLoader, array $context = []) {
         $this->viewLoader = $viewLoader;
+        $this->context = $context;
     }
 
     private function sanitize(array &$data) {
@@ -28,6 +31,8 @@ class View{
     public function display(string $viewName, array $data = [], bool $noerror = false) {
         /*echo */
         $this->sanitize($data);
+        $data = array_merge($data, $this->context);
+        
         if($noerror) {
             error_reporting(0);
         }

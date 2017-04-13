@@ -35,7 +35,7 @@
 
         <nav>
             <div class="nav-wrapper">
-                <?php if(!empty($_SESSION)) { ?>
+                <?php if($data["session"]->has_data()) { ?>
                     <a href="#!" data-activates="slide-out" class="button-collapse" style="display: block !important;">
                         <i class="material-icons">menu</i>
                     </a>
@@ -45,7 +45,7 @@
                 </a>
                 <a href="<?php echo ROOTURL; ?>" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right">
-                    <?php if(empty($_SESSION)) { ?>
+                    <?php if($data["session"]->has_data()) { ?>
                         <li>
                             <a href="<?php echo ROOTURL; ?>/inscription/">S'inscrire</a>
                         </li>
@@ -61,7 +61,7 @@
             </div>
         </nav>
         
-        <?php if(!empty($_SESSION)) { ?>
+        <?php if($data["session"]->has_data()) { ?>
             <ul id="slide-out" class="side-nav">
                 <li>
                     <div class="userView">
