@@ -16,7 +16,7 @@ USE ananas;
 CREATE TABLE `activity` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `date` timestamp,
-`regular` int(11) NOT NULL,
+`regular` int(11),
 
 PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
