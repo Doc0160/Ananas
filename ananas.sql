@@ -81,7 +81,7 @@ CREATE TABLE `activity_vote` (
 `id_user` int(11) UNSIGNED NOT NULL,
 PRIMARY KEY (`id`),
 CONSTRAINT `a_v_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-CONSTRAINT `a_v_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `a_v_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 CONSTRAINT `a_v_ibfk_3` UNIQUE (`id_activity`, `id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -121,9 +121,11 @@ CONSTRAINT `p_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON D
 CREATE TABLE `photo_comment` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `id_photo` int(11) UNSIGNED NOT NULL,
+`id_user` int(11) UNSIGNED NOT NULL,
 `comment` varchar(1024) NOT NULL,
 PRIMARY KEY (`id`),
 CONSTRAINT `p_c_ibfk_1` FOREIGN KEY (`id_photo`) REFERENCES photo(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CONSTRAINT `p_c_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `photo_like` (
