@@ -1,6 +1,6 @@
 <?php
 
-final class singletonPDO{
+final class database {
     private static $PDOInstance = null;
     private static $dsn         = null;
     private static $username    = null;
@@ -13,7 +13,7 @@ final class singletonPDO{
     private function __construct(){
     }
 
-    public static function getInstance(){
+    public static function getInstance(): PDO {
         if(is_null(self::$PDOInstance)){
             if(self::configDone()){
                 self::$PDOInstance = new PDO(self::$dsn, self::$username, self::$password, self::$options);
@@ -24,18 +24,23 @@ final class singletonPDO{
         return self::$PDOInstance;
     }
 
-    public static function setConfig($dsn, $username, $password, array $options = array()){
+    public static function setConfig(string $dsn,
+                                     string $username, string $password,
+                                     array $options = array()){
         self::$dsn      = $dsn;
         self::$username = $username;
         self::$password = $password;
         self::$options += $options;
     }
 
-    private static function configDone(){
-        return self::$dsn !== null && self::$username !== null && self::$password !== null;
+    private static function configDone(): bool {
+        return self::$dsn !== null &&
+               self::$username !== null &&
+               self::$password !== null;
     }
 }
 
-singletonPDO::setConfig('mysql:host=localhost;port=3306;dbname=ananas;charset=utf-8', 'root', '');
+database::setConfig('mysql:host=localhost;port=3306;dbname=ananas;charset=utf-8',
+                    'root', '');
 
 ?>

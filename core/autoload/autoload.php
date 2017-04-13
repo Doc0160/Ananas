@@ -5,7 +5,7 @@ class Autoload{
     private $autoloadable = [];
 
     public function register($name, $loader = false){
-        if( is_callable($loader) || $loader == false){
+        if(is_callable($loader) || $loader == false){
             $this->autoloadable[$name] = $loader;
             return;
         }

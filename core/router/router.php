@@ -11,34 +11,33 @@ class Router{
         };
     }
 
-    public function __set($url, $action){
-        $this->routes["_"][BASEURI.$url] = $action;
+    public function __set(string $url, callable $action){
+        $this->addWithMethod("_", $url, $action);
     }
     
-    public function add($url, $action){
-        $this->routes["_"][BASEURI.$url] = $action;
+    public function add(string $url, callable $action){
+        $this->addWithMethod("_", $url, $action);
     }
 
-    public function get($url, $action){
-        $this->routes["GET"][BASEURI.$url] = $action;
+    public function get(string $url, callable $action){
+        $this->addWithMethod("GET", $url, $action);
     }
 
-    public function post($url, $action){
-        $this->routes["POST"][BASEURI.$url] = $action;
+    public function post(string $url, callable $action){
+        $this->addWithMethod("POST", $url, $action);
     }
 
-    public function addWithMethod($method, $url, $action){
+    public function addWithMethod(string $method, string $url, callable $action){
+        if(isset($this->routes[$method][BASEURI.$url])) {
+            throw new Exception("Path already exist: ".$url);
+        }
         $this->routes[$method][BASEURI.$url] = $action;
     }
 
-    public function setNotFound($action){
+    public function setNotFound(callable $action){
         $this->notFound = $action;
     }
-
-    public function redirect($page) {
-        header('Location: '.BASEURI.$page);
-    }
-
+    
     public function dispatch(){
         if(isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
             foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $url => $action) {
@@ -54,4 +53,10 @@ class Router{
         }
         call_user_func_array($this->notFound,[$_SERVER['REQUEST_URI']]);
     }
+
+    
+    public static function redirect(string $page) {
+        header('Location: '.BASEURI.$page);
+    }
+
 }

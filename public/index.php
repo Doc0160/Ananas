@@ -14,8 +14,6 @@ header('Content-Type: text/html; charset=utf-8');
 
 $session = new Session();
 
-require_once("../class/singletonPDO.php");
-
 $view = new View( new ViewLoader(BASEPATH.'/views/') );
 $router = new Router();
 
@@ -25,17 +23,13 @@ $router->setNotFound(function($url) use ($view){
 
 $router->add('/',function() use ($view){
     $view->display('header.php');
-    
+    $view->display('tralala.php');
     $view->display('footer.php');
 });
 
-$router->add('/r',function() use ($router) {
-    $router->redirect("/");
-});
-
-$router->add('/connexion',function() use ($session, $router){
+$router->add('/connexion',function() use ($session){
     $session->username = "bite";
-    $router->redirect("/");
+    Router::redirect("/");
 });
 
 $router->add('/connexion/',function() use ($view){
@@ -52,9 +46,7 @@ $router->add('/inscription/',function() use ($view){
 
 $router->add('/deconnexion/',function() use ($view, $session){
     $session->destroy();
-    $view->display('header.php');
-    $view->display('deconnexion.php');
-    $view->display('footer.php');
+    Router::redirect("/");
 });
 
 $router->dispatch();
