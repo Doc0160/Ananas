@@ -14,12 +14,14 @@
             <div class="row"></div>
             <div class="row">
                 <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
                     <input id="email" type="email" name="email" class="validate">
                     <label for="email">Email</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
                     <input id="password" type="password" name="pass" class="validate">
                     <label for="password">Password</label>
                 </div>
@@ -40,7 +42,7 @@
             <div class="row"></div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="first_name"  name="first_name" type="text" class="validate">
+                    <input id="first_name" name="first_name" type="text" class="validate">
                     <label for="first_name">First Name</label>
                 </div>
                 <div class="input-field col s6">
@@ -50,14 +52,30 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" name="pass" class="validate">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="username" type="text" name="username" class="validate">
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="email" name="email" class="validate">
+                    <label for="email" data-error="not an email">Email</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock</i>
+                    <input id="password" type="password" name="pass1" class="validate">
                     <label for="password">Password</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="email" type="email" name="email" class="validate">
-                    <label for="email">Email</label>
+                    <i class="material-icons prefix">lock</i>
+                    <input id="password" type="password" name="pass2" class="validate">
+                    <label for="password">Password</label>
                 </div>
             </div>
             <div class="row">
