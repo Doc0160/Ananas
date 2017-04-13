@@ -22,11 +22,9 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `groupe` (`name`, `permissions`)
-VALUES ('BDE', '9999999999');
-INSERT INTO `groupe` (`name`, `permissions`)
-VALUES ('CESI', '999999999');
-INSERT INTO `groupe` (`name`, `permissions`)
-VALUES ('Member', '0');
+VALUES ('BDE', '9999999999'),
+('CESI', '999999999'),
+('Member', '0');
 
 CREATE TABLE `user` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -42,11 +40,9 @@ CONSTRAINT`u_ibfk_1` FOREIGN KEY (`id_groupe`) REFERENCES groupe(`id`) ON DELETE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
-VALUES ('JPBDE', 'Jean-Paul BDE', '?', 'a@b.c1', 1);
-INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
-VALUES ('JPCESI', 'Jack-Pierre CESI', '?', 'a@b.c2', 2);
-INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
-VALUES ('Peni', 'penisland', '?', 'a@b.c3', 3);
+VALUES ('JPBDE', 'Jean-Paul BDE', '?', 'a@b.c1', 1),
+('JPCESI', 'Jack-Pierre CESI', '?', 'a@b.c2', 2),
+('Peni', 'penisland', '?', 'a@b.c3', 3);
 
 
 /* activity related tables */
