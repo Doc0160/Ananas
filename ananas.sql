@@ -70,7 +70,7 @@ CREATE TABLE `activity_suggestion` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `name` varchar(255) DEFAULT NULL,
 `description` varchar(2048) NOT NULL,
-`ìd_user` int(11) UNSIGNED,
+`ìd_user` int(11) UNSIGNED NOT NULL,
 PRIMARY KEY (`id`),
 CONSTRAINT `a_s_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;x
