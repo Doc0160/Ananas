@@ -45,7 +45,7 @@ $router->get('/connexion/',function() use ($view){
     $view->display('footer.php');
 });
 
-$router->post('/inscription/',function() use ($database, $cookie, $database){
+$router->post('/inscription/',function() use ($database, $cookie){
     require('../controllers/inscription.php');
 });
 

@@ -12,3 +12,5 @@ define("DATABASE_PASSWORD", '');
 define("DATABASE_HOST", 'localhost');
 define("DATABASE_PORT", '3306');
 define("DATABASE_DATABASE", 'ananas');
+
+define("DEFAULT_USER_GROUP", 3);

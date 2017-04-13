@@ -5,13 +5,25 @@ if(
     isset($_POST['pass2']) &&
     $_POST['pass1'] == $_POST['pass2']
 ) {
-    $req = $database->prepare("INSERT INTO user (username, name, pass, email, id_group) VALUES (:username, :name, :pass, :mail, :groupe)");
+    
+    $pass = hash("sha256", $_POST['pass1'], false);
+    $name = $_POST['first_name']." ".$_POST['last_name'];
+    $groupe = DEFAULT_USER_GROUP;
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    
+    $req = $database->prepare("INSERT INTO user (username, name, pass, email, id_groupe) VALUES (:username, :name, :pass, :mail, :groupe)");
+
     $req->bindParam(":username", $_POST['username']);
-    $req->bindParam(":pass", hash("sha256", $_POST['pass1'], false));
-    $req->bindParam(":email", $_POST['email']);
-    $req->bindParam(":name", $_POST['first_name']." ".$_POST['last_name']);
-    var_dump($_POST);
+    $req->bindParam(":name", $name);
+    $req->bindParam(":pass", $pass);
+    $req->bindParam(":mail", $email);
+    $req->bindParam(":groupe", $groupe);
+    $req->execute();
+    
+    Router::redirect("/");
+    //var_dump($_POST);
 } else {
+    Router::redirect("/inscription/");
     $cookie->error = "Mot de passe invalide.";
 }
 
