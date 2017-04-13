@@ -36,27 +36,27 @@
     </div>
 
     <div id="inscription" class="col l6 offset-l3 m12">
-        <form action="" method="post">
+        <form action="<?php echo ROOTURL; ?>/inscription/" method="post">
             <div class="row"></div>
             <div class="row">
                 <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate">
+                    <input id="first_name"  name="first_name" type="text" class="validate">
                     <label for="first_name">First Name</label>
                 </div>
                 <div class="input-field col s6">
-                    <input id="last_name" type="text" class="validate">
+                    <input id="last_name" name="last_name" type="text" class="validate">
                     <label for="last_name">Last Name</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="password" type="password" class="validate">
+                    <input id="password" type="password" name="pass" class="validate">
                     <label for="password">Password</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
+                    <input id="email" type="email" name="email" class="validate">
                     <label for="email">Email</label>
                 </div>
             </div>
