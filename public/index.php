@@ -14,7 +14,7 @@ header('Content-Type: text/html; charset=utf-8');
 
 $session = new Session();
 
-$view = new View( new ViewLoader(BASEPATH.'/views/') );
+$view = new View(new ViewLoader(BASEPATH.'/views/'));
 $router = new Router();
 
 $router->setNotFound(function($url) use ($view){
