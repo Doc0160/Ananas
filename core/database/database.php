@@ -40,7 +40,10 @@ final class database {
     }
 }
 
-database::setConfig('mysql:host=localhost;port=3306;dbname=ananas;charset=utf8',
-                    'root', '');
+database::setConfig('mysql:host='.DATABASE_HOST.';'.
+                    'port='.DATABASE_PORT.';'.
+                    'dbname='.DATABASE_DATABASE.';'.
+                    'charset=utf8',
+                    DATABASE_USERNAME, DATABASE_PASSWORD);
 
 ?>

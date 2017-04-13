@@ -27,8 +27,8 @@ CREATE TABLE `activity_inscription` (
 `id_user` int(11) UNSIGNED NOT NULL,
 
 PRIMARY KEY (`id`),
-FOREIGN KEY (`id_activity`) REFERENCES activity(`id`),
-FOREIGN KEY (`id_user`) REFERENCES user(`id`)
+CONSTRAINT `a_i_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `a_i_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `activity_suggestion` (
@@ -44,7 +44,7 @@ CREATE TABLE `activity_vote` (
 `id_activity` int(11) UNSIGNED NOT NULL,
 
 PRIMARY KEY (`id`),
-FOREIGN KEY (`id_activity`) REFERENCES activity(`id`)
+CONSTRAINT `a_v_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -67,8 +67,8 @@ CREATE TABLE `goodies_reservation` (
 `id_user` int(11) UNSIGNED NOT NULL,
 
 PRIMARY KEY (`id`),
-FOREIGN KEY (`id_goodies`) REFERENCES goodies(`id`),
-FOREIGN KEY (`id_user`) REFERENCES user(`id`)
+CONSTRAINT `g_r_ibfk_1` FOREIGN KEY (`id_goodies`) REFERENCES goodies(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `g_r_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
@@ -80,7 +80,7 @@ CREATE TABLE `photo_comment` (
 `comment` varchar(1024) NOT NULL,
 
 PRIMARY KEY (`id`),
-FOREIGN KEY (`id_photo`) REFERENCES photo(`id`)
+CONSTRAINT `p_c_ibfk_1` FOREIGN KEY (`id_photo`) REFERENCES photo(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `photo_like` (
@@ -88,7 +88,7 @@ CREATE TABLE `photo_like` (
 `id_photo` int(11) UNSIGNED NOT NULL,
 
 PRIMARY KEY (`id`),
-FOREIGN KEY (`id_photo`) REFERENCES photo(`id`)
+CONSTRAINT `p_l_ibfk_1` FOREIGN KEY (`id_photo`) REFERENCES photo(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `photo` (
@@ -97,32 +97,11 @@ CREATE TABLE `photo` (
 `picture` varchar(255) NOT NULL,
 
 PRIMARY KEY (`id`),
-FOREIGN KEY (`id_activity`) REFERENCES activity(`id`)
+CONSTRAINT `p_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 /* user related tables */
-
-CREATE TABLE `user` (
-`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-`username` varchar(255) NOT NULL UNIQUE,
-`name` varchar(255) NOT NULL,
-`pass` varchar(255) NOT NULL,
-`email` varchar(255) NOT NULL UNIQUE,
-`avatar` varchar(255),
-`inscription_date` timestamp DEFAULT CURRENT_TIMESTAMP,
-`id_groupe` int(11) UNSIGNED NOT NULL,
-
-PRIMARY KEY (`id`),
-FOREIGN KEY (`id_groupe`) REFERENCES groupe(`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
-VALUES ('JPBDE', 'Jean-Paul BDE', '?', 'a@b.c', 1);
-INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
-VALUES ('JPCESI', 'Jack-Pierre CESI', '?', 'a@b.c', 2);
-INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
-VALUES ('Peni', 'penisland', '?', 'a@b.c', 3);
 
 CREATE TABLE `groupe` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -138,6 +117,27 @@ INSERT INTO `groupe` (`name`, `permissions`)
 VALUES ('CESI', '999999999');
 INSERT INTO `groupe` (`name`, `permissions`)
 VALUES ('Member', '0');
+
+CREATE TABLE `user` (
+`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+`username` varchar(255) NOT NULL UNIQUE,
+`name` varchar(255) NOT NULL,
+`pass` varchar(255) NOT NULL,
+`email` varchar(255) NOT NULL UNIQUE,
+`avatar` varchar(255),
+`inscription_date` timestamp DEFAULT CURRENT_TIMESTAMP,
+`id_groupe` int(11) UNSIGNED NOT NULL,
+
+PRIMARY KEY (`id`),
+CONSTRAINT`u_ibfk_1` FOREIGN KEY (`id_groupe`) REFERENCES groupe(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
+VALUES ('JPBDE', 'Jean-Paul BDE', '?', 'a@b.c1', 1);
+INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
+VALUES ('JPCESI', 'Jack-Pierre CESI', '?', 'a@b.c2', 2);
+INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
+VALUES ('Peni', 'penisland', '?', 'a@b.c3', 3);
 
 /*
 CREATE TABLE `permission` (
