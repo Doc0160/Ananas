@@ -63,7 +63,8 @@ CREATE TABLE `activity_inscription` (
 `id_user` int(11) UNSIGNED NOT NULL,
 PRIMARY KEY (`id`),
 CONSTRAINT `a_i_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-CONSTRAINT `a_i_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CONSTRAINT `a_i_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `a_i_ibfk_3` UNIQUE (`id_activity`, `id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `activity_suggestion` (
@@ -133,8 +134,8 @@ CREATE TABLE `photo_like` (
 `id_photo` int(11) UNSIGNED NOT NULL,
 `id_user` int(11) UNSIGNED NOT NULL,
 PRIMARY KEY (`id`),
-CONSTRAINT `p_l_ibfk_1` FOREIGN KEY (`id_photo`) REFERENCES photo(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-CONSTRAINT `p_l_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+CONSTRAINT `p_l_ibfk_1` FOREIGN KEY (`id_photo`) REFERENCES photo(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `p_l_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 CONSTRAINT `p_l_ibfk_3` UNIQUE (`id_photo`, `id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
