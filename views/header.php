@@ -51,7 +51,7 @@
                         <div class="row">
                             <div class="col s6">
                                 <a href="#!user">
-                                    <img class="circle" src="http://materializecss.com/images/yuna.jpg">
+                                    <img class="circle" src="<?php echo ROOTURL; ?>/images/<?php echo ((false) ? "" : DEFAULT_USER_AVATAR); ?>">
                                 </a>
                             </div>
 
