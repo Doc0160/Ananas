@@ -26,8 +26,13 @@
                     <label for="password">Password</label>
                 </div>
             </div>
-            <?php if(isset($_COOKIE["error"])) { ?>
-                <p class=error><?php echo $_COOKIE["error"]; setcookie("error","mabite",time()-1); ?></p>
+            <?php if(isset($cookie->error)) { ?>
+                <p class=error>
+                    <?php
+                    echo $cookie->error;
+                    unset($cookie->error);
+                    ?>
+                </p>
             <?php } ?>
             <div class="row">
                 <div class="col s12">

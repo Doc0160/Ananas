@@ -21,13 +21,13 @@ if (!empty($_POST['email']) && !empty($_POST['pass']))
 	else
 	{
 		Router::redirect("/connexion/");
-		setcookie("error","E-Mail ou mot de passe invalide.",time()+60*60);
+        $cookie->error = "E-Mail ou mot de passe invalide.";
 	}
 }
 else
 {
 	Router::redirect("/connexion/");
-	setcookie("error","Tous les champs doivent être remplis.",time()+60*60);
+    $cookie->error = "Tous les champs doivent être remplis.";
 }
 
 
