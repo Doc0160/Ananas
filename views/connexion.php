@@ -4,8 +4,8 @@
 
     <div class="col l6 offset-l3 m12">
         <ul class="tabs tabs-fixed-width">
-            <li class="tab col s3"><a href="#connexion">Se connecter</a></li>
-            <li class="tab col s3"><a href="#inscription">S'inscrire</a></li>
+            <li class="tab col s3"><a class="<?php echo ($data["type"]=="connexion") ? 'active' : ''; ?>" href="#connexion">Se connecter</a></li>
+            <li class="tab col s3"><a class="<?php echo ($data["type"]=="inscription") ? 'active' : ''; ?>" href="#inscription">S'inscrire</a></li>
         </ul>
     </div>
 

@@ -123,7 +123,11 @@ CONSTRAINT `p_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON D
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `photo` (`picture`, `id_activity`)
-VALUES ('babe_1.jpg',1), ('babe_2.jpg',1), ('babe_3.jpg',1), ('babe_4.jpg',1), ('babe_5.jpg',1);
+VALUES ('babe_1.jpg',1),
+('babe_2.jpg',1),
+('babe_3.jpg',1),
+('babe_4.jpg',1),
+('babe_5.jpg',1);
 
 CREATE TABLE `photo_comment` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
