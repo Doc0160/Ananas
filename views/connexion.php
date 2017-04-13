@@ -23,7 +23,9 @@
                     <label for="password">Password</label>
                 </div>
             </div>
-            <p class=error><?php $_COOKIE["error"]; ?></p>
+            <?php if(isset($_COOKIE["error"])) { ?>
+            <p class=error><?php echo $_COOKIE["error"]; setcookie("error","mabite",time()-1); ?></p>
+            <?php } ?>
             <div class="row">
                 <div class="col s12">
                     <input type="submit" class="btn waves-effect waves-light" value="Se connecter">
