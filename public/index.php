@@ -26,7 +26,6 @@ $router->setNotFound(function($url) use ($view){
 
 $router->add('/',function() use ($view, $session, $database){
     $view->display('header.php', ["session" => $_SESSION]);
-    $view->display('tralala.php', ['test' => $session->email]);
     require('../controllers/caroussel_dl.php');
     $view->display('footer.php');
 });
@@ -39,6 +38,10 @@ $router->get('/connexion/',function() use ($view){
     $view->display('header.php');
     $view->display('connexion.php', ["type" => "connexion"]);
     $view->display('footer.php');
+});
+
+$router->post('/inscription/',function() use ($session, $view, $database){
+    require('../controllers/inscription.php');
 });
 
 $router->get('/inscription/',function() use ($view){
