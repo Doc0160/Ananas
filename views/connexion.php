@@ -8,8 +8,8 @@
             <li class="tab col s3"><a href="#inscription">S'inscrire</a></li>
         </ul>
     </div>
-    <div id="connextion" class="col l6 offset-l3 m12">
-        <form action="<?php echo ROOTURL; ?>/connexion" method="post">
+    <div id="connextion" class="col l6 offset-l3 m12 active">
+        <form action="<?php echo ROOTURL; ?>/connexion/" method="post">
             <div class="row">
                 <div class="input-field col s12">
                     <input id="email" type="email" class="validate">

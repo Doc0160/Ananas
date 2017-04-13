@@ -13,7 +13,7 @@ $autoloader->register('viewloader', function(){
 header('Content-Type: text/html; charset=utf-8');
 
 $session = new Session();
-$database = new Database();
+$database = Database::getInstance();
 
 $view = new View(new ViewLoader(BASEPATH.'/views/'));
 $router = new Router();
@@ -24,28 +24,28 @@ $router->setNotFound(function($url) use ($view){
 
 $router->add('/',function() use ($view){
     $view->display('header.php');
-    $view->display('tralala.php');
+    $view->display('tralala.php', ['test' => "<b>ayayaya</b>"]);
     $view->display('footer.php');
 });
 
-$router->add('/connexion',function() use ($session){
+$router->post('/connexion/',function() use ($session){
     $session->username = "bite";
     Router::redirect("/");
 });
 
-$router->add('/connexion/',function() use ($view){
+$router->get('/connexion/',function() use ($view){
     $view->display('header.php');
     $view->display('connexion.php');
     $view->display('footer.php');
 });
 
-$router->add('/inscription/',function() use ($view){
+$router->get('/inscription/',function() use ($view){
     $view->display('header.php');
     $view->display('connexion.php');
     $view->display('footer.php');
 });
 
-$router->add('/deconnexion/',function() use ($view, $session){
+$router->get('/deconnexion/',function() use ($view, $session){
     $session->destroy();
     Router::redirect("/");
 });

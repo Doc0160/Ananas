@@ -9,8 +9,8 @@ class ViewLoader{
     public function load(string $viewName) {
         if(file_exists($this->path.$viewName)) {
             //return file_get_contents($this->path.$viewName);
-            require_once($this->path.$viewName);
-            return;
+            //require_once($this->path.$viewName);
+            return $this->path.$viewName;
         }
         throw new Exception("View does not exist: ".$this->path.$viewName);
     }

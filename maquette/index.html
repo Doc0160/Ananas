@@ -20,6 +20,23 @@
          .main {
              flex: 1 0 auto;
          }
+
+         nav, .page-footer, .btn {
+             background: #c2242a;
+         }
+
+         .btn:hover {
+             background: #000000;
+         }
+         
+         .carousel .carousel-item {
+             width: 500px;
+         }
+         .carousel {
+             height: 1000px;
+             margin-top: -300px;
+             margin-bottom: -50px;
+         }
         </style>
     </head>
 
@@ -242,7 +259,9 @@
         <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
         <script>
          $(document).ready(function(){
-             $('.carousel').carousel();
+             $('.carousel').carousel({
+                 dist: -100,
+             });
              $(".button-collapse").sideNav();
          });
         </script>
