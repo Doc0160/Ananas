@@ -45,7 +45,7 @@
                 </a>
                 <a href="<?php echo ROOTURL; ?>" class="brand-logo">Ananas</a>
                 <ul id="nav-mobile" class="right">
-                    <?php if($data["session"]->has_data()) { ?>
+                    <?php if(!$data["session"]->has_data()) { ?>
                         <li>
                             <a href="<?php echo ROOTURL; ?>/inscription/">S'inscrire</a>
                         </li>

@@ -22,7 +22,7 @@ class Session {
     }
 
     public function has_data(): bool {
-        return count($_SESSION) > 0;
+        return !empty($_SESSION);
     }
     
     public function set_error(string $error) {
