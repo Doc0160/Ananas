@@ -1,6 +1,6 @@
 
 <div class="row">
-<?php echo $data["test"]; ?>
+<!--<?php echo $data["test"]; ?>-->
 </div>
 
 <div class="row">
