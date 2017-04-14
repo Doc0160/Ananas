@@ -53,7 +53,8 @@ CREATE TABLE `activity` (
 `regular` int(11) UNSIGNED,
 `prix` int(11) UNSIGNED,
 `name` varchar(255),
-`description` varchar(2048),
+`description` varchar(2048) NOT NULL,
+`picture` varchar(255),
 PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
