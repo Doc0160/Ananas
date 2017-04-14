@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="<?php echo ROOTURL; ?>/profile/"><i class="material-icons">cloud</i>Profile</a></li>
+                <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/"><i class="material-icons">cloud</i>Profile</a></li>
                 <li><a href="#!">Second Link</a></li>
                 <li><div class="divider"></div></li>
                 <li><a class="subheader">Subheader</a></li>
