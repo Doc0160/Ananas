@@ -1,4 +1,6 @@
 Options +FollowSymlinks
 RewriteEngine On
 RewriteOptions Inherit
-RewriteRule ^([A-Za-z0-9\-_/]+)?$ /ananas/public/index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /ananas/public/index.php [NC,L,QSA]

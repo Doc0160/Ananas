@@ -30,6 +30,7 @@ class Router{
     }
 
     public function addWithMethod(string $method, string $url, callable $action){
+        $url = preg_replace('#:([\w]+)#', '([^/]+)', $url);
         if(isset($this->routes[$method][$this->uri.$url])) {
             throw new Exception("Path already exist: ".$url);
         }
@@ -41,9 +42,12 @@ class Router{
     }
     
     public function dispatch(){
+        $_url = $_SERVER['REQUEST_URI'];
         if(isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
             foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $url => $action) {
-                if( $url == $_SERVER['REQUEST_URI'] ){
+                if(preg_match("#^".$_url."$#i", $url, $matches)){
+                //}
+                //if($url == $_SERVER['REQUEST_URI']){
                     return $action();
                 }
             }

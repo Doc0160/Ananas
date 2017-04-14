@@ -31,13 +31,15 @@
 </div>
 <div class="row">
     <div class="col s6 offset-s3">
-        <div class="col s12">
-            <?php if($data['avatar'] != null) { ?>
-                <img alt="avatar" src="<?php echo ROOTURL.BASEAVATAR.'/'.$data['avatar']; ?>">
-            <?php } else { ?>
-                no avatar
-            <?php } ?>
-        </div>
+        <?php if($data['avatar'] != null) { ?>
+            <img alt="avatar" class="responsive-img materialboxed" src="<?php echo ROOTURL.BASEAVATAR.'/'.$data['avatar']; ?>">
+        <?php } else { ?>
+            no avatar
+        <?php } ?>
+    </div>
+</div>
+<div class="row">
+    <div class="col s6 offset-s3">
         <form action="" enctype="multipart/form-data" method="post">
             <div class="file-field input-field s12">
                 <div class="btn">

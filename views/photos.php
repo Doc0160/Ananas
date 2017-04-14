@@ -40,10 +40,12 @@
                  <?php var_dump($v); ?>
                  </div> -->
             <div class="card-action">
-                <a href="#">Like</a>
-                <a href="#">Dislike</a>
+                <a href="#">Aimer(0)</a>
+                <?php if($data['can_delete']) { ?>
+                    <a href="#">Suprimer</a>
+                <?php } ?>
                 <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>"
-                   download="<?php echo $v["picture"]; ?>">Download</a>
+                   download="<?php echo $v["picture"]; ?>">Télécharger</a>
             </div>
         </div>
     </div>

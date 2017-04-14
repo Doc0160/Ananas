@@ -1,10 +1,11 @@
 <?php
 
 $router->get('/photos/', function()
-    use ($do_header, $database, $view, $controller){
+    use ($do_header, $session, $database, $view, $controller){
     $do_header();
     $controller->execute('photo.php', [
         'database' => $database,
+        'session' => $session,
     ]);
         $view->display('footer.php');
     });
