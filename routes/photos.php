@@ -28,10 +28,10 @@ $router->post('/photos/', function() use ($router, $session, $database) {
             $req->execute();
             $router->redirect("/");
         }
+    } else {
+        var_dump($_FILES);
+        var_dump($_POST);
     }
-    
-    var_dump($_FILES);
-    var_dump($_POST);
 });
 
 ?>
