@@ -1,9 +1,6 @@
 <?php
 
 class Cookie {
-    public function __construct() {
-        //$this->start();
-    }
     
     public function __get(string $name) {
         return (isset($_COOKIE[$name])) ? $_COOKIE[$name] : null;
@@ -21,17 +18,9 @@ class Cookie {
         return isset($_COOKIE[$name]);
     }
 
-    public function start() {
-        /*if(!isset($_SESSION)){
-            session_name("ananas");
-            session_start();
-        }*/
+    
+    public function __debugInfo() {
+        return $_COOKIE;
     }
 
-    public function destroy() {
-        /*if(isset($_SESSION)){
-            $_SESSION = [];
-            session_destroy();
-        }*/
-    }
 }

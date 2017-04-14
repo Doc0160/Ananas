@@ -1,3 +1,5 @@
+
+<div class="row"></div>
 <div class="row">
     <div class="carousel carousel-slider" data-indicators="true">
         <?php

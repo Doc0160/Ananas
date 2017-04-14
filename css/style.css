@@ -21,6 +21,10 @@ nav, .page-footer, .btn, .background {
     margin-left: 10px;
 }
 
+.carousel.carousel-slider {
+    min-height: 500px;
+}
+
 .heart
 {
   fill: white;

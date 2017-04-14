@@ -2,16 +2,16 @@
 
 class Session {
     private $timeout;
-    public function __construct(int $timeout = 1800) {
-        $this->start();
+    public function __construct(int $timeout = 3600) {
         $this->timeout = $timeout;
+        $this->start();
     }
     
     public function __get(string $name) {
         return (isset($_SESSION[$name])) ? $_SESSION[$name] : null;
     }
 
-    public function __set(string $name, string $value) {
+    public function __set(string $name, $value) {
         $_SESSION[$name] = $value;
     }
 
@@ -21,6 +21,10 @@ class Session {
     
     public function __isset(string $name): bool {
         return isset($_SESSION[$name]);
+    }
+
+    public function __debugInfo() {
+        return $_SESSION;
     }
 
     public function has_data(): bool {
@@ -33,10 +37,11 @@ class Session {
             session_start();
             if($this->has_data()) {
                 if (isset($_SESSION['LAST_ACTIVITY']) &&
-                    (time() - $_SESSION['LAST_ACTIVITY'] > $this->timeout)) {
+                    (time() - (int)$_SESSION['LAST_ACTIVITY'] > $this->timeout)) {
                     session_unset();
+                } else {
+                    $_SESSION['LAST_ACTIVITY'] = time();
                 }
-                $_SESSION['LAST_ACTIVITY'] = time();
             }
         }
     }
