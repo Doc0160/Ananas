@@ -1,9 +1,14 @@
 <?php
 
-$req = $data["database"]->prepare('SELECT * FROM user');
+$req = $data["database"]->prepare('SELECT * FROM user WHERE id=:id');
+$id = $data["session"]->id;
+$req->bindParam(":id", $id);
 $req->execute();
-var_dump($req->fetchAll());
+$user = $req->fetch();
 
+$data['view']->display('profile.php', $user);
+
+var_dump($data["session"]);
 var_dump($data);
 
 ?>
