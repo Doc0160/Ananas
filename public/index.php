@@ -41,7 +41,9 @@ $router->add('/', function() use ($view, $controller, $session, $database){
             "database" => $database,
         ]);
     }
-    $view->display('news.php');
+    $controller->execute("news.php", [
+            "database" => $database,
+        ]);
     $view->display('footer.php');
 });
 
