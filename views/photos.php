@@ -67,9 +67,9 @@
                                 </div>
                             <?php } ?>
                             <div class="row collection-item">
-                                <form method="post" action="<?php echo BASEURI.'/photo/comment/'.$v['id']; ?>">
+                                <form method="post" action="<?php echo BASEURI.'/photos/comment/'.$v['id'].'/'; ?>">
                                     <div class="input-field col s9">
-                                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                        <textarea name="comment" id="textarea1" class="materialize-textarea"></textarea>
                                         <label for="textarea1">Textarea</label>
                                     </div>
                                     <div class="input-field col s3">

@@ -10,6 +10,16 @@ $router->get('/photos/', function()
         $view->display('footer.php');
     });
 
+$router->post('/photos/comment/:id/', function($id) use ($router, $database, $session){
+    $id = (int)$id;
+    $idu = $session->id;
+    $req = $database->prepare('INSERT INTO photo_comment (id_photo, id_user, comment) VALUES (:id_photo, :id_user, :comment)');
+    $req->bindParam(':id_photo', $id);
+    $req->bindParam(':id_user', $idu);
+    $req->bindParam(':comment', $_POST['comment']);
+    $req->execute();
+    $router->redirect('/photos/');
+});
 $router->get('/photos/delete/:id/', function($id) use ($router, $database){
     $id = (int)$id;
     $req = $database->prepare("SELECT picture FROM photo WHERE id=:id");
