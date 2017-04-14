@@ -11,7 +11,7 @@
     <div class="col s4">
         <div class="card hoverable">
             <div class="card-image">
-                <img src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
+                <img class="materialboxed" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
             </div>
             <!-- <div class="card-content">
                  <?php var_dump($v); ?>
@@ -19,7 +19,8 @@
             <div class="card-action">
                 <a href="#">Like</a>
                 <a href="#">Dislike</a>
-                <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>">Full erection</a>
+                <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>"
+                   download="<?php echo $v["picture"]; ?>">Download</a>
             </div>
         </div>
     </div>

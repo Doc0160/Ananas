@@ -8,6 +8,7 @@ define('BASEURI', "/ananas");
 define('HOST', 'localhost');
 define('ROOTURL', 'http://'.HOST.BASEURI);
 define('BASEIMAGE', "/images");
+define('BASEAVATAR', "/avatars");
 
 // DATABASE
 define("DATABASE_USERNAME", 'root');
@@ -18,7 +19,7 @@ define("DATABASE_DATABASE", 'ananas');
 
 // DEFAUT USER
 define("DEFAULT_USER_GROUP", 3);
-define("DEFAULT_USER_AVATAR", "_peni.jpg");
+define("DEFAULT_USER_AVATAR", "logo.png");
 
 // PERMISSION
 $i = 0;

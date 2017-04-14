@@ -6,12 +6,24 @@
     ?>
         <div class="col s6">
             <div class="card">
-                <form>
+                <form method="post">
                     <div class="card-image">
                         <img src="<?php echo ROOTURL."/logo.png"; ?>">
                         <span class="card-title"><?php echo $v['name']; ?></span>
                     </div>
                     <div class="card-content">
+                        <div class="row">
+                            <input type="hidden" name="id" value="<?php echo $v['id']; ?>">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" name="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <span class="card-title">
                                 <div class="input-field col s12">
@@ -27,10 +39,11 @@
                             <span class="card-title">
                                 <div class="input-field col s12">
                                     <input placeholder="Placeholder"
-                                           id="first_name" type="number"
+                                           id="price" type="number"
                                            class="validate" name="price"
+                                           step="0.01"
                                            value="<?php echo $v['prix']; ?>">
-                                    <label for="first_name">Prix(€)</label>
+                                    <label for="price">Prix(€)</label>
                                 </div>
                             </span>
                         </div>
@@ -43,14 +56,18 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="date" class="datepicker">
-                                <label for="textarea1">Date de l'événement</label>
+                                <input id="date" type="date" name="date"
+                                       class="datepicker"
+                                       value="<?php echo $v['date']; ?>">
+                                <label for="date">Date de l'événement</label>
                             </div>
                         </div>
                     </div>
                     <div class="card-action">
-                        <a href="#">S'incrire</a>
-                        <a href="#">Poser une question</a>
+                        <div class="input-field">
+                            <input type="submit" class="btn" value="Modifier">
+                            <a href="#!mabite" class="btn">Supprimer</a>
+                        </div>
                     </div>
                 </form>
             </div>

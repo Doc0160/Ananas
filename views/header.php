@@ -51,7 +51,7 @@
                         <div class="row">
                             <div class="col s6">
                                 <a href="#!user">
-                                    <img class="circle" src="<?php echo ROOTURL; ?>/images/<?php echo ((!empty($data['avatar'])) ? $data['avatar'] : DEFAULT_USER_AVATAR); ?>">
+                                    <img class="responsive-img materialboxed" src="<?php echo ROOTURL.BASEAVATAR.'/'.((!empty($data['avatar'])) ? $data['avatar'] : DEFAULT_USER_AVATAR); ?>">
                                 </a>
                             </div>
 
@@ -64,6 +64,7 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="row"></div>
                     </div>
                 </li>
                 <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/"><i class="material-icons">cloud</i>Profile</a></li>
