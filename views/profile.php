@@ -38,11 +38,11 @@
                 no avatar
             <?php } ?>
         </div>
-        <form enctype="multipart/form-data" method="post">
+        <form action="" enctype="multipart/form-data" method="post">
             <div class="file-field input-field s12">
                 <div class="btn">
                     <span>Avatar</span>
-                    <input type="file" accept="image/*">
+                    <input type="file" accept="image/*" name="avatar">
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
