@@ -34,15 +34,14 @@ nav, .page-footer, .btn, .background {
     background: #f2f2f2;
 }
 
-<<<<<<< HEAD
 #carousel_2 {
     min-height: 10px;
     background: #f2f2f2;
-=======
+}
+
 .error {
     height: 400px;
     width:100%;
->>>>>>> 8bcbf2d4f74d5f7391fe7de46d22a4bb8f93f7ab
 }
 
 .heart
