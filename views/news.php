@@ -32,7 +32,7 @@
         <div class="col l6 m12">
             <div class="card hoverable">
                 <div class="card-image">
-                    <img src="<?php echo $picture_1; ?>">
+                    <img class="materialboxed" src="<?php echo $picture_1; ?>">
                     <span class="card-title"><?php echo $data[0]['name'] ; ?></span>
                 </div>
                 <div class="card-content">
@@ -47,7 +47,7 @@
         <div class="col l6 m12">
             <div class="card hoverable">
                 <div class="card-image">
-                    <img src="<?php echo $picture_2; ?>">
+                    <img class="materialboxed" src="<?php echo $picture_2; ?>">
                     <span class="card-title"><?php echo $data[1]['name'] ; ?></span>
                 </div>
                 <div class="card-content">

@@ -12,7 +12,7 @@
         <div class="col s6">
             <div class="card">
                 <div class="card-image">
-                    <img src="<?php echo ROOTURL."/logo.png"; ?>">
+                    <img class="materialboxed" src="<?php echo ROOTURL."/logo.png"; ?>">
                     <span class="card-title"><?php echo $v['name']; ?></span>
                 </div>
                 <div class="card-content">

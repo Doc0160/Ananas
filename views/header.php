@@ -64,6 +64,7 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="row"></div>
                     </div>
                 </li>
                 <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/"><i class="material-icons">cloud</i>Profile</a></li>
