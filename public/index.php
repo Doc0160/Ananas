@@ -33,9 +33,10 @@ $controller = new Controller(BASEPATH.'/controllers/', [
     'router' => $router,
 ]);
 
-$do_header = function() use($controller, $database) {
+$do_header = function() use($controller, $database, $session) {
     $controller->execute('header.php', [
         "database" => $database,
+        'session' => $session,
     ]);
 };
 
@@ -53,51 +54,17 @@ $router->add('/', function() use ($do_header, $view, $controller, $session, $dat
     $view->display('footer.php');
 });
 
-$router->post('/connexion/', function() use ($do_header, $controller, $session, $database, $cookie){
-    $controller->execute("login.php", [
-        "database" => $database,
-        "cookie" => $cookie,
-    ]);
-});
-
-$router->get('/connexion/', function() use ($do_header, $view){
-    $do_header();
-    $view->display('connexion.php', ["type" => "connexion"]);
-    $view->display('footer.php');
-});
-
-$router->post('/inscription/', function() use ($controller, $database, $cookie){
-    $controller->execute("inscription.php", [
-        "database" => $database,
-    ]);
-});
-
-$router->get('/inscription/', function() use ($do_header, $view){
-    $do_header();
-    $view->display('connexion.php', ["type" => "inscription"]);
-    $view->display('footer.php');
-});
-
-$router->add('/deconnexion/', function() use ($view, $session){
+$router->add('/deconnexion/', function() use ($do_header, $view, $session){
     $session->destroy();
-    $controller->execute('header.php');
+    $do_header();
     $view->display('deco.php');
     $view->display('footer.php');
 });
 
-$router->get('/photos/', function() use ($do_header, $view, $controller){
-    $do_header();
-    $controller->execute('photo.php', [
-        
-    ]);
-    $view->display('footer.php');
-});
-
-$router->post('/photos/', function() use ($router, $database, $session) {
-    $router->redirect("/");
-});
-
+require("../routes/connexion.php");
+require("../routes/inscription.php");
 require("../routes/profile.php");
+require("../routes/photos.php");
 
 $router->dispatch();
 
