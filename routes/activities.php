@@ -1,9 +1,9 @@
 <?php
 
-$router->get("/activities/", function() use($do_header, $view) {
+$router->get("/activities/", function() use($do_header, $controller, $view) {
     $do_header();
-    $view->display("activities.php");
-    $view->display("footer.php", []);
+    $controller->execute("activities.php", []);
+    $view->display("footer.php");
 });
 
 ?>
