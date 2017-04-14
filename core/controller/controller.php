@@ -9,6 +9,10 @@ class Controller {
         $this->context = $context;
     }
 
+    public function __debugInfo() {
+        return $this;
+    }
+
     public function execute(string $name, array $data = []) {
         $data = array_merge($data, $this->context);
         {

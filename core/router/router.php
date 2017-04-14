@@ -16,6 +16,12 @@ class Router{
     public function __set(string $url, callable $action){
         $this->addWithMethod("_", $url, $action);
     }
+
+    public function __debugInfo() {
+        return [
+            'routers' => $this->routes,
+        ];
+    }
     
     public function add(string $url, callable $action){
         $this->addWithMethod("_", $url, $action);

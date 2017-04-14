@@ -36,18 +36,25 @@
             <div class="card-image">
                 <img class="materialboxed" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
             </div>
-            <!-- <div class="card-content">
+            <!--
+                 <div class="card-content">
                  <?php var_dump($v); ?>
-                 </div> -->
+                 </div>
+               -->
             <div class="card-action">
                 <a href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
-                    Aimer(<?php echo $v["likes"]; ?>)
+                    <i class="material-icons"><?php echo ($v['you_like']) ? 'thumb_down' : 'thumb_up';?></i>
+                    (<?php echo $v["likes"]; ?>)
                 </a>
                 <?php if($data['can_delete']) { ?>
-                    <a href="<?php echo ROOTURL."/photos/delete/".$v["id"].'/'; ?>">Suprimer</a>
+                    <a href="<?php echo ROOTURL."/photos/delete/".$v["id"].'/'; ?>">
+                        <i class="material-icons">delete</i>
+                    </a>
                 <?php } ?>
                 <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>"
-                   download="<?php echo $v["picture"]; ?>">Télécharger</a>
+                   download="<?php echo $v["picture"]; ?>">
+                    <i class="material-icons">file_download</i>
+                </a>
             </div>
         </div>
     </div>
