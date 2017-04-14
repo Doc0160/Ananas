@@ -101,4 +101,3 @@ require("../routes/profile.php");
 
 $router->dispatch();
 
-$do_header();
