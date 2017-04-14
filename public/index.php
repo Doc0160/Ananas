@@ -19,8 +19,11 @@ $session = new Session();
 $database = Database::getInstance();
 $cookie = new Cookie();
 
-$controller = new Controller(BASEPATH.'/controllers/');
 $view = new View(BASEPATH.'/views/', [
+    'session' => $session,
+]);
+$controller = new Controller(BASEPATH.'/controllers/', [
+    'view' => $view,
     'session' => $session,
 ]);
 
@@ -37,7 +40,6 @@ $router->add('/', function() use ($view, $controller, $session, $database){
     {
         $controller->execute("caroussel_dl.php", [
             "database" => $database,
-            "view" => $view,
         ]);
     }
     $view->display('footer.php');
@@ -46,7 +48,6 @@ $router->add('/', function() use ($view, $controller, $session, $database){
 $router->post('/connexion/', function() use ($controller, $session, $database, $cookie){
     $controller->execute("login.php", [
         "database" => $database,
-        "session" => $session,
         "cookie" => $cookie,
     ]);
 });
@@ -58,10 +59,8 @@ $router->get('/connexion/', function() use ($view){
 });
 
 $router->post('/inscription/', function() use ($controller, $database, $cookie){
-    //require('../controllers/inscription.php');
     $controller->execute("inscription.php", [
         "database" => $database,
-        "view" => $view,
     ]);
 });
 

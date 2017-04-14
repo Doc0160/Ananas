@@ -21,12 +21,9 @@ if(
     $req->execute();
     
     Router::redirect("/");
-    //var_dump($_POST);
 } else {
     Router::redirect("/inscription/");
     $data["cookie"]->error = "Mot de passe invalide.";
 }
 
-
-//Router::redirect("/");
 ?>
