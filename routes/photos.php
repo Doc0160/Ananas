@@ -27,13 +27,19 @@ $router->get('/photos/delete/:id/', function($id) use ($router, $database){
     $router->redirect('/photos/');
 });
 
-$router->get('/photos/like/:id/', function($id) use ($router, $database){
+$router->get('/photos/like/:id/', function($id) use ($router, $session, $database){
+    $id = (int)$id;
+    $idu = $session->id;
+    $req = $database->prepare("INSERT INTO photo_like (id_user, id_photo) VALUES(:id_user, :id_photo)");
+    $req->bindParam(":id_photo", $id);
+    $req->bindParam(":id_user", $idu);
+    $req->execute();
 
+    $router->redirect('/photos/');
 });
 
 $router->post('/photos/', function() use ($router, $session, $database) {
-    //$router->redirect("/");
-    
+
     $id = (int)$session->id;
     $id_activity = (int)$_POST['activity'];
 

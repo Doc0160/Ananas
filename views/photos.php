@@ -40,7 +40,9 @@
                  <?php var_dump($v); ?>
                  </div> -->
             <div class="card-action">
-                <a href="#">Aimer(0)</a>
+                <a href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
+                    Aimer(<?php echo $v["likes"]; ?>)
+                </a>
                 <?php if($data['can_delete']) { ?>
                     <a href="<?php echo ROOTURL."/photos/delete/".$v["id"].'/'; ?>">Suprimer</a>
                 <?php } ?>
