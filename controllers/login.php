@@ -19,17 +19,17 @@ if (!empty($_POST['email']) && !empty($_POST['pass']))
 		$data["session"]->permissions = BitField::add($results["permissions"], DEFAULT_PERMISSION_UNKNOWN);
         $data["session"]->CSRF = CSRF::token();
         $data["session"]->avatar = $results["avatar"];
-        Router::redirect("/");
+        $data["router"]->redirect("/");
 	}
 	else
 	{
-		Router::redirect("/connexion/");
+		$data["router"]->redirect("/connexion/");
         $data['cookie']->error = "E-Mail ou mot de passe invalide.";
 	}
 }
 else
 {
-	Router::redirect("/connexion/");
+	$data["router"]->redirect("/connexion/");
     $data['cookie']->error = "Tous les champs doivent être remplis.";
 }
 

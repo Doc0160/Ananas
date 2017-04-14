@@ -4,10 +4,10 @@ class Router{
 
     private $routes = [];
     private $notFound;
-    private $path;
+    private $uri;
 
-    public function __construct(string $path){
-        $this->path = $path;
+    public function __construct(string $uri){
+        $this->uri = $uri;
         $this->notFound = function($url){
             echo "404 - $url was not found!";
         };
@@ -30,10 +30,10 @@ class Router{
     }
 
     public function addWithMethod(string $method, string $url, callable $action){
-        if(isset($this->routes[$method][BASEURI.$url])) {
+        if(isset($this->routes[$method][$this->uri.$url])) {
             throw new Exception("Path already exist: ".$url);
         }
-        $this->routes[$method][BASEURI.$url] = $action;
+        $this->routes[$method][$this->uri.$url] = $action;
     }
 
     public function setNotFound(callable $action){
@@ -56,9 +56,8 @@ class Router{
         call_user_func_array($this->notFound,[$_SERVER['REQUEST_URI']]);
     }
 
-    
     public function redirect(string $page) {
-        header('Location: '.$this->path.$page);
+        header('Location: '.$this->uri.$page);
     }
 
 }

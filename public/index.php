@@ -23,15 +23,15 @@ $cookie = new Cookie();
 $view = new View(BASEPATH.'/views/', [
     'session' => $session,
 ]);
-$controller = new Controller(BASEPATH.'/controllers/', [
-    'view' => $view,
-    'session' => $session,
-]);
-
-$router = new Router(BASEPATH);
+$router = new Router(BASEURI);
 $router->setNotFound(function($url) use ($view){
     $view->display('404.php');
 });
+$controller = new Controller(BASEPATH.'/controllers/', [
+    'view' => $view,
+    'session' => $session,
+    'router' => $router,
+]);
 
 $router->add('/', function() use ($view, $controller, $session, $database){
     $view->display('header.php');
