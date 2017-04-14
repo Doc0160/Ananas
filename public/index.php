@@ -31,7 +31,12 @@ $router->setNotFound(function($url) use ($view){
 
 $router->add('/',function() use ($view, $session, $database){
     $view->display('header.php');
-    require('../controllers/caroussel_dl.php');
+    $perm = (isset($session->permissions) ? $session->permissions : DEFAULT_PERMISSION_UNKNOWN);
+    if(BitField::has($perm, PERMISSION_READ_PHOTO))
+    {
+        require('../controllers/caroussel_dl.php');
+    }
+    var_dump($session->permissions);
     $view->display('footer.php');
 });
 

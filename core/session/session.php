@@ -1,8 +1,10 @@
 <?php
 
 class Session {
-    public function __construct() {
+    private $timeout;
+    public function __construct(int $timeout = 1800) {
         $this->start();
+        $this->timeout = $timeout;
     }
     
     public function __get(string $name) {
@@ -22,19 +24,26 @@ class Session {
     }
 
     public function has_data(): bool {
-        return !empty($_SESSION);
+        return isset($_SESSION) && !empty($_SESSION);
     }
 
     public function start() {
         if(!isset($_SESSION)){
             session_name("ananas");
             session_start();
+            if($this->has_data()) {
+                if (isset($_SESSION['LAST_ACTIVITY']) &&
+                    (time() - $_SESSION['LAST_ACTIVITY'] > $this->timeout)) {
+                    session_unset();
+                }
+                $_SESSION['LAST_ACTIVITY'] = time();
+            }
         }
     }
 
     public function destroy() {
         if(isset($_SESSION)){
-            $_SESSION = [];
+            session_unset();
             session_destroy();
         }
     }

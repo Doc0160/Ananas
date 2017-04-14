@@ -22,9 +22,9 @@ PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `groupe` (`name`, `permissions`)
-VALUES ('BDE', '9999999999'),
-('CESI', '999999999'),
-('Member', '0');
+VALUES ('BDE', 9999999999),
+('CESI', 99999999999),
+('Member', 3);
 
 CREATE TABLE `user` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
