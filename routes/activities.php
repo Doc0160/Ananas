@@ -11,9 +11,10 @@ if($session->has_data() &&
             $view->display("footer.php");
         });
 
-    $router->get("/activities/admin/", function() use($do_header, $view) {
+    $router->get("/activities/admin/", function()
+        use($do_header, $controller, $view, $database, $session) {
         $do_header();
-        $view->display("activities_admin.php");
+            $controller->execute("activities_admin.php", ['database' => $database]);
         $view->display("footer.php");
     });
 
