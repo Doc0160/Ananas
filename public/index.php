@@ -28,7 +28,6 @@ $controller = new Controller(BASEPATH.'/controllers/', [
 ]);
 
 $router = new Router();
-
 $router->setNotFound(function($url) use ($view){
     $view->display('404.php');
 });
@@ -36,8 +35,7 @@ $router->setNotFound(function($url) use ($view){
 $router->add('/', function() use ($view, $controller, $session, $database){
     $view->display('header.php');
     $perm = (isset($session->permissions) ? $session->permissions : DEFAULT_PERMISSION_UNKNOWN);
-    if(BitField::has($perm, PERMISSION_READ_PHOTO))
-    {
+    if(BitField::has($perm, PERMISSION_READ_PHOTO)) {
         $controller->execute("caroussel_dl.php", [
             "database" => $database,
         ]);
@@ -72,15 +70,18 @@ $router->get('/inscription/', function() use ($view){
 
 $router->add('/deconnexion/', function() use ($view, $session){
     $session->destroy();
-    Router::redirect("/");
+    $view->display('header.php');
+    $view->display('deco.php');
+    $view->display('footer.php');
 });
 
 $router->get('/photos/', function() use ($view){
     $view->display('header.php');
+    echo "fotofoto";
     $view->display('footer.php');
 });
 
-$router->post('/photos/', function() use ($database, $session){
+$router->post('/photos/', function() use ($database, $session) {
     Router::redirect("/");
 });
 
