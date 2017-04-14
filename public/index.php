@@ -34,7 +34,7 @@ $controller = new Controller(BASEPATH.'/controllers/', [
 ]);
 
 $router->add('/', function() use ($view, $controller, $session, $database){
-    $view->display('header.php');
+    $controller->execute('header.php');
     $perm = (isset($session->permissions) ? $session->permissions : DEFAULT_PERMISSION_UNKNOWN);
     if(BitField::has($perm, PERMISSION_READ_PHOTO)) {
         $controller->execute("carousel.php", [
@@ -55,7 +55,7 @@ $router->post('/connexion/', function() use ($controller, $session, $database, $
 });
 
 $router->get('/connexion/', function() use ($view){
-    $view->display('header.php');
+    $controller->execute('header.php');
     $view->display('connexion.php', ["type" => "connexion"]);
     $view->display('footer.php');
 });
@@ -67,20 +67,20 @@ $router->post('/inscription/', function() use ($controller, $database, $cookie){
 });
 
 $router->get('/inscription/', function() use ($view){
-    $view->display('header.php');
+    $controller->execute('header.php');
     $view->display('connexion.php', ["type" => "inscription"]);
     $view->display('footer.php');
 });
 
 $router->add('/deconnexion/', function() use ($view, $session){
     $session->destroy();
-    $view->display('header.php');
+    $controller->execute('header.php');
     $view->display('deco.php');
     $view->display('footer.php');
 });
 
 $router->get('/photos/', function() use ($view, $controller){
-    $view->display('header.php');
+    $controller->execute('header.php');
     $controller->execute('photo.php', [
         
     ]);
