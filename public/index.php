@@ -88,5 +88,13 @@ $router->post('/photos/', function() use ($router, $database, $session) {
     $router->redirect("/");
 });
 
+$router->get('/profile/', function() use ($view, $controller){
+    $view->display('header.php');
+    $controller->execute('profile.php', [
+        
+    ]);
+    $view->display('footer.php');
+});
+
 $router->dispatch();
 
