@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-image">
               <img src="images/babe_5.jpg">
-              <span class="card-title">Card Title</span>
+              <span class="card-title"><?php echo $data[0]['name'] ; ?></span>
               <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
@@ -21,7 +21,7 @@
             <div class="card">
               <div class="card-image">
                 <img src="images/babe_5.jpg">
-                <span class="card-title">Card Title</span>
+                <span class="card-title"<?php echo $data[1]['name'] ; ?></span>
                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
               </div>
               <div class="card-content">
@@ -36,7 +36,7 @@
             <div class="card">
               <div class="card-image">
                 <img src="images/babe_5.jpg">
-                <span class="card-title">Card Title</span>
+                <span class="card-title"><?php echo $data[2]['name'] ; ?></span>
                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
               </div>
               <div class="card-content">
