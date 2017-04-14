@@ -33,14 +33,14 @@ $controller = new Controller(BASEPATH.'/controllers/', [
     'router' => $router,
 ]);
 
-function do_header() {
+$do_header = function() use($controller, $database) {
     $controller->execute('header.php', [
         "database" => $database,
     ]);
-}
+};
 
-$router->add('/', function() use ($view, $controller, $session, $database){
-    do_header();
+$router->add('/', function() use ($do_header, $view, $controller, $session, $database){
+    $do_header();
     $perm = (isset($session->permissions) ? $session->permissions : DEFAULT_PERMISSION_UNKNOWN);
     if(BitField::has($perm, PERMISSION_READ_PHOTO)) {
         $controller->execute("carousel.php", [
