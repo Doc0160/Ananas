@@ -46,7 +46,7 @@
      $('.carousel').carousel({fullWidth: true});
      setInterval(function(){
         $('.carousel').carousel('next');
-     }, 1000);
+     }, 3000);
      $(".button-collapse").sideNav();
  });
 </script>
