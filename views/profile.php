@@ -33,7 +33,7 @@
     <div class="col s6 offset-s3">
         <div class="col s12">
             <?php if($data['avatar'] != null) { ?>
-                <img alt="avatar" src="">
+                <img alt="avatar" src="<?php echo ROOTURL.BASEAVATAR.'/'.$data['avatar']; ?>">
             <?php } else { ?>
                 no avatar
             <?php } ?>

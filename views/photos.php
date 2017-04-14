@@ -1,5 +1,5 @@
 <div class="row">
-    <form action="" method="post">
+    <form action="" enctype="multipart/form-data"  method="post">
         <div class="file-field input-field col s10">
             <div class="btn">
                 <span>File</span>
