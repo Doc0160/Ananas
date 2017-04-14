@@ -2,7 +2,7 @@
 <div class="row"></div>
 <div class="row">
     <div class="col s12">
-        <div class="carousel carousel-slider" data-indicators="true">
+        <div class="carousel carousel-slider" id="carousel_1" data-indicators="true">
             <?php
             foreach ($data['images'] as $key => $value) {
     	    ?>

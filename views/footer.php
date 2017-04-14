@@ -43,9 +43,17 @@
 <script type="text/javascript" src="<?php echo ROOTURL; ?>/materialize/js/materialize.min.js"></script>
 <script>
  $(document).ready(function(){
-     $('.carousel').carousel({fullWidth: true});
+     $('#carousel_1').carousel({fullWidth: true});
      setInterval(function(){
-        $('.carousel').carousel('next');
+        $('#carousel_1').carousel('next');
+     }, 3000);
+     $(".button-collapse").sideNav();
+ });
+
+ $(document).ready(function(){
+     $('#carousel_2').carousel({fullWidth: true});
+     setInterval(function(){
+        $('#carousel_2').carousel('next');
      }, 3000);
      $(".button-collapse").sideNav();
  });
