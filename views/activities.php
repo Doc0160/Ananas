@@ -14,16 +14,6 @@
                     <ul class="collapsible row" data-collapsible="expandable">
                         <li>
                             <div class="collapsible-header">
-                                <i class="material-icons">filter_drama</i>Plus
-                            </div>
-                            <div class="collapsible-body">
-                                <p>
-                                    <?php echo $v['description']; ?>
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="collapsible-header">
                                 <i class="material-icons">filter_drama</i>Prix
                             </div>
                             <div class="collapsible-body">
@@ -32,11 +22,21 @@
                                 </p>
                             </div>
                         </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons">filter_drama</i>Plus
+                            </div>
+                            <div class="collapsible-body">
+                                <p>
+                                    <?php echo $v['description']; ?>
+                                </p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="card-action">
-                    <a href="#!"><?php echo $v['prix']; ?>€</a>
                     <a href="#">S'incrire</a>
+                    <a href="#">Poser une question</a>
                 </div>
             </div>
         </div>
