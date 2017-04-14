@@ -61,7 +61,7 @@ $router->post('/connexion/', function() use ($controller, $session, $database, $
 });
 
 $router->get('/connexion/', function() use ($view){
-    $controller->execute('header.php');
+    $do_header();
     $view->display('connexion.php', ["type" => "connexion"]);
     $view->display('footer.php');
 });
@@ -73,7 +73,7 @@ $router->post('/inscription/', function() use ($controller, $database, $cookie){
 });
 
 $router->get('/inscription/', function() use ($view){
-    $controller->execute('header.php');
+    $do_header();
     $view->display('connexion.php', ["type" => "inscription"]);
     $view->display('footer.php');
 });
@@ -86,7 +86,7 @@ $router->add('/deconnexion/', function() use ($view, $session){
 });
 
 $router->get('/photos/', function() use ($view, $controller){
-    $controller->execute('header.php');
+    $do_header();
     $controller->execute('photo.php', [
         
     ]);
@@ -101,3 +101,4 @@ require("../routes/profile.php");
 
 $router->dispatch();
 
+$do_header();
