@@ -51,7 +51,6 @@
                    download="<?php echo $v["picture"]; ?>">
                     <i class="material-icons">file_download</i>
                 </a>
-                <?php if(count($v['comments']) > 0) { ?>
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header"><i class="material-icons">filter_drama</i>Comments</div>
@@ -67,10 +66,20 @@
                                     </div>
                                 </div>
                             <?php } ?>
+                            <div class="row collection-item">
+                                <form method="post" action="<?php echo BASEURI.'/photo/comment/'.$v['id']; ?>">
+                                    <div class="input-field col s9">
+                                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                        <label for="textarea1">Textarea</label>
+                                    </div>
+                                    <div class="input-field col s3">
+                                        <input type="submit" class="btn" value="GO">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </li>
                 </ul>
-                <?php } ?>
             </div>
         </div>
     </div>
