@@ -49,8 +49,7 @@
                         </div>
                     </div>
                     <div class="card-action">
-                        <a href="#">S'incrire</a>
-                        <a href="#">Poser une question</a>
+                        <input type="submit" value="S'incrire">
                     </div>
                 </form>
             </div>
