@@ -10,6 +10,10 @@ $router->get('/photos/', function()
         $view->display('footer.php');
     });
 
+$router->get('/photos/:id/', function($id) {
+    var_dump($id);
+});
+
 $router->post('/photos/', function() use ($router, $session, $database) {
     //$router->redirect("/");
     

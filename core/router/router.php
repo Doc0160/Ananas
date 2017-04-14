@@ -45,10 +45,9 @@ class Router{
         $_url = $_SERVER['REQUEST_URI'];
         if(isset($this->routes[$_SERVER['REQUEST_METHOD']])) {
             foreach ($this->routes[$_SERVER['REQUEST_METHOD']] as $url => $action) {
-                if(preg_match("#^".$_url."$#i", $url, $matches)){
-                //}
-                //if($url == $_SERVER['REQUEST_URI']){
-                    return $action();
+                if(preg_match("#^".$url."$#i", $_url, $matches)){
+                    array_shift($matches);
+                    return $action(...$matches);
                 }
             }
         }
