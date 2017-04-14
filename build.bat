@@ -1,4 +1,5 @@
 @echo off
+echo.
 git status
 echo.
 git pull
