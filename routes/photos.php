@@ -33,7 +33,14 @@ $router->get('/photos/like/:id/', function($id) use ($router, $session, $databas
     $req = $database->prepare("INSERT INTO photo_like (id_user, id_photo) VALUES(:id_user, :id_photo)");
     $req->bindParam(":id_photo", $id);
     $req->bindParam(":id_user", $idu);
-    $req->execute();
+    try {
+        $req->execute();
+    } catch(PDOException $e) {
+        $req = $database->prepare("DELETE FROM photo_like WHERE id_user=:id_user AND id_photo=:id_photo");
+        $req->bindParam(":id_photo", $id);
+        $req->bindParam(":id_user", $idu);
+        $req->execute();
+    }
 
     $router->redirect('/photos/');
 });
