@@ -53,14 +53,14 @@ $router->add('/', function() use ($do_header, $view, $controller, $session, $dat
     $view->display('footer.php');
 });
 
-$router->post('/connexion/', function() use ($controller, $session, $database, $cookie){
+$router->post('/connexion/', function() use ($do_header, $controller, $session, $database, $cookie){
     $controller->execute("login.php", [
         "database" => $database,
         "cookie" => $cookie,
     ]);
 });
 
-$router->get('/connexion/', function() use ($view){
+$router->get('/connexion/', function() use ($do_header, $view){
     $do_header();
     $view->display('connexion.php', ["type" => "connexion"]);
     $view->display('footer.php');
@@ -72,7 +72,7 @@ $router->post('/inscription/', function() use ($controller, $database, $cookie){
     ]);
 });
 
-$router->get('/inscription/', function() use ($view){
+$router->get('/inscription/', function() use ($do_header, $view){
     $do_header();
     $view->display('connexion.php', ["type" => "inscription"]);
     $view->display('footer.php');
@@ -85,7 +85,7 @@ $router->add('/deconnexion/', function() use ($view, $session){
     $view->display('footer.php');
 });
 
-$router->get('/photos/', function() use ($view, $controller){
+$router->get('/photos/', function() use ($do_header, $view, $controller){
     $do_header();
     $controller->execute('photo.php', [
         
