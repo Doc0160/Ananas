@@ -107,7 +107,9 @@ CHECK (`price` > 0)
 
 INSERT INTO `goodies` (`price`, `name`, `description`, `picture`)
 VALUES (300.1, 'Anal', 'hummm', 'babe_2.jpg'),
-(500.4, 'Vaginal', 'aaaah', 'babe_2.jpg');
+(500.4, 'Vaginal', 'aaaah', 'babe_2.jpg'),
+(500.4, 'Bucal', 'mumumu', 'babe_2.jpg'),
+(500.4, 'Nasal', 'aie', 'babe_2.jpg');
 
 CREATE TABLE `goodies_reservation` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,

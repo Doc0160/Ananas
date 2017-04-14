@@ -1,9 +1,9 @@
 <div class="row">
-    <form action="#">
+    <form action="" method="post">
         <div class="file-field input-field col s10">
             <div class="btn">
                 <span>File</span>
-                <input type="file">
+                <input type="file" name="photo">
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">

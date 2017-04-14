@@ -9,7 +9,9 @@ $router->get('/photos/', function() use ($do_header, $database, $view, $controll
 });
 
 $router->post('/photos/', function() use ($router, $database, $session) {
-    $router->redirect("/");
+    //$router->redirect("/");
+    var_dump($_FILES);
+    var_dump($_POST);
 });
 
 ?>
