@@ -10,7 +10,7 @@ $router->get('/photos/', function()
         $view->display('footer.php');
     });
 
-$router->get('/photos/:id/', function($id) {
+$router->get('/photos/delete/:id/', function($id) {
     var_dump($id);
 });
 
