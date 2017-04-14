@@ -44,9 +44,9 @@
 <script>
  $(document).ready(function(){
      $('.carousel').carousel({fullWidth: true});
-     setTimeout(function(){
+     setInterval(function(){
         $('.carousel').carousel('next');
-     }, 250);
+     }, 1000);
      $(".button-collapse").sideNav();
  });
 </script>
