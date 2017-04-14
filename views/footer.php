@@ -43,6 +43,9 @@
 <script type="text/javascript" src="<?php echo ROOTURL; ?>/materialize/js/materialize.min.js"></script>
 <script>
  $(document).ready(function(){
+     $(document).ready(function() {
+         $('select').material_select();
+     });
      $('#carousel_1').carousel({fullWidth: true});
      setInterval(function(){
         $('#carousel_1').carousel('next');

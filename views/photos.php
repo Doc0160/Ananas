@@ -1,7 +1,7 @@
 <div class="row">
     <form action="" enctype="multipart/form-data"  method="post">
         <div class="input-field col s2">
-            <select name="activity" style="display:block;">
+            <select name="activity">
                 <?php foreach($data['activities'] as $k => $v) { ?>
                     <option value="<?php echo $v['id']; ?>"><?php echo $v['name']; ?></option>
                 <?php } ?>
