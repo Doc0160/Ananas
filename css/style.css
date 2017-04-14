@@ -24,6 +24,11 @@ nav, .page-footer, .btn, .background {
     margin-left: 10px;
 }
 
+.nav-wrapper img
+{
+    margin-left: 10px;
+}
+
 .carousel.carousel-slider {
     min-height: 800px;
     background: #f2f2f2;
