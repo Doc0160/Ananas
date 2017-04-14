@@ -16,7 +16,7 @@ $router->post('/photos/', function() use ($router, $session, $database) {
     $id_activity = '';
 
     $req = $database->prepare("INSERT INTO photo (id_activity, picture) VALUES (:id_activity, :photo)");
-    $photo = time().$_FILES['avatar']['name'];
+    $photo = time().$_FILES['photo']['name'];
     $req->bindParam(":photo", $photo);
     $req->bindParam(":id_activity", $id_activity);
     
