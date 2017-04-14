@@ -1,5 +1,5 @@
 <?php
 
-$view->display('header.php');
+$data['view']->display('header.php');
 
 ?>
