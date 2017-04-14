@@ -18,6 +18,7 @@ if (!empty($_POST['email']) && !empty($_POST['pass']))
 		$data["session"]->id = $results["id"];
 		$data["session"]->permissions = BitField::add($results["permissions"], DEFAULT_PERMISSION_UNKNOWN);
         $data["session"]->CSRF = CSRF::token();
+        $data["session"]->avatar = $results["avatar"];
         Router::redirect("/");
 	}
 	else
