@@ -30,7 +30,7 @@ $router->setNotFound(function($url) use ($view){
 });
 
 $router->add('/',function() use ($view, $session, $database){
-    $view->display('header.php', ["session" => $_SESSION]);
+    $view->display('header.php');
     require('../controllers/caroussel_dl.php');
     $view->display('footer.php');
 });
@@ -55,7 +55,7 @@ $router->get('/inscription/',function() use ($view){
     $view->display('footer.php');
 });
 
-$router->get('/deconnexion/',function() use ($view, $session){
+$router->add('/deconnexion/',function() use ($view, $session){
     $session->destroy();
     Router::redirect("/");
 });
