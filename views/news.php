@@ -1,15 +1,19 @@
+<?php
+    $max_length = substr($data[0]['description'], 0, 100) . ('...');
+?>+ 
+
 <div class="row">
         <div class="col l6 m12">
             <div class="card hoverable">
                 <div class="card-image">
                     <img src="http://materializecss.com/images/sample-1.jpg">
-                    <span class="card-title"><?php echo  $data[0]['name']; ?></span>
+                    <span class="card-title"><?php echo $data[0]['name'] ; ?></span>
                 </div>
                 <div class="card-content">
-                    <p><?php echo  $data[0]['description']; ?></p>
+                    <p><?php echo $max_length; ?></p>
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">En savoir plus</a>
                 </div>
             </div>
         </div>
