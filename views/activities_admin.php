@@ -41,6 +41,7 @@
                                     <input placeholder="Placeholder"
                                            id="price" type="number"
                                            class="validate" name="price"
+                                           step="0.01"
                                            value="<?php echo $v['prix']; ?>">
                                     <label for="price">Prix(€)</label>
                                 </div>
@@ -56,7 +57,8 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="date" type="date" name="date"
-                                       class="datepicker">
+                                       class="datepicker"
+                                       value="<?php echo $v['date']; ?>">
                                 <label for="date">Date de l'événement</label>
                             </div>
                         </div>
