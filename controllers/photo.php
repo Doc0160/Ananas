@@ -1,5 +1,5 @@
 <?php
 
-$data["view"]->display('photo.php', []);
+$data["view"]->display('photos.php', []);
 
 ?>
