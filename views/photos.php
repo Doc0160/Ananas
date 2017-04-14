@@ -1,4 +1,20 @@
 <div class="row">
+    <form action="#">
+        <div class="file-field input-field col s10">
+            <div class="btn">
+                <span>File</span>
+                <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+        <div class="input-field col s2">
+            <input class="btn" type="submit" value="Upload">
+        </div>
+    </form>
+</div>
+<div class="row">
     <?php
     foreach($data['photos'] as $k => $v) {
         if($k % 3 == 0) {
