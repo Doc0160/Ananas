@@ -51,6 +51,26 @@
                    download="<?php echo $v["picture"]; ?>">
                     <i class="material-icons">file_download</i>
                 </a>
+                <?php if(count($v['comments']) > 0) { ?>
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Comments</div>
+                        <div class="collapsible-body collection">
+                            <?php foreach($v['comments'] as $kk => $vv) { ?>
+                                <div class="row collection-item">
+                                    <div class="col s3">
+                                        <?php echo $vv['username']; ?>
+                                        <img alt="avatar" class="responsive-img" src="<?php echo BASEURI.BASEAVATAR.'/'.((false) ? $vv['avatar'] : 'logo.png'); ?>">
+                                    </div>
+                                    <div class="col s9">
+                                        <p><?php echo $vv['comment']; ?></p>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </li>
+                </ul>
+                <?php } ?>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <?php
 
-$req = $data['database']->prepare('SELECT * FROM activity');
+$req = $data['database']->prepare('SELECT * FROM activity WHERE date IS NOT NULL');
 $req->execute();
 $activities = $req->fetchAll();
 

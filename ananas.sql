@@ -60,7 +60,7 @@ CHECK (`price` > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `activity` (`date`, `regular`, `prix`, `name`, `description`)
-VALUES (CURRENT_TIMESTAMP, NULL, 10.1, 'BDE', 'open BDE for my banana'),
+VALUES (CURRENT_TIMESTAMP, NULL, 10.1, 'LAN', 'LALAN'),
 (NULL, NULL, 10.1, 'PENISLAND', 'Many companies specialize in custom pens in bulk orders of hundreds or thousands of units, but where do you go if you want just one or two customized pens for that special gift? You come to Pen Island, where we are passionate about creating the exact pen you want, a pen that is as unique as you are. You do not need to be an design expert to own a one-of-a-kind pen, our team will work with you to find a design uniquely yours. For those do not have the time to design their own pens we offer our pre-designed line of pens, some of which can be additionally customized. Whether you are looking for a thin white EZ-Grip pen, a petite yellowheart wood pen, or a thick dark mahogany pen we have just the one for you. Our pens are available in several custom sizes. Once we built a pen so large that we had difficulty finding a box it would fit in. We Specialize In Wood We have been hand-crafting wooden pens for nearly three decades and our designs have won multiple awards. From single pens to bulk orders, virgin timber or reclaimed barn wood. Visit our wood page for further information.');
 
 CREATE TABLE `activity_inscription` (
@@ -132,7 +132,8 @@ CONSTRAINT `p_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON D
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `photo` (`picture`, `id_activity`)
-VALUES ('babe_1.jpg',1),
+VALUES ('photo1.jpg',1),
+('babe_1.jpg',1),
 ('babe_2.jpg',1),
 ('babe_3.jpg',1),
 ('babe_4.jpg',1),
@@ -147,6 +148,10 @@ PRIMARY KEY (`id`),
 CONSTRAINT `p_c_ibfk_1` FOREIGN KEY (`id_photo`) REFERENCES photo(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 CONSTRAINT `p_c_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `photo_comment` (`id_photo`, `id_user`, `comment`)
+VALUES (2, 1, 'SUCK MA DICK'),
+(2, 1, 'SUCK MA DICK TOO');
 
 CREATE TABLE `photo_like` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,

@@ -1,6 +1,6 @@
 <?php
 
-$req = $data['database']->prepare('SELECT id, name FROM activity');
+$req = $data['database']->prepare('SELECT id, name FROM activity WHERE date IS NOT NULL');
 $req->execute();
 $activities = $req->fetchAll();
 
@@ -14,13 +14,18 @@ $you_vote_req->bindParam(':id_user', $you_id);
 
 $req = $data['database']->prepare('SELECT COUNT(DISTINCT id_user) AS nb FROM photo_like WHERE id_photo=:id ORDER BY id DESC');
 
+$comments = $data['database']->prepare('SELECT photo_comment.*, user.username, user.avatar FROM photo_comment JOIN user ON user.id=photo_comment.id_user WHERE photo_comment.id_photo=:id');
+
 foreach($photos as $k => $v) {
     $you_vote_req->bindParam(':id', $v['id']);
     $you_vote_req->execute();
     $req->bindParam(':id', $v['id']);
     $req->execute();
+    $comments->bindParam(':id', $v['id']);
+    $comments->execute();
     $photos[$k]['likes'] = (int)$req->fetch()['nb'];
     $photos[$k]['you_like'] = ((int)$you_vote_req->fetch()['nb'] > 0);
+    $photos[$k]['comments'] = $comments->fetchAll();
 }
 
 $data["view"]->display('photos.php',
