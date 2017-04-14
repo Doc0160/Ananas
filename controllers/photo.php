@@ -4,7 +4,7 @@ $req = $data['database']->prepare('SELECT id, name FROM activity');
 $req->execute();
 $activities = $req->fetchAll();
 
-$req = $data['database']->prepare('SELECT * FROM photo ORDER BY photo.id DESC LIMIT 10');
+$req = $data['database']->prepare('SELECT photo.*, activity.name as activity FROM photo JOIN activity ON activity.id=photo.id_activity ORDER BY photo.id DESC LIMIT 10');
 $req->execute();
 $photos = $req->fetchAll();
 

@@ -35,12 +35,8 @@
         <div class="card hoverable">
             <div class="card-image">
                 <img class="materialboxed" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
+                <span class="card-title"><?php echo $v["activity"]; ?></span>
             </div>
-            <!--
-                 <div class="card-content">
-                 <?php var_dump($v); ?>
-                 </div>
-               -->
             <div class="card-action">
                 <a href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
                     <i class="material-icons"><?php echo ($v['you_like']) ? 'thumb_down' : 'thumb_up';?></i>
