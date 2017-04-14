@@ -51,7 +51,11 @@
  });
 
  $(document).ready(function(){
-     $('#carousel_2').carousel({fullWidth: true});
+     $('#carousel_2').carousel({
+            dist:0,
+            shift:100,
+            padding:10,
+        fullWidth: true});
      setInterval(function(){
         $('#carousel_2').carousel('next');
      }, 3000);
