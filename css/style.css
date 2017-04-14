@@ -11,6 +11,9 @@ body {
 nav, .page-footer, .btn, .background {
     background: #c2242a;
 }
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: #c2242a;
+}
 
 .btn:hover {
     background: #000000;
