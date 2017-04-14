@@ -1,6 +1,13 @@
 <div class="row">
     <form action="" enctype="multipart/form-data"  method="post">
-        <div class="file-field input-field col s10">
+        <div class="input-field col s2">
+            <select name="activity" style="display:block;">
+                <?php foreach($data['activities'] as $k => $v) { ?>
+                    <option value="<?php echo $v['id']; ?>"><?php echo $v['name']; ?></option>
+                <?php } ?>
+            </select>
+        </div>
+        <div class="file-field input-field col s8">
             <div class="btn">
                 <span>File</span>
                 <input type="file" name="photo">
