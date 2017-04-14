@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Ananas Corp.</title>
+        <title>BDE</title>
         <meta charset="utf-8">
         <link href="<?php echo ROOTURL; ?>/materialize/MaterialIcons.css" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="<?php echo ROOTURL; ?>/materialize/css/materialize.min.css" media="screen"/>
@@ -24,7 +24,7 @@
                 <a href="<?php echo ROOTURL; ?>">
                     <img alt="logo" src="<?php echo ROOTURL; ?>/logo.png" style="height:60px;">
                 </a>
-                <a href="<?php echo ROOTURL; ?>" class="brand-logo">Site Web BDE</a>
+                <a href="<?php echo ROOTURL; ?>" class="brand-logo">BDE</a>
                 <ul id="nav-mobile" class="right">
                     <?php if(!$data["session"]->has_data()) { ?>
                         <li>
