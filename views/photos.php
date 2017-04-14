@@ -53,7 +53,10 @@
                 </a>
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
-                        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Comments</div>
+                        <div class="collapsible-header">
+                            <i class="material-icons">filter_drama</i>
+                            Comments (<?php echo count($v['comments']); ?>)
+                        </div>
                         <div class="collapsible-body collection">
                             <?php foreach($v['comments'] as $kk => $vv) { ?>
                                 <div class="row collection-item">
