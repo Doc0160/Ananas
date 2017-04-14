@@ -13,7 +13,7 @@
                     <p><?php echo $max_length; ?></p>
                 </div>
                 <div class="card-action">
-                    <a href="#">En savoir plus</a>
+                    <a href="#">Voir l'article complet</a>
                 </div>
             </div>
         </div>
@@ -29,7 +29,7 @@
                        I am convenient because I require little markup to use effectively.</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">Voir l'article complet</a>
                 </div>
             </div>
         </div>
