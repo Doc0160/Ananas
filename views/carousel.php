@@ -5,7 +5,7 @@
         <?php
         foreach ($data['images'] as $key => $value) {
     	?>
-    	    <a class="carousel-item" href="#one!">
+    	    <a class="carousel-item" href="<?php echo ROOTURL."/photos/"; ?>">
                 <img src="<?php echo ROOTURL."/images/".$value["picture"]; ?>">
             </a>
     	<?php
