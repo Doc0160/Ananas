@@ -2,12 +2,18 @@
 
 class Controller {
     private $path;
-    public function __construct(string $path) {
+    private $context;
+    
+    public function __construct(string $path, array $context = []) {
         $this->path = $path;
+        $this->context = $context;
     }
 
     public function execute(string $name, array $data) {
-        require_once($this->path.$name);
+        $data = array_merge($data, $this->context);
+        {
+            require_once($this->path.$name);
+        }
     }
 }
 

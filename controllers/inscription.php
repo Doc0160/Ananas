@@ -11,7 +11,7 @@ if(
     $groupe = DEFAULT_USER_GROUP;
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     
-    $req = $database->prepare("INSERT INTO user (username, name, pass, email, id_groupe) VALUES (:username, :name, :pass, :mail, :groupe)");
+    $req = $data["database"]->prepare("INSERT INTO user (username, name, pass, email, id_groupe) VALUES (:username, :name, :pass, :mail, :groupe)");
 
     $req->bindParam(":username", $_POST['username']);
     $req->bindParam(":name", $name);
@@ -24,7 +24,7 @@ if(
     //var_dump($_POST);
 } else {
     Router::redirect("/inscription/");
-    $cookie->error = "Mot de passe invalide.";
+    $data["cookie"]->error = "Mot de passe invalide.";
 }
 
 

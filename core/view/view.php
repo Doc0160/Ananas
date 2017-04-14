@@ -3,9 +3,10 @@
 class View{
 
     private $context;
+    private $path;
     
-    public function __construct(ViewLoader $viewLoader, array $context = []) {
-        $this->viewLoader = $viewLoader;
+    public function __construct(string $path, array $context = []) {
+        $this->path = $path;
         $this->context = $context;
     }
 
@@ -28,19 +29,15 @@ class View{
         }
     }
 
-    public function display(string $viewName, array $data = [], bool $noerror = false) {
+    public function display(string $viewName, array $data = []) {
         /*echo */
         $this->sanitize($data);
         $data = array_merge($data, $this->context);
-        
-        if($noerror) {
-            error_reporting(0);
+        if(file_exists($this->path.$viewName)) {
+            require($this->path.$viewName);
+            return;
         }
-        {
-            require($this->viewLoader->load($viewName));
-        }
-        if($noerror) {
-            error_reporting(-1);
-        }
+        throw new Exception("View does not exist: ".$this->path.$viewName);
+
     }
 }

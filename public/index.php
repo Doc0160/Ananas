@@ -19,11 +19,10 @@ $session = new Session();
 $database = Database::getInstance();
 $cookie = new Cookie();
 
-$view = new View(new ViewLoader(BASEPATH.'/views/'), [
+$controller = new Controller(BASEPATH.'/controllers/');
+$view = new View(BASEPATH.'/views/', [
     'session' => $session,
 ]);
-
-$controller = new Controller(BASEPATH.'/controllers/');
 
 $router = new Router();
 
@@ -58,8 +57,12 @@ $router->get('/connexion/', function() use ($view){
     $view->display('footer.php');
 });
 
-$router->post('/inscription/', function() use ($database, $cookie){
-    require('../controllers/inscription.php');
+$router->post('/inscription/', function() use ($controller, $database, $cookie){
+    //require('../controllers/inscription.php');
+    $controller->execute("inscription.php", [
+        "database" => $database,
+        "view" => $view,
+    ]);
 });
 
 $router->get('/inscription/', function() use ($view){
