@@ -2,11 +2,20 @@
 <div class="row"></div>
 <div class="row">
     <div class="col s6 offset-s3">
-        <div class="input-field col s12">
+        <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
             <input type="text" id="username" readonly="readonly"
                    value="<?php echo $data['username']; ?>">
         </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <input type="text" id="groupe" readonly="readonly"
+                   value="<?php echo $data['groupe']; ?>">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s6 offset-s3">
         <form>
             <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
@@ -29,11 +38,11 @@
                 no avatar
             <?php } ?>
         </div>
-        <form>
+        <form enctype="multipart/form-data" method="post">
             <div class="file-field input-field s12">
                 <div class="btn">
                     <span>Avatar</span>
-                    <input type="file">
+                    <input type="file" accept="image/*">
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
