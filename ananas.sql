@@ -51,11 +51,12 @@ CREATE TABLE `activity` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `date` timestamp,
 `regular` int(11) UNSIGNED,
-`prix` int(11) UNSIGNED,
+`prix` float,
 `name` varchar(255),
 `description` varchar(2048) NOT NULL,
 `picture` varchar(255),
-PRIMARY KEY (`id`)
+PRIMARY KEY (`id`),
+CHECK (`price` > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `activity` (`date`, `regular`, `prix`, `name`, `description`)
