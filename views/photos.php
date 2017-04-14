@@ -19,7 +19,8 @@
             <div class="card-action">
                 <a href="#">Like</a>
                 <a href="#">Dislike</a>
-                <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>">Full erection</a>
+                <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>"
+                   download="<?php echo $v["picture"]; ?>">Download</a>
             </div>
         </div>
     </div>
