@@ -51,7 +51,7 @@
                         <div class="row">
                             <div class="col s6">
                                 <a href="#!user">
-                                    <img class="circle" src="<?php echo ROOTURL; ?>/images/<?php echo ((false) ? "" : DEFAULT_USER_AVATAR); ?>">
+                                    <img class="circle" src="<?php echo ROOTURL; ?>/images/<?php echo ((!empty($data['avatar'])) ? $data['avatar'] : DEFAULT_USER_AVATAR); ?>">
                                 </a>
                             </div>
 
