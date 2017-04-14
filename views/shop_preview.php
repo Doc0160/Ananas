@@ -40,54 +40,54 @@
     else{
         $pic_3 = ROOTURL."/logo.png";
     }
-?>
+  ?>
 
   <div class="row">
-    <div class="col s12">
+      <div class="col s12">
 
-      <div class="col s4">
-        <div class="card hoverable">
-          <div class="card">
-            <div class="card-image">
-              <img src="<?php echo $pic_1; ?>">
-              <span class="card-title"><?php echo $data[0]['name']; ?></span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-            <div class="card-content">
-              <p><?php echo $desc_1; ?></p>
-            </div>
-            </div>
+          <div class="col s4">
+              <div class="card hoverable">
+                  <div class="card">
+                      <div class="card-image">
+                          <img class="materialboxed" alt="photo" src="<?php echo $pic_1; ?>">
+                          <span class="card-title"><?php echo $data[0]['name']; ?></span>
+                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                      </div>
+                      <div class="card-content">
+                          <p><?php echo $desc_1; ?></p>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
 
-        <div class="col s4">
-          <div class="card hoverable">
-            <div class="card">
-              <div class="card-image">
-                <img src="<?php echo $pic_2; ?>">
-                <span class="card-title"><?php echo $data[1]['name']; ?></span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          <div class="col s4">
+              <div class="card hoverable">
+                  <div class="card">
+                      <div class="card-image">
+                          <img class="materialboxed" alt="photo" src="<?php echo $pic_2; ?>">
+                          <span class="card-title"><?php echo $data[1]['name']; ?></span>
+                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                      </div>
+                      <div class="card-content">
+                          <p><?php echo $desc_2; ?></p>
+                      </div>
+                  </div>
               </div>
-              <div class="card-content">
-                <p><?php echo $desc_2; ?></p>
-              </div>
-            </div>
           </div>
-        </div>
 
-        <div class="col s4">
-          <div class="card hoverable">
-            <div class="card">
-              <div class="card-image">
-                <img src="<?php echo $pic_3; ?>">
-                <span class="card-title"><?php echo $data[2]['name']; ?></span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+          <div class="col s4">
+              <div class="card hoverable">
+                  <div class="card">
+                      <div class="card-image">
+                          <img class="materialboxed" alt="photo" src="<?php echo $pic_3; ?>">
+                          <span class="card-title"><?php echo $data[2]['name']; ?></span>
+                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                      </div>
+                      <div class="card-content">
+                          <p><?php echo $desc_3; ?></p>
+                      </div>
+                  </div>
               </div>
-              <div class="card-content">
-                <p><?php echo $desc_3; ?></p>
-              </div>
-            </div>
           </div>
-        </div>
-    </div>
+      </div>
   </div>  

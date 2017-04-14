@@ -106,9 +106,9 @@ CHECK (`price` > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `goodies` (`price`, `name`, `description`, `picture`)
-VALUES (300.1, 'Anal', 'hummm', 'babe_2.jpg'),
-(500.4, 'Vaginal', 'aaaah', 'babe_2.jpg'),
-(500.4, 'Bucal', 'mumumu', 'babe_2.jpg'),
+VALUES (300.1, 'Logo Exia Reims', 'Une coupe en plastique de la forme de logo snkjfdkdsksbkfjbskjbfkjbsdkjbfkhbskhfbkshbkfhbkshbfkhbskhfbkhsbdkh', 'photo1.jpg'),
+(500.4, 'TRUC', 'JE DECRIS UN TRUC', NULL),
+(500.4, 'Bucal', 'mumumu', 'photo2.jpg'),
 (500.4, 'Nasal', 'aie', 'babe_2.jpg');
 
 CREATE TABLE `goodies_reservation` (
@@ -133,6 +133,7 @@ CONSTRAINT `p_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON D
 
 INSERT INTO `photo` (`picture`, `id_activity`)
 VALUES ('photo1.jpg',1),
+('photo2.jpg',1),
 ('babe_1.jpg',1),
 ('babe_2.jpg',1),
 ('babe_3.jpg',1),
