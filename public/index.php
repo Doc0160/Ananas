@@ -36,18 +36,20 @@ $router->add('/', function() use ($view, $controller, $session, $database){
     $perm = (isset($session->permissions) ? $session->permissions : DEFAULT_PERMISSION_UNKNOWN);
     if(BitField::has($perm, PERMISSION_READ_PHOTO))
     {
-        //require('../controllers/caroussel_dl.php');
         $controller->execute("caroussel_dl.php", [
             "database" => $database,
             "view" => $view,
         ]);
     }
-    //$controller->execute("caroussel_dl.php", $view, $session, $database);
     $view->display('footer.php');
 });
 
-$router->post('/connexion/', function() use ($session, $database, $cookie){
-    require('../controllers/login.php');
+$router->post('/connexion/', function() use ($controller, $session, $database, $cookie){
+    $controller->execute("login.php", [
+        "database" => $database,
+        "session" => $session,
+        "cookie" => $cookie,
+    ]);
 });
 
 $router->get('/connexion/', function() use ($view){

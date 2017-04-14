@@ -22,7 +22,7 @@ class View{
                 $value = (array) $value;
                 
             } elseif(is_string($value)) {
-                $value = htmlspecialchars($value);
+                $value = htmlentities($value);
                 
             }
         }

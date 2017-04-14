@@ -22,7 +22,8 @@ nav, .page-footer, .btn, .background {
 }
 
 .carousel.carousel-slider {
-    min-height: 500px;
+    min-height: 800px;
+    background: #f2f2f2;
 }
 
 .heart
