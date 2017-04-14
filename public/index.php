@@ -75,9 +75,10 @@ $router->add('/deconnexion/', function() use ($view, $session){
     $view->display('footer.php');
 });
 
-$router->get('/photos/', function() use ($view){
+$router->get('/photos/', function() use ($view, $controller){
     $view->display('header.php');
-    echo "fotofoto";
+    $controller->execute('photo.php', [
+    ]);
     $view->display('footer.php');
 });
 
