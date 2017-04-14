@@ -105,7 +105,8 @@ CHECK (`price` > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `goodies` (`price`, `name`, `description`, `picture`)
-VALUES (300.1, 'Anal', 'hummm', 'babe_2.jpg');
+VALUES (300.1, 'Anal', 'hummm', 'babe_2.jpg'),
+(500.4, 'Vaginal', 'aaaah', 'babe_2.jpg');
 
 CREATE TABLE `goodies_reservation` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
