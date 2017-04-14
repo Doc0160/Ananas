@@ -11,7 +11,7 @@
     <div class="col s4">
         <div class="card hoverable">
             <div class="card-image">
-                <img src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
+                <img class="materialboxed" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
             </div>
             <!-- <div class="card-content">
                  <?php var_dump($v); ?>

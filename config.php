@@ -19,7 +19,7 @@ define("DATABASE_DATABASE", 'ananas');
 
 // DEFAUT USER
 define("DEFAULT_USER_GROUP", 3);
-define("DEFAULT_USER_AVATAR", "_peni.jpg");
+define("DEFAULT_USER_AVATAR", "logo.png");
 
 // PERMISSION
 $i = 0;
