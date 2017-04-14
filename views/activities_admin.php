@@ -6,12 +6,24 @@
     ?>
         <div class="col s6">
             <div class="card">
-                <form>
+                <form method="post">
                     <div class="card-image">
                         <img src="<?php echo ROOTURL."/logo.png"; ?>">
                         <span class="card-title"><?php echo $v['name']; ?></span>
                     </div>
                     <div class="card-content">
+                        <div class="row">
+                            <input type="hidden" name="id" value="<?php echo $v['id']; ?>">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" name="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate" type="text">
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <span class="card-title">
                                 <div class="input-field col s12">
@@ -43,13 +55,17 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="date" type="date" class="datepicker">
+                                <input id="date" type="date" name="date"
+                                       class="datepicker">
                                 <label for="date">Date de l'événement</label>
                             </div>
                         </div>
                     </div>
                     <div class="card-action">
-                        <input type="submit" value="S'incrire">
+                        <div class="input-field">
+                            <input type="submit" class="btn" value="Modifier">
+                            <a href="#!mabite" class="btn">Supprimer</a>
+                        </div>
                     </div>
                 </form>
             </div>
