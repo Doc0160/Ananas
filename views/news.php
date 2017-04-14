@@ -1,6 +1,17 @@
 <?php
-    $article_1 = substr($data[0]['description'], 0, 500) . ('...');
-    $article_2 = substr($data[1]['description'], 0, 500) . ('...');
+    if (strlen($data[0]['description']) > 500){
+        $article_1 = substr($data[0]['description'], 0, 500) . ('...');
+    }
+    else{
+        $article_1 = $data[0]['description'];
+    }
+
+    if (strlen($data[1]['description']) > 500){
+        $article_2 = substr($data[1]['description'], 0, 500) . ('...');
+    }
+    else{
+        $article_2 = $data[1]['description'];
+    }
 ?>
 
 <div class="row">
