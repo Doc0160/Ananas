@@ -10,8 +10,25 @@ $router->get('/photos/', function()
         $view->display('footer.php');
     });
 
-$router->get('/photos/delete/:id/', function($id) {
-    var_dump($id);
+$router->get('/photos/delete/:id/', function($id) use ($router, $database){
+    $id = (int)$id;
+    $req = $database->prepare("SELECT picture FROM photo WHERE id=:id");
+    $req->bindParam(":id", $id);
+    $req->execute();
+    $filename = $req->fetch()['picture'];
+    var_dump($filename);
+    
+    $req = $database->prepare("DELETE FROM photo WHERE id=:id");
+    $req->bindParam(":id", $id);
+    $req->execute();
+
+    unlink(BASEPATH.BASEIMAGE.'/'.$filename);
+
+    $router->redirect('/photos/');
+});
+
+$router->get('/photos/like/:id/', function($id) use ($router, $database){
+
 });
 
 $router->post('/photos/', function() use ($router, $session, $database) {
@@ -27,8 +44,7 @@ $router->post('/photos/', function() use ($router, $session, $database) {
 
     if(is_uploaded_file($_FILES['photo']['tmp_name'])) {
         if(move_uploaded_file($_FILES['photo']['tmp_name'],
-                              BASEPATH.BASEIMAGE.'/'.
-                              time().$_FILES['photo']['name']))
+                              BASEPATH.BASEIMAGE.'/'.$photo))
         {
             $req->execute();
             $router->redirect("/photos/");

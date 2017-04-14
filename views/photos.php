@@ -42,7 +42,7 @@
             <div class="card-action">
                 <a href="#">Aimer(0)</a>
                 <?php if($data['can_delete']) { ?>
-                    <a href="#">Suprimer</a>
+                    <a href="<?php echo ROOTURL."/photos/delete/".$v["id"].'/'; ?>">Suprimer</a>
                 <?php } ?>
                 <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>"
                    download="<?php echo $v["picture"]; ?>">Télécharger</a>
