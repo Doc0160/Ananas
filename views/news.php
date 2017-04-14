@@ -39,7 +39,7 @@
                     <p><?php echo $article_1; ?></p>
                 </div>
                 <div class="card-action">
-                    <a href="#">Voir l'activité correspondante</a>
+                    <a href="<?php echo ROOTURL."/activities/"; ?>">Voir l'activité correspondante</a>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                     <p><?php echo $article_2; ?></p>
                 </div>
                 <div class="card-action">
-                    <a href="#">Voir l'activité correspondante</a>
+                    <a href="<?php echo ROOTURL."/activities/"; ?>">Voir l'activité correspondante</a>
                 </div>
             </div>
         </div>
