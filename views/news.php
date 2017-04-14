@@ -12,13 +12,27 @@
     else{
         $article_2 = $data[1]['description'];
     }
+
+    if (!empty($data[0]['picture'])){
+        $picture_1 = $data[0]['picture'];
+    }
+    else{
+        $picture_1 = ROOTURL."/images/wat.jpg";
+    }
+
+    if (!empty($data[1]['picture'])){
+        $picture_2 = $data[1]['picture'];
+    }
+    else{
+        $picture_2 = ROOTURL."/images/wat.jpg";
+    }
 ?>
 
 <div class="row">
         <div class="col l6 m12">
             <div class="card hoverable">
                 <div class="card-image">
-                    <img src="http://materializecss.com/images/sample-1.jpg">
+                    <img src="<?php echo $picture_1; ?>">
                     <span class="card-title"><?php echo $data[0]['name'] ; ?></span>
                 </div>
                 <div class="card-content">
@@ -33,7 +47,7 @@
         <div class="col l6 m12">
             <div class="card hoverable">
                 <div class="card-image">
-                    <img src="http://materializecss.com/images/sample-1.jpg">
+                    <img src="<?php echo $picture_2; ?>">
                     <span class="card-title"><?php echo $data[1]['name'] ; ?></span>
                 </div>
                 <div class="card-content">
