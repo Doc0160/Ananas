@@ -1,4 +1,10 @@
-
+<div class="row"></div>
+<?php if($data['session']->has_data() &&
+         Bitfield::has($data['session']->permissions, PERMISSION_MODIFY_ACTIVITY)) { ?>
+<div class="row">
+    <a href="<?php echo ROOTURL."/activities/admin/"; ?>" class="btn col s12">ADMIN</a>
+</div>
+<?php } ?>
 <div class="row">
     <?php
     foreach($data['activities'] as $k => $v) {
