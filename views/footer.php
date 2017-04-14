@@ -48,6 +48,10 @@
         $('.carousel').carousel('next');
      }, 3000);
      $(".button-collapse").sideNav();
+     $('.datepicker').pickadate({
+         selectMonths: true,
+         selectYears: 15,
+     });
  });
 </script>
     </body>
