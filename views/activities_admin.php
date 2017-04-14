@@ -27,10 +27,10 @@
                             <span class="card-title">
                                 <div class="input-field col s12">
                                     <input placeholder="Placeholder"
-                                           id="first_name" type="number"
+                                           id="price" type="number"
                                            class="validate" name="price"
                                            value="<?php echo $v['prix']; ?>">
-                                    <label for="first_name">Prix(€)</label>
+                                    <label for="price">Prix(€)</label>
                                 </div>
                             </span>
                         </div>
@@ -43,8 +43,8 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input type="date" class="datepicker">
-                                <label for="textarea1">Date de l'événement</label>
+                                <input id="date" type="date" class="datepicker">
+                                <label for="date">Date de l'événement</label>
                             </div>
                         </div>
                     </div>
