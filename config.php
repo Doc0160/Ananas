@@ -7,6 +7,7 @@ define('BASEPATH', __DIR__);
 define('BASEURI', "/ananas");
 define('HOST', 'localhost');
 define('ROOTURL', 'http://'.HOST.BASEURI);
+define('BASEIMAGE', "/images");
 
 // DATABASE
 define("DATABASE_USERNAME", 'root');

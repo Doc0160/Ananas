@@ -20,7 +20,7 @@
             <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>
                 <input id="email" type="email" name="email" class="validate"
-                       value="<?php echo $data['email']; ?>">
+                       value="<?php echo $data['email']; ?>" required>
                 <label for="email">Email</label>
             </div>
             <div class="col s12">
@@ -42,7 +42,7 @@
             <div class="file-field input-field s12">
                 <div class="btn">
                     <span>Avatar</span>
-                    <input type="file" accept="image/*" name="avatar">
+                    <input type="file" accept="image/*" name="avatar" required>
                 </div>
                 <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">
