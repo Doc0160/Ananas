@@ -16,6 +16,10 @@ nav, .page-footer, .btn, .background {
     color: #c2242a;
 }
 
+.red {
+    background: #c2242a !important;
+}
+
 .btn:hover {
     background: #000000;
 }
