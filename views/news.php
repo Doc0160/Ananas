@@ -17,14 +17,14 @@
         $picture_1 = $data[0]['picture'];
     }
     else{
-        $picture_1 = ROOTURL."/images/wat.jpg";
+        $picture_1 = ROOTURL."/logo.png";
     }
 
     if (!empty($data[1]['picture'])){
         $picture_2 = $data[1]['picture'];
     }
     else{
-        $picture_2 = ROOTURL."/images/wat.jpg";
+        $picture_2 = ROOTURL."/logo.png";
     }
 ?>
 
