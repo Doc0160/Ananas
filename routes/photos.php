@@ -26,7 +26,7 @@ $router->post('/photos/', function() use ($router, $session, $database) {
                               time().$_FILES['photo']['name']))
         {
             $req->execute();
-            $router->redirect("/");
+            $router->redirect("/photos/");
         }
     } else {
         var_dump($_FILES);
