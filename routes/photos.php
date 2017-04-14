@@ -11,10 +11,6 @@ $router->get('/photos/', function()
 
 $router->post('/photos/', function() use ($router, $session, $database) {
     //$router->redirect("/");
-
-    $req = $database->prepare('SELECT id, name FROM activity');
-    $req->execute();
-    $activities = $req->fecthAll();
     
     $id = (int)$session->id;
     $id_activity = '';
