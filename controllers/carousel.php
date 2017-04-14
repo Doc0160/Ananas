@@ -4,6 +4,6 @@ $records = $data["database"]->prepare('SELECT * FROM photo ORDER BY id DESC LIMI
 $records->execute();
 $results = $records->fetchAll();
 
-$data["view"]->display('caroussel.php', ["images" => $results]);
+$data["view"]->display('carousel.php', ["images" => $results]);
 
 ?>

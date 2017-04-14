@@ -36,7 +36,7 @@ $router->add('/', function() use ($view, $controller, $session, $database){
     $view->display('header.php');
     $perm = (isset($session->permissions) ? $session->permissions : DEFAULT_PERMISSION_UNKNOWN);
     if(BitField::has($perm, PERMISSION_READ_PHOTO)) {
-        $controller->execute("caroussel_dl.php", [
+        $controller->execute("carousel.php", [
             "database" => $database,
         ]);
     }
