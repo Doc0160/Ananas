@@ -4,8 +4,10 @@ class Router{
 
     private $routes = [];
     private $notFound;
+    private $path;
 
-    public function __construct(){
+    public function __construct(string $path){
+        $this->path = $path;
         $this->notFound = function($url){
             echo "404 - $url was not found!";
         };
@@ -55,8 +57,8 @@ class Router{
     }
 
     
-    public static function redirect(string $page) {
-        header('Location: '.BASEURI.$page);
+    public function redirect(string $page) {
+        header('Location: '.$this->path.$page);
     }
 
 }

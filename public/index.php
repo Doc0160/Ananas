@@ -27,7 +27,7 @@ $controller = new Controller(BASEPATH.'/controllers/', [
     'session' => $session,
 ]);
 
-$router = new Router();
+$router = new Router(BASEPATH);
 $router->setNotFound(function($url) use ($view){
     $view->display('404.php');
 });
@@ -78,12 +78,13 @@ $router->add('/deconnexion/', function() use ($view, $session){
 $router->get('/photos/', function() use ($view, $controller){
     $view->display('header.php');
     $controller->execute('photo.php', [
+        
     ]);
     $view->display('footer.php');
 });
 
-$router->post('/photos/', function() use ($database, $session) {
-    Router::redirect("/");
+$router->post('/photos/', function() use ($router, $database, $session) {
+    $router->redirect("/");
 });
 
 $router->dispatch();
