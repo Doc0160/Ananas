@@ -10,7 +10,7 @@ $router->get('/profile/', function() use ($view, $controller, $database){
 
 $router->post('/profile/', function() {
     var_dump($_FILES);
-    var_dump($_FILES);
+    var_dump($_POST);
 });
 
 ?>
