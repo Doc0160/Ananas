@@ -21,21 +21,21 @@
     }
 
     if (!empty($data[0]['picture'])){
-        $pic_1 = ROOTURL."/images/babe_5.jpg";
+        $pic_1 = ROOTURL."/images/".$data[0]['picture'];
     }
     else{
         $pic_1 = ROOTURL."/logo.png";
     }
 
     if (!empty($data[1]['picture'])){
-        $pic_2 = ROOTURL."/images/babe_5.jpg";
+        $pic_2 = ROOTURL."/images/".$data[1]['picture'];
     }
     else{
         $pic_2 = ROOTURL."/logo.png";
     }
 
     if (!empty($data[2]['picture'])){
-        $pic_3 = ROOTURL."/images/babe_5.jpg";
+        $pic_3 = ROOTURL."/images/".$data[2]['picture'];
     }
     else{
         $pic_3 = ROOTURL."/logo.png";
