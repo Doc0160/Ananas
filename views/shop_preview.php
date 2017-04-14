@@ -1,16 +1,9 @@
 <div class="row">
-        <div class="col s12 m4 l2">
+        <div class="col l12">
             <div class="card hoverable">
-                <div class="card-image">
-                    <img src="<?php echo $picture_1; ?>">
-                    <span class="card-title"></span>
-                </div>
                 <div class="card-content">
-                    <p></p>
                 </div>
-                <div class="card-action">
-                    <a href="#">Voir l'activité correspondante</a>
-                </div>
+                <a class="col s12 btn" href="<?php echo ROOTURL."/photos/"; ?>">Acceder à la boutique</a>
             </div>
         </div>
 </div>

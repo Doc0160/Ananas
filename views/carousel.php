@@ -13,8 +13,6 @@
             }
             ?>
         </div>
+        <a class="col s12 btn" href="<?php echo ROOTURL."/photos/"; ?>">Voir plus de photos</a>
     </div>
-    <a class="col s12 btn" href="<?php echo ROOTURL."/photos/"; ?>">
-        Voir plus de photos
-    </a>
 </div>
