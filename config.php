@@ -8,6 +8,7 @@ define('BASEURI', "/ananas");
 define('HOST', 'localhost');
 define('ROOTURL', 'http://'.HOST.BASEURI);
 define('BASEIMAGE', "/images");
+define('BASEAVATAR', "/avatars");
 
 // DATABASE
 define("DATABASE_USERNAME", 'root');

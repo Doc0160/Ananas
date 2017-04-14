@@ -8,8 +8,8 @@ $router->get("/activities/", function()
     });
 
 if($session->has_data() &&
-   Bitfield::has($session->permissions, PERMISSION_MODIFY_ACTIVITY) ||
-   Bitfield::has($session->permissions, PERMISSION_DELETE_ACTIVITY)) {
+   (Bitfield::has($session->permissions, PERMISSION_MODIFY_ACTIVITY) ||
+   Bitfield::has($session->permissions, PERMISSION_DELETE_ACTIVITY))) {
 
     $router->get("/activities/admin/", function()
         use($do_header, $controller, $view, $database, $session) {

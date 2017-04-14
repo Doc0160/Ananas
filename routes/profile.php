@@ -15,7 +15,7 @@ $router->post('/profile/', function() use ($router, $database, $session) {
     $req->bindParam(":photo", $photo);
     $req->bindParam(":id", $id);
     if(move_uploaded_file($_FILES['avatar']['tmp_name'],
-                       BASEPATH.BASEIMAGE.'/'.time().$_FILES['avatar']['name'])) {
+                       BASEPATH.BASEAVATAR.'/'.time().$_FILES['avatar']['name'])) {
         $req->execute();
     }
     $router->redirect("/");
