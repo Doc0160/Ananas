@@ -24,7 +24,7 @@ PRIMARY KEY (`id`)
 INSERT INTO `groupe` (`name`, `permissions`)
 VALUES ('BDE', 9999999999),
 ('CESI', 99999999999),
-('Member', 3);
+('Member', 558641);
 
 CREATE TABLE `user` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
