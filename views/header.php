@@ -49,18 +49,23 @@
                         </div>
                         <div class="row">
                             <div class="col s6">
-                                <a href="#!user">
-                                    <img class="responsive-img materialboxed" src="<?php echo ROOTURL.BASEAVATAR.'/'.((!empty($data['avatar'])) ? $data['avatar'] : DEFAULT_USER_AVATAR); ?>">
-                                </a>
+                                <img class="responsive-img materialboxed"
+                                     src="<?php 
+                                          echo ROOTURL.BASEAVATAR.'/'.
+                                               ((!empty($data['avatar'])) ? $data['avatar'] : DEFAULT_USER_AVATAR); 
+                                          ?>">
                             </div>
 
                             <div class="col s6">
-                                <a href="#!name">
-                                    <span class="white-text name"><?php echo $data['session']->username; ?></span>
-                                </a>
-                                <a href="#!email">
-                                    <span class="white-text email"><?php echo $data['session']->email; ?></span>
-                                </a>
+                                <span class="white-text name">
+                                    <?php echo $data['session']->username; ?>
+                                </span>
+                                <span class="white-text email">
+                                    <?php echo $data['session']->email; ?>
+                                </span>
+                                <span class="white-text email">
+                                    <?php echo $data['groupe']; ?>
+                                </span>
                             </div>
                         </div>
                         <div class="row"></div>
