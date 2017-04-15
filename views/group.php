@@ -1,3 +1,17 @@
+
+<div class="row">
+    
+    <div class="col s6">
+        
+    </div>
+    
+    <div class="col s6">
+        
+    </div>
+    
+</div>
+
+
 <?php
 
 var_dump($data['groups']);
@@ -33,3 +47,5 @@ var_dump($data['groups']);
         </div>
     <?php } ?>
 </div>
+
+
