@@ -10,7 +10,7 @@ spl_autoload_register([$autoloader, 'load']);
 ```php
 $router = new Router('/');
 $router->add('/', function() {
-echo 'hello';
+    echo 'hello';
 });
 $router->dispatch();
 ```
