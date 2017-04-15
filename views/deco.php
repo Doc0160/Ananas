@@ -1,3 +1,9 @@
 <div class="row">
-    Ya deco nao !
+    Vous avez été déconnecté.
 </div>
+
+<script>
+ setTimeout(function() {
+     window.location='<?php echo ROOTURL; ?>';
+ }, 1000);
+</script>
