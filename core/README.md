@@ -26,3 +26,22 @@ $view->display('hello.php');
 $controller = new Controller('./controllers/');
 $controller->execute('hello.php');
 ```
+
+### EXample
+
+```php
+$autoloader = new Autoload();
+spl_autoload_register([$autoloader, 'load']);
+
+$router = new Router('/');
+$view = new View('./views/');
+$controller = new Controller('./controllers/');
+
+$router->get('/', function() use ($view, $controller) {
+    $controller->execute('hello.php, [
+        'view' => $view,    
+    ]);
+});
+
+$router->dispatch();
+```
