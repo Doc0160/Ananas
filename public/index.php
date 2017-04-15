@@ -66,7 +66,7 @@ require("../routes/inscription.php");
 require("../routes/profile.php");
 require("../routes/photos.php");
 require("../routes/activities.php");
-require('../routes/groupe.php');
+require('../routes/group.php');
 
 $router->dispatch();
 

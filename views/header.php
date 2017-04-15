@@ -13,7 +13,6 @@
     </head>
 
     <body>
-
         <nav>
             <div class="nav-wrapper">
                 <?php if($data["session"]->has_data()) { ?>
@@ -67,14 +66,38 @@
                         <div class="row"></div>
                     </div>
                 </li>
-                <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/"><i class="material-icons">cloud</i>Profile</a></li>
+                <li>
+                    <a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/">
+                        <i class="material-icons">cloud</i>
+                        Profile
+                    </a>
+                </li>
                 <li><div class="divider"></div></li>
-                <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/activities/">Activitées</a></li>
-                <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/photos/">Photos</a></li>
+                <li>
+                    <a class="waves-effect" href="<?php echo ROOTURL; ?>/activities/">
+                        Activitées
+                    </a>
+                </li>
+                <li>
+                    <a class="waves-effect" href="<?php echo ROOTURL; ?>/photos/">
+                        Photos
+                    </a>
+                </li>
+                <?php if ($data['session']->has_data() &&
+                          BitField::has($data['session']->permissions,
+                                        PERMISSION_CREATE_GROUPE) &&
+                          BitField::has($data['session']->permissions,
+                                        PERMISSION_MODIFY_GROUPE) &&
+                          BitField::has($data['session']->permissions,
+                                        PERMISSION_DELETE_GROUPE)) { ?>
+                <li>
+                    <a class="waves-effect" href="<?php echo ROOTURL; ?>/groupe/">
+                        Groupes
+                    </a>
+                </li>
+                <?php } ?>
             </ul>
         <?php } ?>
-        
-        
         <div class="container main">
 
             
