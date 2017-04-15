@@ -16,7 +16,9 @@
                     <span class="card-title"><?php echo $v['name']; ?></span>
                 </div>
                 <div class="card-content">
-                    <span class="card-title"><?php echo $v['name']; ?></span>
+                    <span class="card-title">
+                        <?php echo $v['name'].', le '.$v['date']; ?>
+                    </span>
                     <ul class="collapsible row" data-collapsible="expandable">
                         <li>
                             <div class="collapsible-header">
@@ -41,7 +43,7 @@
                     </ul>
                 </div>
                 <div class="card-action">
-                    <a href="#">S'incrire</a>
+                    <a href="<?php echo ROOTURL.'/activities/inscription/'.$v['id'].'/'; ?>">S'incrire</a>
                     <a href="#">Poser une question</a>
                 </div>
             </div>

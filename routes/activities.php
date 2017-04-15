@@ -7,6 +7,17 @@ $router->get("/activities/", function()
         $view->display("footer.php");
     });
 
+$router->get("/activities/inscription/:id/", function($id)
+    use($database, $session, $router){
+        $idu = (int)$session->id;
+        $ida = (int)$id;
+        $req = $database->prepare('INSERT INTO activity_inscription (id_activity, id_user) VALUES (:ida, :idu)');
+        $req->bindParam(':ida', $ida);
+        $req->bindParam(':idu', $idu);
+        $req->execute();
+        $router->redirect('/activities/');
+});
+
 if($session->has_data() &&
    (Bitfield::has($session->permissions, PERMISSION_MODIFY_ACTIVITY) ||
    Bitfield::has($session->permissions, PERMISSION_DELETE_ACTIVITY))) {

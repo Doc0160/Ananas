@@ -8,8 +8,8 @@ $user = $req->fetch();
 
 $data['view']->display('profile.php', $user);
 
-var_dump($user);
-var_dump($data["session"]);
-var_dump($data);
+//var_dump($user);
+//var_dump($data["session"]);
+//var_dump($data);
 
 ?>

@@ -16,6 +16,15 @@
 </div>
 <div class="row">
     <div class="col s6 offset-s3">
+        <div class="input-field">
+        <i class="material-icons prefix">account_circle</i>
+        <input type="text" id="groupe" readonly="readonly"
+               value="<?php echo $data['name']; ?>">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s6 offset-s3">
         <form>
             <div class="input-field col s12">
                 <i class="material-icons prefix">email</i>

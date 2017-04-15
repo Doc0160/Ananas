@@ -68,10 +68,9 @@
                     </div>
                 </li>
                 <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/"><i class="material-icons">cloud</i>Profile</a></li>
-                <li><a href="#!">Second Link</a></li>
                 <li><div class="divider"></div></li>
-                <li><a class="subheader">Subheader</a></li>
-                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+                <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/activities/">Activitées</a></li>
+                <li><a class="waves-effect" href="<?php echo ROOTURL; ?>/photos/">Photos</a></li>
             </ul>
         <?php } ?>
         
