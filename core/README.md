@@ -7,6 +7,13 @@ spl_autoload_register([$autoloader, 'load']);
 ```
 
 * Router
+```php
+$router = new Router('/');
+$router->add('/', function() {
+echo 'hello';
+});
+$router->dispatch();
+```
 
 * View
 ```php
