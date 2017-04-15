@@ -4,6 +4,6 @@
     $records->execute();
     $results = $records->fetchAll();
 
-    $data["view"]->display('news.php', $results);
+    $data["view"]->display('news.php', ['results' => $results]);
 
 ?>

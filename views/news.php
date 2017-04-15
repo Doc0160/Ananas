@@ -1,6 +1,6 @@
 <div class="row">
     <?php
-    foreach($data as $k => $v) {
+    foreach($data['results'] as $k => $v) {
         if (empty($v['picture'])){
             $v['picture'] = ROOTURL."/logo.png";
         }
