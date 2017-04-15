@@ -171,22 +171,22 @@
 
                      fadeIn(overlay);
                      setTimeout(function(){
-                         addText("I'm Sure you don't belong here.");
+                         addText("I'm sure you don't belong here.");
 
                          setTimeout(function(){
                              addText("Are you lost?");
 
                              setTimeout(function(){
-                                 addText("Or prehaps you ware searching for our shop?");
+                                 addText("Or prehaps you were searching for our shop?");
 
                                  setTimeout(function(){
                                      addText("You don't talk very much, do you?");
 
                                      setTimeout(function(){
-                                         addText("I heared some humans love tentacules...");
+                                         addText("I heared some humans love mugs...");
 
                                          setTimeout(function(){
-                                             addText("I bet you'd love my tentacules. <3");
+                                             addText("I bet you'd love my mugs. <3");
 
                                              setTimeout(function(){
                                                  document.getElementById("back").setAttribute("class", "back");
@@ -195,7 +195,7 @@
                                                  fadeOut(document.getElementById("text"));
 
                                                  setTimeout(function(){
-                                                     window.location="<?php echo ROOTURL ?>";
+                                                     window.location="<?php echo ROOTURL.'/shop/'; ?>";
                                                  }, 250);
                                              }, 10000);
                                          }, 5000);
