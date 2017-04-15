@@ -2,6 +2,12 @@
 <div class="row"></div>
 <div class="row">
     <div class="col s6 offset-s3">
+        <h1>PROFILE</h1>
+        <div class="divider"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col s6 offset-s3">
         <div class="input-field col s6">
             <i class="material-icons prefix">account_circle</i>
             <input type="text" id="username" readonly="readonly"

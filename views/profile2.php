@@ -3,6 +3,7 @@
 
     <div class="col s6 offset-s3">
         <h1>PROFILE</h1>
+        <div class="divider"></div>
         <div class="row">
             <div class="col s6">Pseudo: </div>
             <div class="col s6"><?php echo $data['username']; ?></div>

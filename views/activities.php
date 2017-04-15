@@ -1,4 +1,4 @@
-<div class="row"><h1>Activitées</h1></div>
+<div class="row"><h1>Activitées</h1><div class="divider"></div></div>
 <?php if($data['session']->has_data() &&
          Bitfield::has($data['session']->permissions, PERMISSION_MODIFY_ACTIVITY)) { ?>
 <div class="row">

@@ -1,4 +1,4 @@
-
+<div class="row"><h1>PHOTOS</h1><div class="divider"></div></div>
 <?php if($data['session']->has_data() && BitField::has($data['session']->permissions, PERMISSION_CREATE_PHOTO)) { ?>
 <div class="row">
     <form action="" enctype="multipart/form-data"  method="post">
