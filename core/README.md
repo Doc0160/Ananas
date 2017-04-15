@@ -27,7 +27,7 @@ $controller = new Controller('./controllers/');
 $controller->execute('hello.php');
 ```
 
-### EXample
+### Example
 
 ```php
 $autoloader = new Autoload();
