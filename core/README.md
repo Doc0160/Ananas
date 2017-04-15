@@ -38,7 +38,7 @@ $view = new View('./views/');
 $controller = new Controller('./controllers/');
 
 $router->get('/', function() use ($view, $controller) {
-    $controller->execute('hello.php, [
+    $controller->execute('hello.php', [
         'view' => $view,    
     ]);
 });
