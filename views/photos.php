@@ -1,3 +1,5 @@
+
+<?php if($data['session']->has_data() && BitField::has($data['session']->permissions, PERMISSION_CREATE_PHOTO)) { ?>
 <div class="row">
     <form action="" enctype="multipart/form-data"  method="post">
         <div class="input-field col s2">
@@ -21,6 +23,7 @@
         </div>
     </form>
 </div>
+<?php } ?>
 <div class="row">
     <?php
     foreach($data['photos'] as $k => $v) {
