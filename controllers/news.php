@@ -1,6 +1,6 @@
 <?php
 
-    $records = $data["database"]->prepare('SELECT * FROM activity');
+    $records = $data["database"]->prepare('SELECT * FROM activity WHERE visible = 1');
     $records->execute();
     $results = $records->fetchAll();
 

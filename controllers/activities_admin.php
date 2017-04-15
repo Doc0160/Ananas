@@ -1,6 +1,6 @@
 <?php
 
-$req = $data['database']->prepare('SELECT * FROM activity');
+$req = $data['database']->prepare('SELECT *, UNIX_TIMESTAMP(date) AS timestamp FROM activity');
 $req->execute();
 $activities = $req->fetchAll();
 

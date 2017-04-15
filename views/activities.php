@@ -17,7 +17,8 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title">
-                        <?php echo $v['name'].', le '.$v['date']; ?>
+                        <?php echo $v['name'].", le ".
+                                   date("d/m/Y à H:i:s", $v['timestamp']); ?>
                     </span>
                     <ul class="collapsible row" data-collapsible="expandable">
                         <li>
@@ -42,10 +43,21 @@
                         </li>
                     </ul>
                 </div>
+                <?php if($data['session']->has_data() &&
+                         Bitfield::has($data['session']->permissions, PERMISSION_PARTICIPATE_ACTIVITY)) { ?>
                 <div class="card-action">
-                    <a href="<?php echo ROOTURL.'/activities/inscription/'.$v['id'].'/'; ?>">S'incrire</a>
-                    <a href="#">Poser une question</a>
+                    <?php if($v['inscrit']) { ?>
+                        <a href="<?php echo ROOTURL.'/activities/disinscription/'.$v['id'].'/'; ?>">
+                            Se desincrire
+                        </a>
+                    <?php } else { ?>
+                        <a href="<?php echo ROOTURL.'/activities/inscription/'.$v['id'].'/'; ?>">
+                            S'incrire
+                        </a>
+                    <?php } ?>
+                    <a href="mailto:contact@cesi.fr">Poser une question</a>
                 </div>
+                <?php } ?>
             </div>
         </div>
     <?php
