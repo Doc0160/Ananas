@@ -21,5 +21,4 @@ $router->post('/groupe/',  function()
         $router->redirect('/groupe/');
 });
 
-
 ?>
