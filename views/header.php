@@ -84,12 +84,12 @@
                     </a>
                 </li>
                 <?php if ($data['session']->has_data() &&
+                          (BitField::has($data['session']->permissions,
+                                        PERMISSION_CREATE_GROUPE) ||
                           BitField::has($data['session']->permissions,
-                                        PERMISSION_CREATE_GROUPE) &&
+                                        PERMISSION_MODIFY_GROUPE) ||
                           BitField::has($data['session']->permissions,
-                                        PERMISSION_MODIFY_GROUPE) &&
-                          BitField::has($data['session']->permissions,
-                                        PERMISSION_DELETE_GROUPE)) { ?>
+                                        PERMISSION_DELETE_GROUPE))) { ?>
                 <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/groupe/">
                         Groupes
