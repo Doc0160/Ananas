@@ -40,9 +40,9 @@ CONSTRAINT`u_ibfk_1` FOREIGN KEY (`id_groupe`) REFERENCES groupe(`id`) ON DELETE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `user` (`username`, `name`, `pass`, `email`, `id_groupe`)
-VALUES ('JPBDE', 'Jean-Paul BDE', '8420c85c2aadaebac268ffa047b24ba8d4e3d7d64c7e8d97d79fe93bfada1981', 'a@b.c1', 1),
-('JPCESI', 'Jack-Pierre CESI', '8420c85c2aadaebac268ffa047b24ba8d4e3d7d64c7e8d97d79fe93bfada1981', 'a@b.c2', 2),
-('Peni', 'penisland', '8420c85c2aadaebac268ffa047b24ba8d4e3d7d64c7e8d97d79fe93bfada1981', 'a@b.c3', 3);
+VALUES ('JPBDE', 'Jean-Paul BDE', '8420c85c2aadaebac268ffa047b24ba8d4e3d7d64c7e8d97d79fe93bfada1981', 'bde@b.c', 1),
+('JPCESI', 'Jack-Pierre CESI', '8420c85c2aadaebac268ffa047b24ba8d4e3d7d64c7e8d97d79fe93bfada1981', 'cesi@b.c', 2),
+('Peni', 'penisland', '8420c85c2aadaebac268ffa047b24ba8d4e3d7d64c7e8d97d79fe93bfada1981', 'member@b.c', 3);
 
 
 /* activity related tables */
