@@ -1,9 +1,13 @@
 <?php
 
-$router->get('/profile/:id/', function()
-    use($do_header, $view) {
+$router->get('/profile/:id/', function($id)
+    use($do_header, $view, $database) {
         $do_header();
-
+        $req = $database->prepare('SELECT user.*, groupe.name AS groupe FROM user JOIN groupe ON groupe.id=user.id_groupe WHERE user.id=:id');
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $user = $req->fetch();
+        $view->display('profile2.php', $user);
         $view->display('footer.php');
     });
 
