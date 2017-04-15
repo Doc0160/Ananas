@@ -29,16 +29,18 @@ if($session->has_data() &&
             $router->redirect('/groupe/');
         });
 
-    $router->post('/groupe/modify/:id/', function($id)
-        use ($database, $router) {
-            $id = (int)$_POST['id'];
-            $perm = array_sum($_POST['perm']);
-            $req = $database->prepare('UPDATE groupe SET permissions=:perm WHERE id=:id');
-            $req->bindParam(':id', $id);
-            $req->bindParam(':perm', $perm);
-            $req->execute();
-            $router->redirect('/groupe/');
-        });
+    if(BitField::has($session->permissions, PERMISSION_MODIFY_GROUPE)) {
+        $router->post('/groupe/modify/:id/', function($id)
+            use ($database, $router) {
+                $id = (int)$id;
+                $perm = array_sum($_POST['perm']);
+                $req = $database->prepare('UPDATE groupe SET permissions=:perm WHERE id=:id');
+                $req->bindParam(':id', $id);
+                $req->bindParam(':perm', $perm);
+                $req->execute();
+                $router->redirect('/groupe/');
+            });
+    }
 }
 
 ?>

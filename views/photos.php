@@ -64,8 +64,10 @@
                             <?php foreach($v['comments'] as $kk => $vv) { ?>
                                 <div class="row collection-item">
                                     <div class="col s3">
-                                        <?php echo $vv['username']; ?>
-                                        <img alt="avatar" class="responsive-img" src="<?php echo BASEURI.BASEAVATAR.'/'.((false) ? $vv['avatar'] : 'logo.png'); ?>">
+                                        <a href="<?php echo ROOTURL.'/profile/'.$vv['id'].'/'; ?>">
+                                            <?php echo $vv['username']; ?>
+                                            <img alt="avatar" class="responsive-img" src="<?php echo BASEURI.BASEAVATAR.'/'.((false) ? $vv['avatar'] : 'logo.png'); ?>">
+                                        </a>
                                     </div>
                                     <div class="col s9">
                                         <p><?php echo $vv['comment']; ?></p>

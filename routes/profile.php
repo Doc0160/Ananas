@@ -1,6 +1,14 @@
 <?php
 
-$router->get('/profile/', function() use ($do_header, $view, $controller, $database){
+$router->get('/profile/:id/', function()
+    use($do_header, $view) {
+        $do_header();
+
+        $view->display('footer.php');
+    });
+
+$router->get('/profile/', function()
+    use ($do_header, $view, $controller, $database){
     $do_header();
     $controller->execute('profile.php', [
         'database' => $database,
