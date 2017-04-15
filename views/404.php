@@ -177,7 +177,7 @@
                              addText("Are you lost?");
 
                              setTimeout(function(){
-                                 addText("Or prehaps you want to be here?");
+                                 addText("Or prehaps you ware searching for our shop?");
 
                                  setTimeout(function(){
                                      addText("You don't talk very much, do you?");
@@ -195,7 +195,7 @@
                                                  fadeOut(document.getElementById("text"));
 
                                                  setTimeout(function(){
-                                                     window.location="/";
+                                                     window.location="<?php echo ROOTURL ?>";
                                                  }, 250);
                                              }, 10000);
                                          }, 5000);
