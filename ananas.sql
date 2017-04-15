@@ -109,7 +109,7 @@ INSERT INTO `goodies` (`price`, `name`, `description`, `picture`)
 VALUES (300.1, 'Logo Exia Reims', 'Une coupe en plastique de la forme de logo snkjfdkdsksbkfjbskjbfkjbsdkjbfkhbskhfbkshbkfhbkshbfkhbskhfbkhsbdkh', 'photo1.jpg'),
 (500.4, 'TRUC', 'JE DECRIS UN TRUC', NULL),
 (500.4, 'Bucal', 'mumumu', 'photo2.jpg'),
-(500.4, 'Nasal', 'aie', 'babe_2.jpg');
+(500.4, 'EXIA', 'GUNDAM EXIA', 'gundam-exia.jpg');
 
 CREATE TABLE `goodies_reservation` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -134,11 +134,9 @@ CONSTRAINT `p_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON D
 INSERT INTO `photo` (`picture`, `id_activity`)
 VALUES ('photo1.jpg',1),
 ('photo2.jpg',1),
+('gundam-exia.jpg',1),
 ('babe_1.jpg',1),
-('babe_2.jpg',1),
-('babe_3.jpg',1),
-('babe_4.jpg',1),
-('babe_5.jpg',1);
+('babe_2.jpg',1);
 
 CREATE TABLE `photo_comment` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
