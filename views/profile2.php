@@ -23,7 +23,7 @@
             <div class="col s6">Groupe:</div>
             <div class="col s6"><?php echo $data['groupe']; ?></div>
         </div>
-        <?php if($session->has_data()) { ?>
+        <?php if($data['session']->has_data()) { ?>
             <div class="row">
                 <div class="col s6">
                     <select name="groupe">
@@ -34,7 +34,9 @@
                         <?php } ?>
                     </select>
                 </div>
-                <div class="col s6"><?php echo $data['groupe']; ?></div>
+                <div class="col s6">
+                    <input class="btn" type="submit" value="Modofier">
+                </div>
             </div>
         <?php } ?>
         <div class="row">
