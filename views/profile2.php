@@ -24,6 +24,10 @@
             <div class="col s6"><?php echo $data['groupe']; ?></div>
         </div>
         <div class="row">
+            <div class="col s6">Groupe:</div>
+            <div class="col s6"><?php echo $data['groupe']; ?></div>
+        </div>
+        <div class="row">
             <div class="col s6">Inscrit le: </div>
             <div class="col s6"><?php echo $data['inscription_date']; ?></div>
         </div>
