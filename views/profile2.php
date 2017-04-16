@@ -23,18 +23,20 @@
             <div class="col s6">Groupe:</div>
             <div class="col s6"><?php echo $data['groupe']; ?></div>
         </div>
-        <div class="row">
-            <div class="col s6">
-                <select>
-                    <?php foreach($data['groupes'] as $k => $v) { ?>
-                        <option <?php echo ($v['id']==$data['id_groupe']) ? 'selected' : '' ; ?>>
-                            <?php echo $v['name']; ?>
-                        </option>
-                    <?php } ?>
-                </select>
+        <?php if($session->has_data()) { ?>
+            <div class="row">
+                <div class="col s6">
+                    <select name="groupe">
+                        <?php foreach($data['groupes'] as $k => $v) { ?>
+                            <option value="<?php echo $v['id']; ?>" <?php echo ($v['id']==$data['id_groupe']) ? 'selected' : '' ; ?>>
+                                <?php echo $v['name']; ?>
+                            </option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="col s6"><?php echo $data['groupe']; ?></div>
             </div>
-            <div class="col s6"><?php echo $data['groupe']; ?></div>
-        </div>
+        <?php } ?>
         <div class="row">
             <div class="col s6">Inscrit le: </div>
             <div class="col s6"><?php echo $data['inscription_date']; ?></div>
