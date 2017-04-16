@@ -12,7 +12,7 @@ $router->get("/activities/", function()
     });
 
 if($session->has_data() &&
-   Bitfield::has($session->permissions, PERMISSION_PARTICIPATE_ACTIVITY)){
+   Bitfield::has($perm, PERMISSION_PARTICIPATE_ACTIVITY)){
     $router->get("/activities/inscription/:id/", function($id)
         use($database, $session, $router){
             $idu = (int)$session->id;
@@ -37,8 +37,8 @@ if($session->has_data() &&
 }
 
 if($session->has_data() &&
-   (Bitfield::has($session->permissions, PERMISSION_MODIFY_ACTIVITY) ||
-   Bitfield::has($session->permissions, PERMISSION_DELETE_ACTIVITY))) {
+   (Bitfield::has($perm, PERMISSION_MODIFY_ACTIVITY) ||
+   Bitfield::has($perm, PERMISSION_DELETE_ACTIVITY))) {
 
     $router->get("/activities/admin/", function()
         use($do_header, $controller, $view, $database, $session) {
@@ -47,7 +47,7 @@ if($session->has_data() &&
             $view->display("footer.php");
         });
 
-    if(Bitfield::has($session->permissions, PERMISSION_MODIFY_ACTIVITY)) {
+    if(Bitfield::has($perm, PERMISSION_MODIFY_ACTIVITY)) {
         $router->post("/activities/admin/", function() use($router,$database){
             $req = $database->prepare("UPDATE activity SET visible=:visible, prix=:price, name=:name, description=:description, date=:date WHERE id=:id");
             $name = $_POST['name'];

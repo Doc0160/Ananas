@@ -11,7 +11,7 @@ $router->get('/photos/', function()
     });
 
 if($session->has_data()) {
-    if(BitField::has($session->permissions, PERMISSION_COMMENT_PHOTO)) {
+    if(BitField::has($perm, PERMISSION_COMMENT_PHOTO)) {
         $router->post('/photos/comment/:id/', function($id) use ($router, $database, $session){
             $id = (int)$id;
             $idu = $session->id;
@@ -24,7 +24,7 @@ if($session->has_data()) {
         });
     }
 
-    if(BitField::has($session->permissions, PERMISSION_DELETE_PHOTO)) {
+    if(BitField::has($perm, PERMISSION_DELETE_PHOTO)) {
         $router->get('/photos/delete/:id/', function($id) use ($router, $database){
             $id = (int)$id;
             $req = $database->prepare("SELECT picture FROM photo WHERE id=:id");
@@ -43,7 +43,7 @@ if($session->has_data()) {
         });
     }
 
-    if(BitField::has($session->permissions, PERMISSION_LIKE_PHOTO)) {
+    if(BitField::has($perm, PERMISSION_LIKE_PHOTO)) {
         $router->get('/photos/like/:id/', function($id) use ($router, $session, $database){
             $id = (int)$id;
             $idu = $session->id;

@@ -88,6 +88,7 @@
                         Photos
                     </a>
                 </li>
+                <li><div class="divider"></div></li>
                 <?php if ($data['session']->has_data() &&
                           (BitField::has($data['session']->permissions,
                                         PERMISSION_CREATE_GROUPE) ||

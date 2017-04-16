@@ -2,10 +2,10 @@
 
 if($session->has_data() &&
    (
-       BitField::has($session->permissions, PERMISSION_READ_GROUPE) ||
-       BitField::has($session->permissions, PERMISSION_CREATE_GROUPE) ||
-       BitField::has($session->permissions, PERMISSION_MODIFY_GROUPE) ||
-       BitField::has($session->permissions, PERMISSION_DELETE_GROUPE)
+       BitField::has($perm, PERMISSION_READ_GROUPE) ||
+       BitField::has($perm, PERMISSION_CREATE_GROUPE) ||
+       BitField::has($perm, PERMISSION_MODIFY_GROUPE) ||
+       BitField::has($perm, PERMISSION_DELETE_GROUPE)
    )) {
 
     $router->get('/groupe/', function()
@@ -29,7 +29,7 @@ if($session->has_data() &&
             $router->redirect('/groupe/');
         });
 
-    if(BitField::has($session->permissions, PERMISSION_MODIFY_GROUPE)) {
+    if(BitField::has($perm, PERMISSION_MODIFY_GROUPE)) {
         $router->post('/groupe/modify/:id/', function($id)
             use ($database, $router) {
                 $id = (int)$id;

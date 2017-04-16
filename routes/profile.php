@@ -7,6 +7,12 @@ $router->get('/profile/:id/', function($id)
         $req->bindParam(':id', $id);
         $req->execute();
         $user = $req->fetch();
+        
+        $req = $database->prepare('SELECT * FROM groupe');
+        $req->execute();
+        $groupes = $req->fetchAll();
+        
+        $user['groupes'] = $groupes;
         $view->display('profile2.php', $user);
         $view->display('footer.php');
     });

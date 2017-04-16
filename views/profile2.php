@@ -26,7 +26,11 @@
         <div class="row">
             <div class="col s6">
                 <select>
-                    <option>f</option>
+                    <?php foreach($data['groupes'] as $k => $v) { ?>
+                        <option <?php echo ($v['id']==$data['id_groupe']) ? 'selected' : '' ; ?>>
+                            <?php echo $v['name']; ?>
+                        </option>
+                    <?php } ?>
                 </select>
             </div>
             <div class="col s6"><?php echo $data['groupe']; ?></div>
