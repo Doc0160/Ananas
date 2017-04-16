@@ -30,6 +30,8 @@ $controller = new Controller(BASEPATH.'/controllers/', [
     'router' => $router,
 ]);
 
+$perm = (isset($session->permissions)) ? BitField::add($session->permissions, DEFAULT_PERMISSION_UNKNOWN) : DEFAULT_PERMISSION_UNKNOWN;
+
 $do_header = function() use($controller, $database, $session) {
     $controller->execute('header.php', [
         "database" => $database,
