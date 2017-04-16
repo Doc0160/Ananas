@@ -6,10 +6,10 @@ echo.
 echo --- git pull ---
 git pull
 echo.
-echo --- git add ---
+echo --- git add . ---
 git add .
 echo.
-echo --- git commit ---
+echo --- git commit -m "%date%-%time%" ---
 git commit -m "%date%-%time%"
 echo.
 echo --- git push ---
