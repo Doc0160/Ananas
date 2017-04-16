@@ -24,7 +24,7 @@
             <div class="col s6"><?php echo $data['groupe']; ?></div>
         </div>
         <?php if($data['session']->has_data()) { ?>
-            <form action="" method="post">
+            <form action="<?php echo ROOTURL.'/profile/groupe/'.$data['id_groupe']; ?>" method="post">
             <div class="row">
                 <div class="col s6">
                     <select name="groupe">
