@@ -21,6 +21,9 @@ define("DATABASE_DATABASE", 'ananas');
 define("DEFAULT_USER_GROUP", 3);
 define("DEFAULT_USER_AVATAR", "logo.png");
 
+//
+define("MAX_IMAGE_SIZE", 1024*1024*50);
+
 // PERMISSION
 $i = 0;
 define("PERMISSION_READ_ACTIVITY", 1 << $i++);
@@ -54,3 +57,11 @@ define("DEFAULT_PERMISSION_UNKNOWN",
        PERMISSION_READ_PHOTO|
        PERMISSION_READ_GOODIES);
 
+
+
+$IMAGE_TYPES = array(
+    'image/gif',
+    'image/png',
+    'image/jpeg',
+    'image/bmp',
+);
