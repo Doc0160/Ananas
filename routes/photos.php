@@ -67,7 +67,6 @@ if($session->has_data()) {
     if(BitField::has($session->permissions, PERMISSION_CREATE_PHOTO)) {
         $router->post('/photos/', function()
             use ($router, $session, $database, $IMAGE_TYPES) {
-            var_dump($_FILES);
             $id = (int)$session->id;
             $id_activity = (int)$_POST['activity'];
 
@@ -86,7 +85,7 @@ if($session->has_data()) {
                                       BASEPATH.BASEIMAGE.'/'.$photo))
                 {
                     $req->execute();
-                    //$router->redirect("/photos/");
+                    $router->redirect("/photos/");
                 }
             } else {
                 var_dump($_FILES);
