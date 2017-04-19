@@ -41,21 +41,25 @@
                 <span class="card-title"><?php echo $v["activity"]; ?></span>
             </div>
             <div class="card-action">
+                
                 <?php if($data['can_like']) { ?>
-                <a href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
+                <a class="ajax like" href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
                     <i class="material-icons"><?php echo ($v['you_like']) ? 'thumb_down' : 'thumb_up';?></i>
                     (<?php echo $v["likes"]; ?>)
                 </a>
                 <?php } ?>
+                
                 <?php if($data['can_delete']) { ?>
                     <a href="<?php echo ROOTURL."/photos/delete/".$v["id"].'/'; ?>">
                         <i class="material-icons">delete</i>
                     </a>
                 <?php } ?>
+                
                 <a href="<?php echo ROOTURL."/images/".$v["picture"]; ?>"
                    download="<?php echo $v["picture"]; ?>">
                     <i class="material-icons">file_download</i>
                 </a>
+                
                 <?php if($data['can_like']) { ?>
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>

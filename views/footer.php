@@ -65,6 +65,31 @@
          selectMonths: true,
          selectYears: 15,
      });
+
+     $('.ajax').each(function(id, el) {
+         $(el).on('click', function(self) {
+             return function(e) {
+                 e.preventDefault();
+                 console.log(self.attr('href'));
+                 $.ajax(self.attr('href')).done(function(self) {
+                     return function() {
+                         if(self.hasClass('like')) {
+                             var i = self.find('i');
+                             self.removeClass('like');
+                             self.addClass('dislike');
+                             i.html('thumb_down');
+                         } else if(self.hasClass('dislike')) {
+                             var i = self.find('i');
+                             self.removeClass('dislike');
+                             self.addClass('like');
+                             i.html('thumb_up');
+                         }
+                         console.log('done');
+                     };
+                 }(self));
+             };
+         }($(el)));
+     });
  });
 </script>
     </body>
