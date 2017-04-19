@@ -108,9 +108,7 @@ CHECK (`price` > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `goodies` (`price`, `name`, `description`, `picture`)
-VALUES (500.4, 'TRUC', 'JE DECRIS UN TRUC', NULL),
-(500.4, 'Bucal', 'mumumu', NULL),
-(10, 'Casquette EXIA', 'ceci est un article de qualité', 'casquette.jpg'),
+VALUES (10, 'Casquette EXIA', 'ceci est un article de qualité', 'casquette.jpg'),
 (100, 'Gourde EXIA', 'ceci est un article de qualité', 'gourde.jpg'),
 (1000, 'Pull EXIA', 'ceci est un article de qualité', 'pull.jpg'),
 (10, 'Sac EXIA', 'ceci est un article de qualité', 'sac.jpg'),
