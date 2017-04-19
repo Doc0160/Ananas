@@ -79,14 +79,14 @@
                              self.removeClass('like');
                              self.addClass('dislike');
                              i.text('thumb_down');
-                             span.text('gg');
+                             span.text(parseInt(span.text())+1);
                          } else if(self.hasClass('dislike')) {
                              var i = self.find('i');
                              var span = self.find('span');
                              self.removeClass('dislike');
                              self.addClass('like');
                              i.text('thumb_up');
-                             span.text('gg');
+                             span.text(parseInt(span.text())-1);
                          }
                          console.log('done');
                      };
