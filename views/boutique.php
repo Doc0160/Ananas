@@ -18,7 +18,6 @@
                     <div class="card-action">
                         <span class="price"><h3>10€</h3></span>
                         <a href="#">commander</a>
-                        
                     </div>
                 </div>
             </div>
@@ -35,7 +34,6 @@
                     <div class="card-action">
                         <span class="price"><h3>100€</h3></span>
                         <a href="#">commander</a>
-                        
                     </div>
                 </div>
             </div>

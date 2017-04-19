@@ -108,10 +108,10 @@ CHECK (`price` > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `goodies` (`price`, `name`, `description`, `picture`)
-VALUES (300.1, 'Logo Exia Reims', 'Une coupe en plastique de la forme de logo snkjfdkdsksbkfjbskjbfkjbsdkjbfkhbskhfbkshbkfhbkshbfkhbskhfbkhsbdkh', 'photo1.jpg'),
+VALUES (300.1, 'Logo Exia Reims', 'Une coupe en plastique de la forme de logo snkjfdkdsksbkfjbskjbfkjbsdkjbfkhbskhfbkshbkfhbkshbfkhbskhfbkhsbdkh', NULL),
 (500.4, 'TRUC', 'JE DECRIS UN TRUC', NULL),
-(500.4, 'Bucal', 'mumumu', 'photo2.jpg'),
-(500.4, 'EXIA', 'GUNDAM EXIA', 'gundam-exia.jpg');
+(500.4, 'Bucal', 'mumumu', NULL),
+(500.4, 'Casquette EXIA', 'ceci est un article de qualité', 'casquette.jpg');
 
 CREATE TABLE `goodies_reservation` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
