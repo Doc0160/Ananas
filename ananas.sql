@@ -100,7 +100,7 @@ CONSTRAINT `a_v_ibfk_3` UNIQUE (`id_activity`, `id_user`)
 CREATE TABLE `goodies` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
 `price` float NOT NULL,
-`name` varchar(255) NOT NULL,
+`name` varchar(255),
 `picture` varchar(255),
 `description` varchar(2048) NOT NULL,
 PRIMARY KEY (`id`),
@@ -116,7 +116,9 @@ VALUES (500.4, 'TRUC', 'JE DECRIS UN TRUC', NULL),
 (10, 'Sac EXIA', 'ceci est un article de qualité', 'sac.jpg'),
 (5, 'Kebab EXIA', 'ceci est un article de qualité', 'kebab.jpg'),
 (1, 'T-shirt siphano', 'ceci est un article de qualité', 'siphano.jpg'),
-(500.4, 'Ton Année à l\'Exia', 'ceci est un article de qualité', 'siphano.jpg');
+(55000, 'Ton Année à l\'Exia', 'ceci est un article de qualité', 'exia.jpg'),
+(25, 'Trophée Exia', 'Dimensions: 10cm x 5.5cm', 'deco.jpg'),
+(NULL, 'Stage en entreprise', 'ceci est un article de qualité', 'stage.jpg');
 
 CREATE TABLE `goodies_reservation` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,

@@ -50,10 +50,10 @@
                   <div class="card">
                       <div class="card-image">
                           <img class="materialboxed" alt="photo" src="<?php echo $pic_1; ?>">
-                          <span class="card-title"><?php echo $data[0]['name']; ?></span>
                           <a href="<?php echo ROOTURL."/shop/"; ?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
+                          <h5><?php echo $data[0]['name']; ?></h5>
                           <p><?php echo $desc_1; ?></p>
                       </div>
                   </div>
@@ -65,10 +65,10 @@
                   <div class="card">
                       <div class="card-image">
                           <img class="materialboxed" alt="photo" src="<?php echo $pic_2; ?>">
-                          <span class="card-title"><?php echo $data[1]['name']; ?></span>
                           <a href="<?php echo ROOTURL."/shop/"; ?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
+                          <h5><?php echo $data[1]['name']; ?></h5>
                           <p><?php echo $desc_2; ?></p>
                       </div>
                   </div>
@@ -80,10 +80,10 @@
                   <div class="card">
                       <div class="card-image">
                           <img class="materialboxed" alt="photo" src="<?php echo $pic_3; ?>">
-                          <span class="card-title"><?php echo $data[2]['name']; ?></span>
                           <a href="<?php echo ROOTURL."/shop/"; ?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
+                          <h5><?php echo $data[2]['name']; ?></h5>
                           <p><?php echo $desc_3; ?></p>
                       </div>
                   </div>
