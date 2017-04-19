@@ -66,6 +66,12 @@ $router->add('/deconnexion/', function() use ($do_header, $view, $session){
     $view->display('footer.php');
 });
 
+$router->add('/shop/', function() use ($do_header, $view) {
+    $do_header();
+    $view->display('boutique.php');
+    $view->display('footer.php');
+});
+
 require("../routes/connexion.php");
 require("../routes/inscription.php");
 require("../routes/profile.php");
