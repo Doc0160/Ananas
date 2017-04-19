@@ -9,7 +9,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\casquette.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>casquette.jpg">
                     </div>
                     <div class="card-content">
                         <span class="title"> <h5>Casquette exia</h5></span>
@@ -26,7 +26,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\gourde.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>gourde.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Gourde Exia</h5></span>
@@ -43,7 +43,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\pull.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>pull.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Pull Exia</h5></span>
@@ -69,7 +69,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\sac.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>sac.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Sac Exia</h5></span>
@@ -86,7 +86,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\kebab.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>kebab.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>kebab Exia</h5></span>
@@ -103,7 +103,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\siphano.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>siphano.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>T-shirt siphano</h5></span>
@@ -129,7 +129,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\exia.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>exia.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Ton Année à l'Exia</h5></span>
@@ -146,7 +146,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\deco.jpg">
+                        <img src="<?php echo ROOTURL.'/products/'; ?>deco.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>le trophée Exia</h5></span>
@@ -163,7 +163,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img class="materialboxed" src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\stage.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>stage.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>stage en entreprise</h5></span>
