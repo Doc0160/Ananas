@@ -27,16 +27,26 @@ if($session->has_data()) {
     if(BitField::has($perm, PERMISSION_DELETE_PHOTO)) {
         $router->get('/photos/delete/:id/', function($id) use ($router, $database){
 
+            $database->beginTransaction();
             $id = (int)$id;
             $req = $database->prepare("SELECT picture FROM photo WHERE id=:id");
             $req->bindParam(":id", $id);
             $req->execute();
             $filename = $req->fetch()['picture'];
-            var_dump($filename);
+
+            $req = $database->prepare("DELETE FROM photo_like WHERE id_photo=:id");
+            $req->bindParam(":id", $id);
+            $req->execute();
+
+            $req = $database->prepare("DELETE FROM photo_comment WHERE id_photo=:id");
+            $req->bindParam(":id", $id);
+            $req->execute();
             
             $req = $database->prepare("DELETE FROM photo WHERE id=:id");
             $req->bindParam(":id", $id);
             $req->execute();
+
+            $database->commit();
 
             unlink(BASEPATH.BASEIMAGE.'/'.$filename);
 

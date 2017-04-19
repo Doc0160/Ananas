@@ -70,7 +70,6 @@
          $(el).on('click', function(self) {
              return function(e) {
                  e.preventDefault();
-                 console.log(self.attr('href'));
                  $.ajax(self.attr('href')).done(function(self) {
                      return function() {
                          if(self.hasClass('like')) {
@@ -87,8 +86,10 @@
                              self.addClass('like');
                              i.text('thumb_up');
                              span.text(parseInt(span.text())-1);
+                         } else {
+                             console.log('done');
+                             console.log(self.prop('tagName'));
                          }
-                         console.log('done');
                      };
                  }(self));
              };
