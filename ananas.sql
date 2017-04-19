@@ -112,6 +112,7 @@ VALUES (300.1, 'Logo Exia Reims', 'Une coupe en plastique de la forme de logo sn
 (500.4, 'TRUC', 'JE DECRIS UN TRUC', NULL),
 (500.4, 'Bucal', 'mumumu', NULL),
 (500.4, 'Casquette EXIA', 'ceci est un article de qualité', 'casquette.jpg');
+(500.4, 'Gourde EXIA', 'ceci est un article de qualité', 'gourde.jpg');
 
 CREATE TABLE `goodies_reservation` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
