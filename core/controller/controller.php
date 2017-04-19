@@ -16,7 +16,7 @@ class Controller {
     public function execute(string $name, array $data = []) {
         $data = array_merge($data, $this->context);
         {
-            require_once($this->path.$name);
+            require($this->path.$name);
         }
     }
 }
