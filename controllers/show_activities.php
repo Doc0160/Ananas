@@ -4,6 +4,6 @@ $records = $data["database"]->prepare('SELECT * FROM activity ORDER BY id DESC L
 $records->execute();
 $results = $records->fetchAll();
 
-$data["view"]->display('show_activities.php', $results);
+$data["view"]->display('show_activities.php', ["activity" => $results]);
 
 ?>
