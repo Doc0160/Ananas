@@ -12,7 +12,7 @@
                 <p><?php echo $v['description']; ?></p>
             </div>
             <div class="card-action">
-                <span class="price"><h3>10€</h3></span>
+                <span class="price"><h3><?php echo $v['price']; ?>€</h3></span>
                 <a href="#">commander</a>
             </div>
         </div>
