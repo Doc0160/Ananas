@@ -99,7 +99,7 @@ CONSTRAINT `a_v_ibfk_3` UNIQUE (`id_activity`, `id_user`)
 
 CREATE TABLE `goodies` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-`price` float NOT NULL,
+`price` float,
 `name` varchar(255),
 `picture` varchar(255),
 `description` varchar(2048) NOT NULL,
