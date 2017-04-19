@@ -62,12 +62,14 @@ $router->add('/', function() use ($do_header, $view, $controller, $session, $dat
     $view->display('footer.php');
 });
 
-$router->add('/deconnexion/', function() use ($do_header, $view, $session){
-    $session->destroy();
-    $do_header();
-    $view->display('deco.php');
-    $view->display('footer.php');
-});
+if($session->has_data()) {
+    $router->add('/deconnexion/', function() use ($do_header, $view, $session){
+        $session->destroy();
+        $do_header();
+        $view->display('deco.php');
+        $view->display('footer.php');
+    });
+}
 
 $router->add('/shop/', function() use ($do_header, $view, $database) {
     $req = $database->prepare('SELECT * FROM goodies');
@@ -76,6 +78,23 @@ $router->add('/shop/', function() use ($do_header, $view, $database) {
     $do_header();
     $view->display('boutique.php', ['goodies' => $goodies]);
     $view->display('footer.php');
+});
+
+$router->get('/activity/vote/:id/', function ($id)
+    use($database, $session) {
+        $req = $database->prepare('INSERT INTO activity_vote (id_activity, id_user) VALUES (:ida, :idu)');
+        $id = (int) $id;
+        $req->bindParam(':ida', $id);
+        $idu = (int)$session->id;
+        $req->bindParam(':idu', $idu);
+        try {
+            $req->execute();
+        } catch(PDOException $e) {
+            $req = $database->prepare("DELETE FROM activity_vote WHERE id_user=:id_user AND id_activity=:id_activity");
+            $req->bindParam(":id_activity", $id);
+            $req->bindParam(":id_user", $idu);
+            $req->execute();
+        }
 });
 
 require("../routes/connexion.php");

@@ -93,7 +93,7 @@ CREATE TABLE `activity_vote` (
 `id_activity` int(11) UNSIGNED NOT NULL,
 `id_user` int(11) UNSIGNED NOT NULL,
 PRIMARY KEY (`id`),
-CONSTRAINT `a_v_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+CONSTRAINT `a_v_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity_suggestion(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 CONSTRAINT `a_v_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 CONSTRAINT `a_v_ibfk_3` UNIQUE (`id_activity`, `id_user`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
