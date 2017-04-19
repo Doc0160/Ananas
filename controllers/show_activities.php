@@ -4,6 +4,6 @@ $records = $data["database"]->prepare('SELECT * FROM goodies ORDER BY RAND() DES
 $records->execute();
 $results = $records->fetchAll();
 
-$data["view"]->display('shop_preview.php', $results);
+$data["view"]->display('show_activities.php', $results);
 
 ?>
