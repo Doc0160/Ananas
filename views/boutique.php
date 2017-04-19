@@ -9,7 +9,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>casquette.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>casquette.jpg">
                     </div>
                     <div class="card-content">
                         <span class="title"> <h5>Casquette exia</h5></span>
@@ -26,7 +26,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>gourde.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>gourde.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Gourde Exia</h5></span>
@@ -43,7 +43,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>pull.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>pull.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Pull Exia</h5></span>
@@ -69,7 +69,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>sac.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>sac.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Sac Exia</h5></span>
@@ -86,7 +86,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>kebab.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>kebab.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>kebab Exia</h5></span>
@@ -103,7 +103,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>siphano.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>siphano.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>T-shirt siphano</h5></span>
@@ -129,7 +129,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>exia.jpg">
+                        <img class="materialboxed"  src="<?php echo ROOTURL.'/products/'; ?>exia.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>Ton Année à l'Exia</h5></span>
@@ -146,7 +146,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="<?php echo ROOTURL.'/products/'; ?>deco.jpg">
+                        <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>deco.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>le trophée Exia</h5></span>
