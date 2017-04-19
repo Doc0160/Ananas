@@ -1,6 +1,6 @@
 <?php
 
-$records = $data["database"]->prepare('SELECT * FROM goodies ORDER BY RAND() DESC LIMIT 3');
+$records = $data["database"]->prepare('SELECT * FROM activity DESC LIMIT 5');
 $records->execute();
 $results = $records->fetchAll();
 
