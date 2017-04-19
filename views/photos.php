@@ -79,7 +79,7 @@
                                 </div>
                             <?php } ?>
                             <div class="row collection-item">
-                                <form method="post" action="<?php echo BASEURI.'/photos/comment/'.$v['id'].'/'; ?>">
+                                <form class="ajax comment" method="post" action="<?php echo BASEURI.'/photos/comment/'.$v['id'].'/'; ?>">
                                     <div class="input-field col s9">
                                         <textarea name="comment" id="textarea1" class="materialize-textarea"></textarea>
                                         <label for="textarea1">Textarea</label>

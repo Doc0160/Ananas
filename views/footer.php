@@ -48,16 +48,16 @@
      });
      $('#carousel_1').carousel({fullWidth: true});
      setInterval(function(){
-        $('#carousel_1').carousel('next');
+         $('#carousel_1').carousel('next');
      }, 3000);
 
      $('#carousel_2').carousel({
-            dist:0,
-            shift:100,
-            padding:10,
-        });
+         dist:0,
+         shift:100,
+         padding:10,
+     });
      setInterval(function(){
-        $('#carousel_2').carousel('next');
+         $('#carousel_2').carousel('next');
      }, 3000);
 
      $(".button-collapse").sideNav();
@@ -66,36 +66,57 @@
          selectYears: 15,
      });
 
-     $('.ajax').each(function(id, el) {
-         $(el).on('click', function(self) {
-             return function(e) {
-                 e.preventDefault();
-                 $.ajax(self.attr('href')).done(function(self) {
-                     return function() {
-                         if(self.hasClass('like')) {
-                             var i = self.find('i');
-                             var span = self.find('span');
-                             self.removeClass('like');
-                             self.addClass('dislike');
-                             i.text('thumb_down');
-                             span.text(parseInt(span.text())+1);
-                         } else if(self.hasClass('dislike')) {
-                             var i = self.find('i');
-                             var span = self.find('span');
-                             self.removeClass('dislike');
-                             self.addClass('like');
-                             i.text('thumb_up');
-                             span.text(parseInt(span.text())-1);
-                         } else {
-                             console.log('done');
-                             console.log(self.prop('tagName'));
-                         }
-                     };
-                 }(self));
-             };
-         }($(el)));
+     setTimeout(function() {
+         $('.ajax').each(function(id, el) {
+             $(el).on('click', function(self) {
+                 return function(e) {
+                     if(self.prop('tagName') == 'FORM') {
+                         self.submit(function(e){
+		                     $.ajax({type:"POST",
+                                     data: $(this).serialize(),
+                                     url: $(this).attr('action'),
+                                     type: $(this).attr('method'),
+			                         success: function(data){
+                                         console.log('f');
+			                         }
+		                     });
+                             e.preventDefault();
+	                     });
+                         
+                     } else if(self.prop('tagName') == 'A') {
+                         e.preventDefault();
+                         $.ajax(self.attr('href')).success(function(self) {
+                             if(self.hasClass('like')) {
+                                 return function() {
+                                     var i = self.find('i');
+                                     var span = self.find('span');
+                                     self.removeClass('like');
+                                     self.addClass('dislike');
+                                     i.text('thumb_down');
+                                     span.text(parseInt(span.text())+1);
+                                 };
+                             } else if(self.hasClass('dislike')) {
+                                 return function() {
+                                     var i = self.find('i');
+                                     var span = self.find('span');
+                                     self.removeClass('dislike');
+                                     self.addClass('like');
+                                     i.text('thumb_up');
+                                     span.text(parseInt(span.text())-1);
+                                 };
+                             } else {
+                                 return function() {
+                                     console.log('done');
+                                 };
+                             }
+                             
+                         }(self));
+                     }
+                 };
+             }($(el)));
+         });
      });
- });
+ }, 0);
 </script>
     </body>
 </html>
