@@ -108,15 +108,15 @@ CHECK (`price` > 0)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `goodies` (`price`, `name`, `description`, `picture`)
-VALUES (10, 'Casquette EXIA', 'ceci est un article de qualité', 'casquette.jpg'),
-(100, 'Gourde EXIA', 'ceci est un article de qualité', 'gourde.jpg'),
-(1000, 'Pull EXIA', 'ceci est un article de qualité', 'pull.jpg'),
-(10, 'Sac EXIA', 'ceci est un article de qualité', 'sac.jpg'),
+VALUES (10, 'Casquette EXIA', 'Ceci est un article de qualité', 'casquette.jpg'),
+(100, 'Gourde EXIA', 'Ceci est un article de qualité', 'gourde.jpg'),
+(1000, 'Pull EXIA', 'Ceci est un article de qualité', 'pull.jpg'),
+(10, 'Sac EXIA', 'Ceci est un article de qualité', 'sac.jpg'),
 (5, 'Kebab EXIA', 'Servit par le chef Loillieux', 'kebab.jpg'),
 (1, 'T-shirt siphano', 'SVP', 'siphano.jpg'),
-(5500, 'Ton Année à l\'Exia', 'ceci est un article de qualité', 'exia.jpg'),
+(5500, 'Ton Année à l\'Exia', 'Ceci est un article de "qualité"', 'exia.jpg'),
 (25, 'Trophée Exia', 'Dimensions: 10cm x 5.5cm', 'deco.jpg'),
-(NULL, 'Stage en entreprise', 'ceci est un article de qualité', 'stage.jpg');
+(NULL, 'Stage en entreprise', '... hum', 'stage.jpg');
 
 CREATE TABLE `goodies_reservation` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
