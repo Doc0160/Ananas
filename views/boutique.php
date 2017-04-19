@@ -163,7 +163,7 @@
             <div class="col s12 m4 l4">
                 <div class="card">
                     <div class="card-image">
-                        <img src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\stage.jpg">
+                        <img class="materialboxed" src="C:\Users\Etienne Dumais\Ananas\maquette\boutique image\stage.jpg">
                     </div>
                     <div class="card-content">
                         <span class="card-title"><h5>stage en entreprise</h5></span>
