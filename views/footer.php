@@ -75,14 +75,18 @@
                      return function() {
                          if(self.hasClass('like')) {
                              var i = self.find('i');
+                             var span = self.find('span');
                              self.removeClass('like');
                              self.addClass('dislike');
-                             i.html('thumb_down');
+                             i.text('thumb_down');
+                             span.text('gg');
                          } else if(self.hasClass('dislike')) {
                              var i = self.find('i');
+                             var span = self.find('span');
                              self.removeClass('dislike');
                              self.addClass('like');
-                             i.html('thumb_up');
+                             i.text('thumb_up');
+                             span.text('gg');
                          }
                          console.log('done');
                      };

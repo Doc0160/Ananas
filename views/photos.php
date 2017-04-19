@@ -44,8 +44,10 @@
                 
                 <?php if($data['can_like']) { ?>
                 <a class="ajax like" href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
-                    <i class="material-icons"><?php echo ($v['you_like']) ? 'thumb_down' : 'thumb_up';?></i>
-                    (<?php echo $v["likes"]; ?>)
+                    <i class="material-icons">
+                        <?php echo ($v['you_like']) ? 'thumb_down' : 'thumb_up';?>
+                    </i>
+                    (<span><?php echo $v["likes"]; ?></span>)
                 </a>
                 <?php } ?>
                 
