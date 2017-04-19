@@ -66,9 +66,12 @@ $router->add('/deconnexion/', function() use ($do_header, $view, $session){
     $view->display('footer.php');
 });
 
-$router->add('/shop/', function() use ($do_header, $view) {
+$router->add('/shop/', function() use ($do_header, $view, $database) {
+    $req = $database->prepare('SELECT * FROM goodies');
+    $req->execute();
+    $goodies = $req->fetchAll();
     $do_header();
-    $view->display('boutique.php');
+    $view->display('boutique.php', ['goodies' => $goodies]);
     $view->display('footer.php');
 });
 
