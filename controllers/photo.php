@@ -35,6 +35,9 @@ $data["view"]->display('photos.php',
                            'can_delete' => $data['session']->has_data() &&
                                          BitField::has($data['session']->permissions,
                                                        PERMISSION_DELETE_PHOTO),
+                           'can_like' => $data['session']->has_data() &&
+                                         BitField::has($data['session']->permissions,
+                                                       PERMISSION_LIKE_PHOTO),
                        ]);
 
 ?>
