@@ -1,6 +1,6 @@
 <?php
 
-$records = $data["database"]->prepare('SELECT * FROM activity DESC LIMIT 5');
+$records = $data["database"]->prepare('SELECT * FROM activity ORDER BY id DESC LIMIT 5');
 $records->execute();
 $results = $records->fetchAll();
 
