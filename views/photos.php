@@ -27,14 +27,8 @@
 <div class="row">
     <?php
     foreach($data['photos'] as $k => $v) {
-        if($k % 3 == 0) {
     ?>
-</div>
-<div class="row">
-    <?php             
-    }
-    ?>
-    <div class="col s4">
+    <div class="col s12 l4">
         <div class="card hoverable">
             <div class="card-image">
                 <img class="materialboxed" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
