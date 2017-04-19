@@ -73,7 +73,7 @@
                                             <?php echo $vv['username']; ?>
                                             <img alt="avatar"
                                                  class="responsive-img"
-                                                 src="<?php echo BASEURI.BASEAVATAR.'/'.((false) ? $vv['avatar'] : 'logo.png'); ?>">
+                                                 src="<?php echo BASEURI.BASEAVATAR.'/'.((!is_nul($vv['avatar'])) ? $vv['avatar'] : 'logo.png'); ?>">
                                         </a>
                                     </div>
                                     <div class="col s9">
