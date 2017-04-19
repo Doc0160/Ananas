@@ -88,6 +88,11 @@
                         Photos
                     </a>
                 </li>
+                <li>
+                    <a href="<?php echo ROOTURL; ?>/shop/">
+                        Shop
+                    </a>
+                </li>
                 <li><div class="divider"></div></li>
                 <?php if ($data['session']->has_data() &&
                           (BitField::has($data['session']->permissions,
