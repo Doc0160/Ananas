@@ -30,6 +30,9 @@
                         </tr>
                     </tbody>
                 </table>
+                    <div class="card-action">
+                        <a href="<?php echo ROOTURL."/activities/"; ?>">Voir toutes les activités</a>
+                    </div>
             </div>
         </div>
     </div>

@@ -21,21 +21,21 @@
     }
 
     if (!empty($data[0]['picture'])){
-        $pic_1 = ROOTURL."/images/".$data[0]['picture'];
+        $pic_1 = ROOTURL."/products/".$data[0]['picture'];
     }
     else{
         $pic_1 = ROOTURL."/logo.png";
     }
 
     if (!empty($data[1]['picture'])){
-        $pic_2 = ROOTURL."/images/".$data[1]['picture'];
+        $pic_2 = ROOTURL."/products/".$data[1]['picture'];
     }
     else{
         $pic_2 = ROOTURL."/logo.png";
     }
 
     if (!empty($data[2]['picture'])){
-        $pic_3 = ROOTURL."/images/".$data[2]['picture'];
+        $pic_3 = ROOTURL."/products/".$data[2]['picture'];
     }
     else{
         $pic_3 = ROOTURL."/logo.png";
@@ -51,7 +51,7 @@
                       <div class="card-image">
                           <img class="materialboxed" alt="photo" src="<?php echo $pic_1; ?>">
                           <span class="card-title"><?php echo $data[0]['name']; ?></span>
-                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          <a href="<?php echo ROOTURL."/shop/"; ?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
                           <p><?php echo $desc_1; ?></p>
@@ -66,7 +66,7 @@
                       <div class="card-image">
                           <img class="materialboxed" alt="photo" src="<?php echo $pic_2; ?>">
                           <span class="card-title"><?php echo $data[1]['name']; ?></span>
-                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          <a href="<?php echo ROOTURL."/shop/"; ?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
                           <p><?php echo $desc_2; ?></p>
@@ -81,7 +81,7 @@
                       <div class="card-image">
                           <img class="materialboxed" alt="photo" src="<?php echo $pic_3; ?>">
                           <span class="card-title"><?php echo $data[2]['name']; ?></span>
-                          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                          <a href="<?php echo ROOTURL."/shop/"; ?>" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                       </div>
                       <div class="card-content">
                           <p><?php echo $desc_3; ?></p>
