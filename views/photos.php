@@ -43,7 +43,8 @@
             <div class="card-action">
                 
                 <?php if($data['can_like']) { ?>
-                <a class="ajax like" href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
+                    <a class="ajax <?php echo ($v['you_like']) ? 'dislike' : 'like';?>"
+                       href="<?php echo ROOTURL."/photos/like/".$v["id"].'/'; ?>">
                     <i class="material-icons">
                         <?php echo ($v['you_like']) ? 'thumb_down' : 'thumb_up';?>
                     </i>
