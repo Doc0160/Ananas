@@ -1,6 +1,6 @@
 <?php
 
-    $records = $data["database"]->prepare('SELECT * FROM activity WHERE visible = 1 ORDER BY id DESC LIMIT 2');
+    $records = $data["database"]->prepare('SELECT * FROM activity WHERE UNIX_TIMESTAMP(date) > UNIX_TIMESTAMP(CURRENT_TIMESTAMP) AND visible = 1 ORDER BY id DESC LIMIT 2');
     $records->execute();
     $results = $records->fetchAll();
 
