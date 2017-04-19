@@ -1,3 +1,9 @@
+<?php
+
+var_dump($data['dump']);
+
+?>
+
 <div class="row">
     <div class="col s12">
         <div class="card hoverable">
@@ -8,7 +14,7 @@
                         <thead>
                             <tr>
                                 <th><i class="material-icons">list</i>Activité</th>
-                                <th><i class="material-icons">alarm</i>Description</th>
+                                <th><i class="material-icons" style="margin-left: 25px;">alarm</i>Description</th>
                                 <th><i class="material-icons">done</i>Vote</th>
                             </tr>
                         </thead>
@@ -19,18 +25,25 @@
                         ?>
                             <tr>
                                 <td><?php echo $value['name']; ?></td>
-                                <td><?php echo $value['description']; ?></td>
+                                <td>
+                                    <div class="col s12">
+                                        <ul class="collapsible" style="width: 50vw; margin-left: 25px;" data-collapsible="accordion">
+                                            <li>
+                                                <div class="collapsible-header">En savoir plus</div>
+                                                <div class="collapsible-body">
+                                                    <span><?php echo $value['description']; ?></span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td><i class="material-icons">thumb_up</i></td>
                         <?php
                         }
                         ?>
-                                <td><?php echo $value['vote'] ?></td>
-                                <td><a href="#" class="btn"><i class="material-icons">send</i></a></td>
                             </tr>
                         </tbody>
                     </table>
-                        <div class="card-action">
-                            <a href="<?php echo ROOTURL."/activities/"; ?>">Voir toutes les activités</a>
-                        </div>
                 </div>
             </div>
         </div>
