@@ -64,13 +64,16 @@
                             <i class="material-icons">filter_drama</i>
                             Comments (<?php echo count($v['comments']); ?>)
                         </div>
-                        <div class="collapsible-body collection">
+                        <div class="collapsible-body collection" style="padding: 0;">
+                            
                             <?php foreach($v['comments'] as $kk => $vv) { ?>
                                 <div class="row collection-item">
                                     <div class="col s3">
                                         <a href="<?php echo ROOTURL.'/profile/'.$vv['id_user'].'/'; ?>">
                                             <?php echo $vv['username']; ?>
-                                            <img alt="avatar" class="responsive-img" src="<?php echo BASEURI.BASEAVATAR.'/'.((false) ? $vv['avatar'] : 'logo.png'); ?>">
+                                            <img alt="avatar"
+                                                 class="responsive-img"
+                                                 src="<?php echo BASEURI.BASEAVATAR.'/'.((false) ? $vv['avatar'] : 'logo.png'); ?>">
                                         </a>
                                     </div>
                                     <div class="col s9">
@@ -78,13 +81,17 @@
                                     </div>
                                 </div>
                             <?php } ?>
+                            
                             <div class="row collection-item">
-                                <form class="ajax comment" method="post" action="<?php echo BASEURI.'/photos/comment/'.$v['id'].'/'; ?>">
-                                    <div class="input-field col s9">
-                                        <textarea name="comment" id="textarea1" class="materialize-textarea"></textarea>
+                                <form class="ajax comment"
+                                      method="post"
+                                      action="<?php echo BASEURI.'/photos/comment/'.$v['id'].'/'; ?>">
+                                    <div class="input-field col s12">
+                                        <textarea name="comment" id="textarea1"
+                                                  class="materialize-textarea"></textarea>
                                         <label for="textarea1">Textarea</label>
                                     </div>
-                                    <div class="input-field col s3">
+                                    <div class="input-field col s12">
                                         <input type="submit" class="btn" value="GO">
                                     </div>
                                 </form>
