@@ -38,6 +38,9 @@ $data["view"]->display('photos.php',
                            'can_like' => $data['session']->has_data() &&
                                          BitField::has($data['session']->permissions,
                                                        PERMISSION_LIKE_PHOTO),
+                           'can_comment' => $data['session']->has_data() &&
+                                       BitField::has($data['session']->permissions,
+                                                     PERMISSION_COMMENT_PHOTO),
                        ]);
 
 ?>

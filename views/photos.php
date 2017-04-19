@@ -56,6 +56,7 @@
                    download="<?php echo $v["picture"]; ?>">
                     <i class="material-icons">file_download</i>
                 </a>
+                <?php if($data['can_like']) { ?>
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header">
@@ -90,6 +91,7 @@
                         </div>
                     </li>
                 </ul>
+                <?php } ?>
             </div>
         </div>
     </div>
