@@ -115,7 +115,7 @@ VALUES (500.4, 'TRUC', 'JE DECRIS UN TRUC', NULL),
 (1000, 'Pull EXIA', 'ceci est un article de qualité', 'pull.jpg'),
 (10, 'Sac EXIA', 'ceci est un article de qualité', 'sac.jpg'),
 (5, 'Kebab EXIA', 'ceci est un article de qualité', 'kebab.jpg'),
-(1, 'T-shirt siphano', 'ceci est un article de qualité', 'siphano.jpg'),
+(1, 'T-shirt siphano', 'SVP', 'siphano.jpg'),
 (55000, 'Ton Année à l\'Exia', 'ceci est un article de qualité', 'exia.jpg'),
 (25, 'Trophée Exia', 'Dimensions: 10cm x 5.5cm', 'deco.jpg'),
 (NULL, 'Stage en entreprise', 'ceci est un article de qualité', 'stage.jpg');

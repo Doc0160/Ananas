@@ -1,5 +1,23 @@
 
 <div class="row">
+
+    <?php  ?>
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-image">
+                <img class="materialboxed" src="<?php echo ROOTURL.'/products/'; ?>casquette.jpg">
+            </div>
+            <div class="card-content">
+                <span class="title"> <h5>Casquette exia</h5></span>
+                <p>ceci est un article de qualité</p>
+            </div>
+            <div class="card-action">
+                <span class="price"><h3>10€</h3></span>
+                <a href="#">commander</a>
+            </div>
+        </div>
+    </div>
+    <?php  ?>
     
     <div class="col s12 m6 l4">
         <div class="card">
