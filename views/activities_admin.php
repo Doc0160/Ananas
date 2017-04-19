@@ -17,12 +17,14 @@
                                 <div class="switch">
                                     <label>
                                         Off
-                                        <input name="visible" type="checkbox" <?php echo (bool)$v['visible'] ? 'checked="checked"' : ''; ?>>
+                                        <input name="visible" type="checkbox"
+                                               <?php echo (bool)$v['visible'] ? 'checked="checked"' : ''; ?>>
                                         <span class="lever"></span>
                                         On
                                     </label>
                                 </div>
                             </div>
+                            
                             <div class="row">
                                 <input type="hidden" name="id" value="<?php echo $v['id']; ?>">
                                 <div class="file-field input-field">
