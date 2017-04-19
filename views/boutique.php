@@ -13,7 +13,7 @@
             </div>
             <div class="card-action">
                 <span class="price"><h3><?php echo (is_null($v['price'])) ? 'non disponible' : $v['price'].'€'; ?></h3></span>
-                <a href="#">commander</a>
+                <a href="#!not_a_real_link">commander</a>
             </div>
         </div>
     </div>
