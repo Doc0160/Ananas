@@ -114,7 +114,7 @@ VALUES (10, 'Casquette EXIA', 'ceci est un article de qualité', 'casquette.jpg'
 (10, 'Sac EXIA', 'ceci est un article de qualité', 'sac.jpg'),
 (5, 'Kebab EXIA', 'ceci est un article de qualité', 'kebab.jpg'),
 (1, 'T-shirt siphano', 'SVP', 'siphano.jpg'),
-(55000, 'Ton Année à l\'Exia', 'ceci est un article de qualité', 'exia.jpg'),
+(5500, 'Ton Année à l\'Exia', 'ceci est un article de qualité', 'exia.jpg'),
 (25, 'Trophée Exia', 'Dimensions: 10cm x 5.5cm', 'deco.jpg'),
 (NULL, 'Stage en entreprise', 'ceci est un article de qualité', 'stage.jpg');
 

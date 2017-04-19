@@ -1,5 +1,14 @@
 <?php
 
+$router->post('/profile/:idu/groupe/', function($idu)
+    use ($router, $database) {
+        $req = $database->prepare('UPDATE user SET id_groupe=:idg WHERE id=:idu');
+        $req->bindParam(':idu', $idu);
+        $req->bindParam(':idg', $_POST['groupe']);
+        $req->execute();
+        $router->redirect('/profile/'.(int)$idu.'/');
+    });
+
 $router->get('/profile/:id/', function($id)
     use($do_header, $view, $database) {
         $do_header();

@@ -24,19 +24,20 @@
             <div class="col s6"><?php echo $data['groupe']; ?></div>
         </div>
         <?php if($data['session']->has_data()) { ?>
-            <form action="<?php echo ROOTURL.'/profile/groupe/'.$data['id_groupe']; ?>" method="post">
+            <form action="<?php echo ROOTURL.'/profile/'.$data['id'].'/groupe/'; ?>" method="post">
             <div class="row">
                 <div class="col s6">
                     <select name="groupe">
                         <?php foreach($data['groupes'] as $k => $v) { ?>
-                            <option value="<?php echo $v['id']; ?>" <?php echo ($v['id']==$data['id_groupe']) ? 'selected' : '' ; ?>>
+                            <option value="<?php echo $v['id']; ?>"
+                                    <?php echo ($v['id']==$data['id_groupe']) ? 'selected' : '' ; ?>>
                                 <?php echo $v['name']; ?>
                             </option>
                         <?php } ?>
                     </select>
                 </div>
                 <div class="col s6">
-                    <input class="btn" type="submit" value="Modofier">
+                    <input class="btn" type="submit" value="Modifier">
                 </div>
             </div>
             </form>

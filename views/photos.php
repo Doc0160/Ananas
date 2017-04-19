@@ -68,7 +68,7 @@
                             <?php foreach($v['comments'] as $kk => $vv) { ?>
                                 <div class="row collection-item">
                                     <div class="col s3">
-                                        <a href="<?php echo ROOTURL.'/profile/'.$vv['id'].'/'; ?>">
+                                        <a href="<?php echo ROOTURL.'/profile/'.$vv['id_user'].'/'; ?>">
                                             <?php echo $vv['username']; ?>
                                             <img alt="avatar" class="responsive-img" src="<?php echo BASEURI.BASEAVATAR.'/'.((false) ? $vv['avatar'] : 'logo.png'); ?>">
                                         </a>
