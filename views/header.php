@@ -119,7 +119,7 @@
                 </li>
                 <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/groupe/">
-                        <i class="material-icons">group_add</i>
+                        <i class="material-icons">assignment_turned_in</i>
                          Suggestions à approuver
                     </a>
                 </li>
