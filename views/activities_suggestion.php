@@ -35,7 +35,11 @@
                                             </ul>
                                         </div>
                                     </td>
-                                    <td><i class="material-icons">thumb_up</i></td>
+                                    <td>
+                                        <a href="<?php echo ROOTURL.'/activity/vote/'.$value['id'].'/'; ?>">
+                                            <i class="material-icons">thumb_up</i>
+                                        </a>
+                                    </td>
                                 </tr>
                                 
                             <?php
