@@ -50,7 +50,7 @@
      $(document).keydown(function (e) {
          if (e.keyCode === k[n++]) {
              if (n === k.length) {
-                 alert('Konami !!!'); // à remplacer par votre code
+                 alert('Konami !!!');
                  n = 0;
                  return false;
              }
