@@ -50,8 +50,8 @@ define("PERMISSION_MODIFY_GOODIES", 1 << $i++);
 define("PERMISSION_DELETE_GOODIES", 1 << $i++);
 define("PERMISSION_BUY_GOODIES", 1 << $i++);
 
-//
 define("PERMISSION_VOTE_ACTIVITY", 1 << $i++);
+define("PERMISSION_ACCEPT_ACTIVITY", 1 << $i++);
 
 // DEFAULT PERMISSION
 define("DEFAULT_PERMISSION_UNKNOWN",
