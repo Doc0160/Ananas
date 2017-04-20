@@ -29,10 +29,3 @@
 </div>
 
 
-<?php
-
-var_dump($data['groups']);
-
-?>
-
-
