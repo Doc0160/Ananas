@@ -13,7 +13,7 @@
                 </p>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
+                <h5 class="white-text">Liens annexes</h5>
                 <ul>
                     <li>
                         <a class="grey-text text-lighten-3" href="https://moodle-exia.cesi.fr/course/view.php?id=631">Moodle</a>
@@ -22,10 +22,10 @@
                         <a class="grey-text text-lighten-3" href="https://github.com/Doc0160/Ananas">Github</a>
                     </li>
                     <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 3</a>
+                        <a class="grey-text text-lighten-3" href="#!">Mentions légales</a>
                     </li>
                     <li>
-                        <a class="grey-text text-lighten-3" href="#!">Link 4</a>
+                        <a class="grey-text text-lighten-3" href="http://materializecss.com/">Materializecss</a>
                     </li>
                 </ul>
             </div>

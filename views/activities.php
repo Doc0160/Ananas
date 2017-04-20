@@ -23,7 +23,7 @@
                     <ul class="collapsible row" data-collapsible="expandable">
                         <li>
                             <div class="collapsible-header">
-                                <i class="material-icons">filter_drama</i>Prix
+                                <i class="material-icons">euro_symbol</i>Prix
                             </div>
                             <div class="collapsible-body">
                                 <p>
@@ -33,7 +33,7 @@
                         </li>
                         <li>
                             <div class="collapsible-header">
-                                <i class="material-icons">filter_drama</i>Plus
+                                <i class="material-icons">description</i>Description
                             </div>
                             <div class="collapsible-body">
                                 <p>

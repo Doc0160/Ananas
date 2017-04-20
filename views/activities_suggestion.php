@@ -1,9 +1,3 @@
-<?php
-
-var_dump($data['dump']);
-
-?>
-
 <div class="row">
     <div class="col s12">
         <div class="card hoverable">
@@ -14,8 +8,8 @@ var_dump($data['dump']);
                         <thead>
                             <tr>
                                 <th><i class="material-icons">list</i>Activité</th>
-                                <th><i class="material-icons" style="margin-left: 25px;">alarm</i>Description</th>
-                                <th><i class="material-icons">done</i>Vote</th>
+                                <th><i class="material-icons" style="margin-left: 35px;">description</i>Description</th>
+                                <th><i class="material-icons">trending_up</i>Vote</th>
                             </tr>
                         </thead>
 

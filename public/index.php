@@ -56,6 +56,9 @@ $router->add('/', function() use ($do_header, $view, $controller, $session, $dat
     $controller->execute("activities_suggestion.php", [
             "database" => $database,
         ]);
+    $controller->execute("new_suggestion.php", [
+            "database" => $database,
+        ]);
     $controller->execute("shop_preview.php", [
             "database" => $database,
         ]);

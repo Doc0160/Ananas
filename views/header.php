@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>BDE</title>
+        <title>Site BDE</title>
         <meta charset="utf-8">
         <link href="<?php echo ROOTURL; ?>/materialize/MaterialIcons.css" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="<?php echo ROOTURL; ?>/materialize/css/materialize.min.css" media="screen"/>
@@ -23,7 +23,7 @@
                 <a href="<?php echo ROOTURL; ?>">
                     <img alt="logo" src="<?php echo ROOTURL; ?>/logo.png" style="height:60px;">
                 </a>
-                <a href="<?php echo ROOTURL; ?>" class="brand-logo">BDE</a>
+                <a id="main_title" href="<?php echo ROOTURL; ?>" class="brand-logo">Site Web du BDE</a>
                 <ul id="nav-mobile" class="right">
                     <?php if(!$data["session"]->has_data()) { ?>
                         <li>
@@ -73,23 +73,26 @@
                 </li>
                 <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/">
-                        <i class="material-icons">cloud</i>
+                        <i class="material-icons">account_box</i>
                         Profile
                     </a>
                 </li>
                 <li><div class="divider"></div></li>
                 <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/activities/">
-                        Activitées
+                        <i class="material-icons">today</i>
+                        Activités
                     </a>
                 </li>
                 <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/photos/">
+                        <i class="material-icons">photo</i>
                         Photos
                     </a>
                 </li>
                 <li>
                     <a href="<?php echo ROOTURL; ?>/shop/">
+                        <i class="material-icons">shopping_cart</i>
                         Shop
                     </a>
                 </li>
@@ -103,6 +106,7 @@
                                         PERMISSION_DELETE_GROUPE))) { ?>
                 <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/groupe/">
+                        <i class="material-icons">group_add</i>
                         Groupes
                     </a>
                 </li>
