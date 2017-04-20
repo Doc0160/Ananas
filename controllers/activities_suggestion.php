@@ -9,6 +9,8 @@ $dump = $data["database"]->prepare('SELECT COUNT(DISTINCT id_user) AS nb FROM ac
 $dump->execute();
 $dump_results = $dump->fetchAll();
 
-$data["view"]->display('activities_suggestion.php', ["activity_suggestion" => $results, "dump" => $dump_results]);
+$data["view"]->display('activities_suggestion.php',
+                       ["activity_suggestion" => $results,
+                        "dump" => $dump_results]);
 
 ?>
