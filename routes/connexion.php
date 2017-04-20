@@ -1,4 +1,5 @@
 <?php
+
 if(!$session->has_data()) {
     $router->post('/connexion/', function() use ($do_header, $controller, $session, $database, $cookie){
         $controller->execute("login.php", [
