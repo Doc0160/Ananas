@@ -66,6 +66,12 @@ $router->add('/', function() use ($do_header, $view, $controller, $session, $dat
     $view->display('footer.php');
 });
 
+$router->add('/legal', function() use ($do_header, $view) {
+    $do_header();
+    $view->display('legal.php');
+    $view->display('footer.php');
+});
+
 if($session->has_data()) {
     $router->add('/deconnexion/', function() use ($do_header, $view, $session){
         $session->destroy();

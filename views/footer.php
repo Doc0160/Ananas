@@ -22,7 +22,7 @@
                         <a class="grey-text text-lighten-3" href="https://github.com/Doc0160/Ananas">Github</a>
                     </li>
                     <li>
-                        <a class="grey-text text-lighten-3" href="#!">Mentions légales</a>
+                        <a class="grey-text text-lighten-3" href="<?php echo ROOTURL.'/legal/' ?>">Mentions légales</a>
                     </li>
                     <li>
                         <a class="grey-text text-lighten-3" href="http://materializecss.com/">Materializecss</a>
@@ -42,6 +42,7 @@
 <script type="text/javascript" src="<?php echo ROOTURL; ?>/materialize/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="<?php echo ROOTURL; ?>/materialize/js/materialize.min.js"></script>
 <script>
+ 
  $(document).ready(function(){
      
      $('select').material_select();
