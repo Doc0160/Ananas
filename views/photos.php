@@ -70,6 +70,7 @@
                             
                             <?php foreach($v['comments'] as $kk => $vv) { ?>
                                 <div class="row collection-item">
+                                    
                                     <div class="col s3">
                                         <a href="<?php echo ROOTURL.'/profile/'.$vv['id_user'].'/'; ?>">
                                             <?php echo $vv['username']; ?>
@@ -78,9 +79,11 @@
                                                  src="<?php echo BASEURI.BASEAVATAR.'/'.((!is_null($vv['avatar'])) ? $vv['avatar'] : 'logo.png'); ?>">
                                         </a>
                                     </div>
+                                    
                                     <div class="col s9">
                                         <p><?php echo $vv['comment']; ?></p>
                                     </div>
+                                    
                                 </div>
                             <?php } ?>
                             
@@ -88,14 +91,17 @@
                                 <form class="comment"
                                       method="post"
                                       action="<?php echo BASEURI.'/photos/comment/'.$v['id'].'/'; ?>">
+
                                     <div class="input-field col s12">
                                         <textarea name="comment" id="textarea1"
                                                   class="materialize-textarea"></textarea>
                                         <label for="textarea1">Commentaire</label>
                                     </div>
+                                    
                                     <div class="input-field col s12">
-                                        <input type="submit" class="btn" value="GO">
+                                        <input type="submit" class="btn" value="Envoyer">
                                     </div>
+
                                 </form>
                             </div>
                         </div>
