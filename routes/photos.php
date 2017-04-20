@@ -10,6 +10,15 @@ $router->get('/photos/', function()
         $view->display('footer.php');
     });
 
+$router->get('/photo/comment/delete/:id/', function($id)
+    use($database, $router) {
+        $id = (int) $id;
+        $req = $database->prepare('DELETE FROM photo_comment WHERE id=:id');
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $router->redirect('/photos/');
+});
+
 if($session->has_data()) {
     if(BitField::has($perm, PERMISSION_COMMENT_PHOTO)) {
         $router->post('/photos/comment/:id/', function($id) use ($router, $database, $session){
