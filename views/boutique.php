@@ -1,3 +1,4 @@
+<div class="row"><h1>BOUTIQUE</h1><div class="divider"></div></div>
 
 <div class="row">
 
