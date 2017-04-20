@@ -86,24 +86,24 @@ $router->add('/shop/', function() use ($do_header, $view, $database) {
 if($session->has_data() &&
    BitField::has($session->permissions, PERMISSION_VOTE_ACTIVITY)){
 
-$router->get('/activity/vote/:id/', function ($id)
-    use($database, $session, $router) {
-        $req = $database->prepare('INSERT INTO activity_vote (id_activity, id_user) VALUES (:ida, :idu)');
-        $id = (int) $id;
-        $req->bindParam(':ida', $id);
-        $idu = (int)$session->id;
-        $req->bindParam(':idu', $idu);
-        try {
-            $req->execute();
-        } catch(PDOException $e) {
-            $req = $database->prepare("DELETE FROM activity_vote WHERE id_user=:id_user AND id_activity=:id_activity");
-            $req->bindParam(":id_activity", $id);
-            $req->bindParam(":id_user", $idu);
-            $req->execute();
-        }
-        $router->redirect('/');
-    });
-    }
+    $router->get('/activity/vote/:id/', function ($id)
+        use($database, $session, $router) {
+            $req = $database->prepare('INSERT INTO activity_vote (id_activity, id_user) VALUES (:ida, :idu)');
+            $id = (int) $id;
+            $req->bindParam(':ida', $id);
+            $idu = (int)$session->id;
+            $req->bindParam(':idu', $idu);
+            try {
+                $req->execute();
+            } catch(PDOException $e) {
+                $req = $database->prepare("DELETE FROM activity_vote WHERE id_user=:id_user AND id_activity=:id_activity");
+                $req->bindParam(":id_activity", $id);
+                $req->bindParam(":id_user", $idu);
+                $req->execute();
+            }
+            $router->redirect('/');
+        });
+}
 
 require("../routes/connexion.php");
 require("../routes/inscription.php");
