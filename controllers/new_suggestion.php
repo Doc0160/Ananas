@@ -6,16 +6,19 @@
 		$records->execute();
 		$results = $records->fetch();
 
-		if ($data["session"]->permissions > $value['description']) 
+		if ($data["session"]->permissions == $results) 
 		{
-
+			$data['cookie']->activity_form = "Votre suggestion à été envoyée et est en attente de validation.";
 		}
-		$data['cookie']->success_activity_form = "Votre demande à été envoyée et est en attente de validation.";
+		else
+		{
+			$data['cookie']->activity_form = "Votre suggestion sera maintenant soumis à un vote";
+		}
 	}
 
-	else
+	elseif (empty($_POST['activity_name']) || empty($_POST['activity_description']))
 	{
-	    /*$data['cookie']->error_activity_form = "Tous les champs doivent être remplis.";*/
+	    $data['cookie']->activity_form = "Tous les champs doivent être remplis.";
 	}
 
 	$data["view"]->display('new_suggestion.php');
