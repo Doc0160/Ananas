@@ -12,7 +12,7 @@
         </div>
         <div class="file-field input-field col s8">
             <div class="btn">
-                <span>Fichier</span>
+                <span>Photo</span>
                 <input type="file" accept="image/*" name="photo">
             </div>
             <div class="file-path-wrapper">
