@@ -91,7 +91,7 @@
                                     <div class="input-field col s12">
                                         <textarea name="comment" id="textarea1"
                                                   class="materialize-textarea"></textarea>
-                                        <label for="textarea1">Textarea</label>
+                                        <label for="textarea1">Commentaire</label>
                                     </div>
                                     <div class="input-field col s12">
                                         <input type="submit" class="btn" value="GO">
