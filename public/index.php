@@ -91,6 +91,14 @@ $router->add('/shop/', function() use ($do_header, $view, $database) {
     $view->display('footer.php');
 });
 
+$router->add('/suggestion_validation/', function() use ($do_header, $view, $database) {
+    $req = $database->prepare('SELECT * FROM goodies');
+    $req->execute();
+    $goodies = $req->fetchAll();
+    $do_header();
+    $view->display('suggestion_validation.php');
+});
+
 if($session->has_data() &&
    BitField::has($session->permissions, PERMISSION_VOTE_ACTIVITY)){
 

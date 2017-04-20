@@ -2,18 +2,16 @@
     $msg_form = '';
 	if (!empty($_POST['activity_name']) && !empty($_POST['activity_description']))
 	{
-		$records = $data['database']->prepare('SELECT id FROM groupe WHERE id > 1');
-		$records->execute();
-		$results = $records->fetch();
+		$name = $_POST['activity_name'];
+		$description = $_POST['activity_description'];
 
-		if ($data["session"]->permissions == $results) 
-		{
-			$data['cookie']->activity_form = "Votre suggestion à été envoyée et est en attente de validation.";
-		}
-		else
-		{
-			$data['cookie']->activity_form = "Votre suggestion sera maintenant soumis à un vote";
-		}
+		$req = $data["database"]->prepare("INSERT INTO activity_suggestion (name, description) VALUES (:name, :description)");
+
+	    $req->bindParam(":name", $name);
+	    $req->bindParam(":description", $description);
+	    $req->execute();
+    
+		$msg_form = "Votre suggestion à été envoyée et est en attente de validation.";
 	}
 
 	elseif (!empty($_POST))
