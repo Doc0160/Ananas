@@ -23,7 +23,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
                     <input id="password" type="password" name="pass" class="validate">
-                    <label for="password">Password</label>
+                    <label for="password">Mot de passe</label>
                 </div>
             </div>
             <?php if(isset($cookie->error)) { ?>
@@ -48,11 +48,11 @@
             <div class="row">
                 <div class="input-field col s6">
                     <input id="first_name" name="first_name" type="text" class="validate">
-                    <label for="first_name">First Name</label>
+                    <label for="first_name">Prénom</label>
                 </div>
                 <div class="input-field col s6">
                     <input id="last_name" name="last_name" type="text" class="validate">
-                    <label for="last_name">Last Name</label>
+                    <label for="last_name">Nom</label>
                 </div>
             </div>
             <div class="row">
