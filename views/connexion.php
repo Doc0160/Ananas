@@ -73,7 +73,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">lock</i>
                     <input id="password" type="password" name="pass1" class="validate">
-                    <label for="password">Password</label>
+                    <label for="password">Mot de passe</label>
                 </div>
             </div>
             <div class="row">
