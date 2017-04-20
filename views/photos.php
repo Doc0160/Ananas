@@ -63,7 +63,7 @@
                 <ul class="collapsible" data-collapsible="accordion">
                     <li>
                         <div class="collapsible-header">
-                            <i class="material-icons">filter_drama</i>
+                            <i class="material-icons">comment</i>
                             Comments (<?php echo count($v['comments']); ?>)
                         </div>
                         <div class="collapsible-body collection" style="padding: 0;">
