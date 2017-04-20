@@ -59,7 +59,7 @@
                 <div class="input-field col s12">
                     <i class="material-icons prefix">account_circle</i>
                     <input id="username" type="text" name="username" class="validate">
-                    <label for="username">Username</label>
+                    <label for="username">Pseudo</label>
                 </div>
             </div>
             <div class="row">
