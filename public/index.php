@@ -83,6 +83,9 @@ $router->add('/shop/', function() use ($do_header, $view, $database) {
     $view->display('footer.php');
 });
 
+if($session->has_data() &&
+   BitField::has($session->permissions, PERMISSION_VOTE_ACTIVITY)){
+
 $router->get('/activity/vote/:id/', function ($id)
     use($database, $session, $router) {
         $req = $database->prepare('INSERT INTO activity_vote (id_activity, id_user) VALUES (:ida, :idu)');
@@ -99,7 +102,8 @@ $router->get('/activity/vote/:id/', function ($id)
             $req->execute();
         }
         $router->redirect('/');
-});
+    });
+    }
 
 require("../routes/connexion.php");
 require("../routes/inscription.php");
