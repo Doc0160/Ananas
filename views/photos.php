@@ -85,8 +85,10 @@
                                     </div>
 
                                     <?php if($data['can_delete_comment']) { ?>
-                                    <div class="col s12">
-                                        <i class="material-icons">delete</i>
+                                        <div class="col s12">
+                                            <a href="">
+                                                <i class="material-icons">delete</i>
+                                            </a>
                                     </div>
                                     <?php } ?>
                                     
