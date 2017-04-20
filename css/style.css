@@ -18,7 +18,7 @@ nav, .page-footer, .btn, .background {
     background: #c2242a;
 }
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating),
-.dropdown-content li > a, .dropdown-content li > span{
+.dropdown-content li > a, .dropdown-content li > span, table a{
     color: #c2242a;
 }
 
