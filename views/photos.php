@@ -3,14 +3,14 @@
 <?php if($data['session']->has_data() && BitField::has($data['session']->permissions, PERMISSION_CREATE_PHOTO)) { ?>
 <div class="row">
     <form action="" enctype="multipart/form-data"  method="post">
-        <div class="input-field col s2">
+        <div class="input-field col l2 s12">
             <select name="activity">
                 <?php foreach($data['activities'] as $k => $v) { ?>
                     <option value="<?php echo $v['id']; ?>"><?php echo $v['name']; ?></option>
                 <?php } ?>
             </select>
         </div>
-        <div class="file-field input-field col s8">
+        <div class="file-field input-field col l8 s12">
             <div class="btn">
                 <span>Photo</span>
                 <input type="file" accept="image/*" name="photo">
@@ -19,7 +19,7 @@
                 <input class="file-path validate" type="text">
             </div>
         </div>
-        <div class="input-field col s2">
+        <div class="input-field col l2 s12">
             <input class="btn" type="submit" value="Upload">
         </div>
     </form>
