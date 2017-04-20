@@ -78,11 +78,13 @@
                         </div>
                     <?php } ?>
                     <div class="card-action">
-                        <div class="input-field">
+                        <div class="input-field" style="margin: 10px">
                             <?php if(Bitfield::has($data['session']->permissions, PERMISSION_MODIFY_ACTIVITY)) { ?>
                                 <input type="submit" class="btn" value="Modifier">
+                            <?php }
+                                  if(Bitfield::has($data['session']->permissions, PERMISSION_DELETE_ACTIVITY)) { ?>
+                                <input type="submit" class="btn" value="Supprimer">
                             <?php } ?>
-                            <a href="#!mabite" class="btn">Supprimer</a>
                         </div>
                     </div>
                 </form>
