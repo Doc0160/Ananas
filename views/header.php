@@ -117,6 +117,12 @@
                     </a>
                 </li>
                 <li>
+                    <a class="waves-effect" href="<?php echo ROOTURL; ?>/activities/admin/">
+                        <i class="material-icons">assignment_return</i>
+                         Modifier les activités
+                    </a>
+                </li>
+                <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/suggestion_validation/">
                         <i class="material-icons">assignment_turned_in</i>
                          Suggestions à approuver

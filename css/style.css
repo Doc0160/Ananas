@@ -64,16 +64,3 @@ nav, .page-footer, .btn, .background {
   50% { transform: scale(0.8); }
   100% { transform: scale(0.8); }
 }
-
-.material-icons
-{
-  animation-name: rotate;
-  animation-duration: 20000s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotate 
-{
-    0%   {transform:rotate(0deg);}
-    100% {transform:rotate(360deg);}
-}

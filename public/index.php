@@ -123,7 +123,7 @@ if($session->has_data() &&
 }
 
 $router->get('/suggestion/trash/:id/', function($id) use ($controller, $do_header, $view, $database) {
-    $req = $database->prepare('DELETE activity_suggestion WHERE id = :id');
+    $req = $database->prepare('DELETE FROM activity_suggestion WHERE id = :id');
     $id = (int) $id;
     $req->bindParam(":id", $id);
     $req->execute();
