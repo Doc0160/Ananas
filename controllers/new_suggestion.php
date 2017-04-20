@@ -1,5 +1,5 @@
 <?php
-
+    $msg_form = '';
 	if (!empty($_POST['activity_name']) && !empty($_POST['activity_description']))
 	{
 		$records = $data['database']->prepare('SELECT id FROM groupe WHERE id > 1');
@@ -16,10 +16,10 @@
 		}
 	}
 
-	elseif (empty($_POST['activity_name']) || empty($_POST['activity_description']))
+	elseif (!empty($_POST))
 	{
-	    $data['cookie']->activity_form = "Tous les champs doivent être remplis.";
+	    $msg_form = "Tous les champs doivent être remplis.";
 	}
 
-	$data["view"]->display('new_suggestion.php');
+	$data["view"]->display('new_suggestion.php', ["info_msg" => $msg_form]);
 ?>
