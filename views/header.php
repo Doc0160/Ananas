@@ -16,7 +16,14 @@
         <nav>
             <div class="nav-wrapper">
                 <?php if($data["session"]->has_data()) { ?>
-                    <a href="#!" data-activates="slide-out" class="button-collapse" style="display: block !important;">
+                    <a href="#!" data-activates="slide-out"
+                       class="button-collapse"
+                       style="display: block !important;">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <a href="#!" data-activates="slide-out"
+                       class="button-collapse btn-floating red"
+                       style="display: block !important; position: fixed; z-index: -1;">
                         <i class="material-icons">menu</i>
                     </a>
                 <?php } ?>
