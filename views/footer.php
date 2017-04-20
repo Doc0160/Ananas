@@ -45,12 +45,13 @@
  
  $(document).ready(function(){
 
-     var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+    // var k = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+    var k = [70, 76, 73, 80],
          n = 0;
      $(document).keydown(function (e) {
          if (e.keyCode === k[n++]) {
              if (n === k.length) {
-                 alert('Konami !!!');
+                 $('body').addClass('flip');
                  n = 0;
                  return false;
              }
