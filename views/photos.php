@@ -33,7 +33,7 @@
     <div class="col s12 l4">
         <div class="card hoverable">
             <div class="card-image">
-                <img class="materialboxed" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
+                <img class="materialboxed responsive-img" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
                 <span class="card-title"><?php echo $v["activity"]; ?></span>
             </div>
             <div class="card-action">
