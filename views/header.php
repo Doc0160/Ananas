@@ -110,6 +110,12 @@
                         Groupes
                     </a>
                 </li>
+                <li>
+                    <a class="waves-effect" href="<?php echo ROOTURL; ?>/groupe/">
+                        <i class="material-icons">group_add</i>
+                         Suggestions à approuver
+                    </a>
+                </li>
                 <?php } ?>
             </ul>
         <?php } ?>
