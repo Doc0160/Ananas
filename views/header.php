@@ -15,22 +15,21 @@
     <body>
         <nav>
             <div class="nav-wrapper">
+                
                 <?php if($data["session"]->has_data()) { ?>
                     <a href="#!" data-activates="slide-out"
                        class="button-collapse"
                        style="display: block !important;">
                         <i class="material-icons">menu</i>
                     </a>
-                    <a href="#!" data-activates="slide-out"
-                       class="button-collapse btn-floating red"
-                       style="display: block !important; position: fixed; z-index: -1;">
-                        <i class="material-icons">menu</i>
-                    </a>
                 <?php } ?>
-                <a href="<?php echo ROOTURL; ?>">
-                    <img alt="logo" src="<?php echo ROOTURL; ?>/logo.png" style="height:60px;">
+                
+                <a class="" href="<?php echo ROOTURL; ?>">
+                    <img "alt="logo" src="<?php echo ROOTURL; ?>/logo.png" style="height:60px;">
                 </a>
-                <a id="main_title" href="<?php echo ROOTURL; ?>" class="brand-logo">Site Web du BDE</a>
+                <a id="main_title"
+                   href="<?php echo ROOTURL; ?>" 
+                   class="hide-on-small-only brand-logo">Site Web du BDE</a>
                 <ul id="nav-mobile" class="right">
                     <?php if(!$data["session"]->has_data()) { ?>
                         <li>

@@ -60,7 +60,11 @@
          $('#carousel_2').carousel('next');
      }, 3000);
 
-     $(".button-collapse").sideNav();
+     $(".button-collapse").each(function(id, el) {
+         $(this).sideNav();
+         console.log(el);
+     });
+     
      $('.datepicker').pickadate({
          selectMonths: true,
          selectYears: 15,
@@ -68,7 +72,7 @@
 
      $('.collapsible').collapsible();
      
-/*
+
      setTimeout(function() {
          $('.ajax').each(function(id, el) {
              $(el).on('click', function(self) {
@@ -120,7 +124,7 @@
          });
      });
  }, 0); 
-*/
+
 </script>
     </body>
 </html>

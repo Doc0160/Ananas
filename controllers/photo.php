@@ -43,5 +43,4 @@ $data["view"]->display('photos.php',
                                                      PERMISSION_COMMENT_PHOTO),
                        ]);
 
-var_dump('gg');
 ?>
