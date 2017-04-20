@@ -39,7 +39,8 @@ $do_header = function() use($controller, $database, $session) {
     ]);
 };
 
-$router->add('/', function() use ($do_header, $view, $controller, $session, $database, $cookie){
+$router->add('/', function()
+    use ($do_header, $view, $controller, $session, $database, $cookie){
     $do_header();
     $perm = (isset($session->permissions) ? $session->permissions : DEFAULT_PERMISSION_UNKNOWN);
     if(BitField::has($perm, PERMISSION_READ_PHOTO)) {
