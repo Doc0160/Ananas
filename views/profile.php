@@ -2,7 +2,7 @@
 <div class="row"></div>
 <div class="row">
     <div class="col s6 offset-s3">
-        <h1>PROFILE</h1>
+        <h1>PROFIL</h1>
         <div class="divider"></div>
     </div>
 </div>
@@ -39,7 +39,7 @@
                 <label for="email">Email</label>
             </div>
             <div class="col s12">
-                <input type="submit" class="btn waves-effect waves-light" value="Change email">
+                <input type="submit" class="btn waves-effect waves-light" value="Changer d'Email">
             </div>
         </form>
     </div>
@@ -49,7 +49,7 @@
         <?php if($data['avatar'] != null) { ?>
             <img alt="avatar" class="responsive-img materialboxed" src="<?php echo ROOTURL.BASEAVATAR.'/'.$data['avatar']; ?>">
         <?php } else { ?>
-            no avatar
+            Vous n'avez pas d'avatar.
         <?php } ?>
     </div>
 </div>
@@ -67,7 +67,7 @@
             </div>
             <div class="col s12">
                 <input type="submit" class="btn waves-effect waves-light"
-                       value="Change avatar">
+                       value="Changer d'Avatar">
             </div>
         </form>
     </div>

@@ -80,7 +80,7 @@
                 <li>
                     <a class="waves-effect" href="<?php echo ROOTURL; ?>/profile/">
                         <i class="material-icons">account_box</i>
-                        Profile
+                        Profil
                     </a>
                 </li>
                 <li><div class="divider"></div></li>
@@ -99,7 +99,7 @@
                 <li>
                     <a href="<?php echo ROOTURL; ?>/shop/">
                         <i class="material-icons">shopping_cart</i>
-                        Shop
+                        Boutique
                     </a>
                 </li>
                 <li><div class="divider"></div></li>
