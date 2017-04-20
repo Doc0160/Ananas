@@ -49,10 +49,6 @@ nav, .page-footer, .btn, .background {
     width:100%;
 }
 
-.card-image img {
-    max-height: 100px;;
-}
-
 .heart
 {
   fill: white;
