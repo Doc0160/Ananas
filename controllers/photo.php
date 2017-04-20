@@ -41,6 +41,9 @@ $data["view"]->display('photos.php',
                            'can_comment' => $data['session']->has_data() &&
                                        BitField::has($data['session']->permissions,
                                                      PERMISSION_COMMENT_PHOTO),
+                           'can_delete_comment' => $data['session']->has_data() &&
+                                                 BitField::has($data['session']->permissions,
+                                                               PERMISSION_DELETE_COMMENT),
                        ]);
 
 ?>

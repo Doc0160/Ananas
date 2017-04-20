@@ -83,6 +83,12 @@
                                     <div class="col s9">
                                         <p><?php echo $vv['comment']; ?></p>
                                     </div>
+
+                                    <?php if($data['can_delete_comment']) { ?>
+                                    <div class="col s12">
+                                        gg
+                                    </div>
+                                    <?php } ?>
                                     
                                 </div>
                             <?php } ?>
