@@ -18,13 +18,16 @@
                             <?php
                             foreach ($data['activity_suggestion'] as $key => $value) {
                             ?>
+
                                 <tr>
                                     <td><?php echo $value['name']; ?></td>
                                     <td>
                                         <div class="col s12">
                                             <ul class="collapsible" style="width: 50vw; margin-left: 25px;" data-collapsible="accordion">
                                                 <li>
-                                                    <div class="collapsible-header">En savoir plus</div>
+                                                    <div class="collapsible-header">
+                                                        En savoir plus
+                                                    </div>
                                                     <div class="collapsible-body">
                                                         <span><?php echo $value['description']; ?></span>
                                                     </div>
@@ -33,10 +36,11 @@
                                         </div>
                                     </td>
                                     <td><i class="material-icons">thumb_up</i></td>
+                                </tr>
+                                
                             <?php
                             }
                             ?>
-                                </tr>
                         </tbody>
                     </table>
                 </div>
