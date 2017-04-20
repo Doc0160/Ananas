@@ -21,8 +21,8 @@
                                 <tr>
                                     <td><?php echo $value['name']; ?></td>
                                     <td><?php echo $value['description']; ?></td>
-                                    <td><i class="material-icons">done</i></td>
-                                    <td><i class="material-icons">delete_forever</i></td>
+                                    <td><a href="<?php echo ROOTURL.'/suggestion/trash/'.$value['id'].'/'; ?>"><i class="material-icons" style="color: green;">done</i></a></td>
+                                    <td><a href="<?php echo ROOTURL.'/suggestion/accept/'.$value['id'].'/'; ?>"><i class="material-icons" style="color: red;">delete_forever</i></a></td>
                                 </tr>
                             <?php
                             }
