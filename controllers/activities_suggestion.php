@@ -1,6 +1,6 @@
 <?php
 
-$records = $data["database"]->prepare('SELECT * FROM activity_suggestion WHERE visible=1 ORDER BY id DESC LIMIT 5');
+$records = $data["database"]->prepare('SELECT * FROM activity_suggestion WHERE visible=1 ORDER BY id DESC');
 $records->execute();
 $results = $records->fetchAll();
 

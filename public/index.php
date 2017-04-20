@@ -91,12 +91,13 @@ $router->add('/shop/', function() use ($do_header, $view, $database) {
     $view->display('footer.php');
 });
 
-$router->add('/suggestion_validation/', function() use ($do_header, $view, $database) {
-    $req = $database->prepare('SELECT * FROM goodies');
-    $req->execute();
-    $goodies = $req->fetchAll();
+$router->add('/suggestion_validation/', function() use ($controller, $do_header, $view, $database) {
     $do_header();
-    $view->display('suggestion_validation.php');
+    $controller->execute("suggestion_validation.php", [
+            "database" => $database,
+            "view" => $view,
+        ]);
+    $view->display('footer.php');
 });
 
 if($session->has_data() &&
