@@ -83,7 +83,7 @@
                             <?php } ?>
                             
                             <div class="row collection-item">
-                                <form class="ajax comment"
+                                <form class="comment"
                                       method="post"
                                       action="<?php echo BASEURI.'/photos/comment/'.$v['id'].'/'; ?>">
                                     <div class="input-field col s12">

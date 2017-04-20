@@ -36,8 +36,10 @@
                                         </div>
                                     </td>
                                     <td>
-                                        <a href="<?php echo ROOTURL.'/activity/vote/'.$value['id'].'/'; ?>">
+                                        <a class="ajax like"
+                                            href="<?php echo ROOTURL.'/activity/vote/'.$value['id'].'/'; ?>">
                                             <i class="material-icons">thumb_up</i>
+                                            (<span>0</span>)
                                         </a>
                                     </td>
                                 </tr>
