@@ -20,7 +20,11 @@
                             <tr>
                                 <td><?php echo $value['name']; ?></td>
                                 <td><?php echo $value['date'] ?></td>
-                                <td><a href="#" class="btn"><i class="material-icons">send</i></a></td>
+                                <td class="row">
+                                    <a href="#" class="btn col s12">
+                                        <i class="material-icons">send</i>
+                                    </a>
+                                </td>
                             </tr>
                         <?php
                         }
