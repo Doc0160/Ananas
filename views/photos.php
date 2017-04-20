@@ -86,7 +86,7 @@
 
                                     <?php if($data['can_delete_comment']) { ?>
                                     <div class="col s12">
-                                        gg
+                                        <i class="material-icons">delete</i>
                                     </div>
                                     <?php } ?>
                                     
