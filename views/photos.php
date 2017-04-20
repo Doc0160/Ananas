@@ -86,7 +86,7 @@
 
                                     <?php if($data['can_delete_comment']) { ?>
                                         <div class="col s12">
-                                            <a href="<?php echo ROOTURL; ?>">
+                                            <a href="<?php echo ROOTURL.'/photo/comment/delete/'.$vv['id'].'/'; ?>">
                                                 <i class="material-icons">delete</i>
                                             </a>
                                     </div>
