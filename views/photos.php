@@ -98,8 +98,8 @@
                                         <label for="textarea1">Commentaire</label>
                                     </div>
                                     
-                                    <div class="input-field col s12">
-                                        <input type="submit" class="btn" value="Envoyer">
+                                    <div class="input-field col s12 row">
+                                        <input type="submit" class="btn col s12" value="Envoyer">
                                     </div>
 
                                 </form>
