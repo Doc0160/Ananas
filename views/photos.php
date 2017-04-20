@@ -30,7 +30,7 @@
     <?php
     foreach($data['photos'] as $k => $v) {
     ?>
-    <div class="col s12 l4">
+    <div class="col s12 m6 l4">
         <div class="card hoverable">
             <div class="card-image">
                 <img class="materialboxed responsive-img" src="<?php echo ROOTURL."/images/".$v["picture"]; ?>">
