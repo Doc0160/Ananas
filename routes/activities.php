@@ -41,9 +41,12 @@ if($session->has_data() &&
    Bitfield::has($perm, PERMISSION_DELETE_ACTIVITY))) {
 
     $router->get("/activities/admin/", function()
-        use($do_header, $controller, $view, $database, $session) {
+        use($do_header, $controller, $view, $database, $session, $router) {
             $do_header();
-            $controller->execute("activities_admin.php", ['database' => $database]);
+            $controller->execute("activities_admin.php", [
+                'database' => $database,
+                'router' => $router,
+            ]);
             $view->display("footer.php");
         });
 
