@@ -119,7 +119,6 @@
                         <form method="post"
                               action="<?php echo ROOTURL.'/activity/add/'; ?>">
                         <div class="row">
-                            <input type="hidden" name="id">
                             <div class="file-field input-field">
                                 <div class="btn">
                                     <span>File</span>
