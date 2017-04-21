@@ -49,6 +49,22 @@ if($session->has_data() &&
             ]);
             $view->display("footer.php");
         });
+    $router->post("/activities/admin/", function()
+        use($do_header, $controller, $view, $database, $session, $router) {
+            $req = $database->prepare('INSERT INTO activity (visible, name, description, prix) VALUES (:v, :n, :d, :p)');
+            $v = $_POST['visible'];
+            $n = $_POST['name'];
+            $d = $_POST['description'];
+            $p = $_POST['price'];
+            $req->bindParam(':v', $v);
+            $req->bindParam(':n', $n);
+            $req->bindParam(':d', $d);
+            $req->bindParam(':p', $p);
+            $req->execute();
+            //$router->redirect('/activities/admin/');
+            var_dump($_POST);
+        });
+    
 
     if(Bitfield::has($perm, PERMISSION_MODIFY_ACTIVITY)) {
         $router->post("/activities/admin/", function() use($router,$database){
