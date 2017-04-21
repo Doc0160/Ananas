@@ -144,8 +144,17 @@ $router->get('/suggestion/accept/:id/', function($id)
 
 $router->post('/activity/add/', function()
     use ($router, $database) {
-        //$req = $database->prepare('INSERT INTO activity (visible)');
-        var_dump($_POST);
+        $req = $database->prepare('INSERT INTO activity (visible, name, description, prix) VALUES (:v, :n, :d, :p)');
+        $v = $_POST['visible'];
+        $n = $_POST['name'];
+        $d = $_POST['description'];
+        $p = $_POST['price'];
+        $req->bindParam(':v', $v);
+        $req->bindParam(':n', $n);
+        $req->bindParam(':d', $d);
+        $req->bindParam(':p', $p);
+        $req->execute();
+        $router->redirect('/activities/admin/');
     });
 
 require("../routes/connexion.php");
