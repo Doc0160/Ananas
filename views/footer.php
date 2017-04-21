@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">Ananas</h5>
+                <h5 class="white-text">Version 1.0.3</h5>
                 <p class="grey-text text-lighten-4">
                     Fait avec  <svg class="heart" viewBox="0 0 32 29.6">
                     <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
@@ -65,16 +65,8 @@
      $('#carousel_1').carousel({fullWidth: true});
      setInterval(function(){
          $('#carousel_1').carousel('next');
-     }, 3000);
-
-     $('#carousel_2').carousel({
-         dist:0,
-         shift:100,
-         padding:10,
-     });
-     setInterval(function(){
-         $('#carousel_2').carousel('next');
-     }, 3000);
+     }, 3500);
+     $('.carousel.carousel-slider').carousel({fullWidth: true});
 
      $(".button-collapse").each(function(id, el) {
          $(this).sideNav();
