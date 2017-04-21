@@ -1,4 +1,4 @@
-
+<div class="row"><h1>GROUPE</h1><div class="divider"></div></div>
 <div class="row">
     
     <div class="col s6">

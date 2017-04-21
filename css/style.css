@@ -40,15 +40,6 @@ nav, .page-footer, .btn, .background {
     margin-left: 10px;
 }
 
-#carousel_1 {
-    min-height: 800px;
-    background: #f2f2f2;
-}
-
-#carousel_2 {
-    min-height: 10px;
-    background: #f2f2f2;
-}
 
 .error {
     height: 400px;

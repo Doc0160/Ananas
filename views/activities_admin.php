@@ -1,5 +1,4 @@
-<div class="row"></div>
-<div class="row">VOUS ADMIN!</div>
+<div class="row"><h1>ADMINISTRATION</h1><div class="divider"></div></div>
 <div class="row">
     <?php
     foreach($data['activities'] as $k => $v) {

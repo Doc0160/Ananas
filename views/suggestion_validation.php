@@ -1,9 +1,9 @@
+<div class="row"><h1>SUGGESTIONS</h1><div class="divider"></div></div>
 <div class="row">
     <div class="col s12">
         <div class="card hoverable">
             <div class="card">
                 <div class="card-content">
-                    <span class="card-title">Vous avez le destin des prochaines activités, choississez bien !</span>
                     <table>
                         <thead>
                             <tr>
