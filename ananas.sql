@@ -166,7 +166,7 @@ INSERT INTO `photo_comment` (`id_photo`, `id_user`, `comment`)
 VALUES (2, 2, 'COUCOUS PARTY'),
 (2, 3, 'YEAH'),
 (6, 1, 'la eau cha mouille'),
-(6, 2, 'apprends le franchais');
+(6, 2, 'apprends le français');
 
 CREATE TABLE `photo_like` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
