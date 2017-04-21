@@ -1,5 +1,5 @@
-#carousel1 {
-    height: 800px;
+#carousel_1 {
+    min-height: 800px;
 }
 
 .flip {
@@ -43,7 +43,6 @@ nav, .page-footer, .btn, .background {
 {
     margin-left: 10px;
 }
-
 
 .error {
     height: 400px;
