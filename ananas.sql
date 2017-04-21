@@ -147,9 +147,9 @@ CONSTRAINT `p_ibfk_1` FOREIGN KEY (`id_activity`) REFERENCES activity(`id`) ON D
 INSERT INTO `photo` (`picture`, `id_activity`)
 VALUES ('photo1.jpg',1),
 ('photo2.jpg',1),
-('pnl.jpg',1);
-('netflix.jpg',1);
-('pingpong.jpg',1);
+('pnl.jpg',1),
+('netflix.jpg',1),
+('pingpong.jpg',1),
 ('piscine.jpg',1);
 
 CREATE TABLE `photo_comment` (
