@@ -165,7 +165,7 @@ CONSTRAINT `p_c_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE 
 INSERT INTO `photo_comment` (`id_photo`, `id_user`, `comment`)
 VALUES (2, 2, 'COUCOUS PARTY'),
 (2, 3, 'YEAH');
-(6, 1, 'l\'eau ça mouille');
+(6, 1, 'l\'eau cha mouille');
 
 CREATE TABLE `photo_like` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
