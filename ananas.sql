@@ -163,8 +163,8 @@ CONSTRAINT `p_c_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES user(`id`) ON DELETE 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `photo_comment` (`id_photo`, `id_user`, `comment`)
-VALUES (2, 2, 'SUCK MA DICK'),
-(2, 3, 'SUCK MA DICK TOO');
+VALUES (2, 2, 'COUCOUS PARTY'),
+(2, 3, 'YEAH');
 
 CREATE TABLE `photo_like` (
 `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
