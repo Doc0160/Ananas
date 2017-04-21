@@ -113,9 +113,13 @@
                                 </label>
                             </div>
                         </div>
+
+
                         
+                        <form method="post"
+                              action="<?php echo ROOTURL.'/activity/add/'; ?>">
                         <div class="row">
-                            <input type="hidden" name="id" value="<?php echo $v['id']; ?>">
+                            <input type="hidden" name="id">
                             <div class="file-field input-field">
                                 <div class="btn">
                                     <span>File</span>
@@ -131,8 +135,7 @@
                                 <div class="input-field col s12">
                                     <input placeholder="Placeholder"
                                            id="first_name" type="text"
-                                           class="validate" name="name"
-                                           value="<?php echo $v['name']; ?>">
+                                           class="validate" name="name">
                                     <label for="first_name">Nom</label>
                                 </div>
                             </span>
@@ -143,8 +146,7 @@
                                     <input placeholder="Placeholder"
                                            id="price" type="number"
                                            class="validate" name="price"
-                                           step="0.01"
-                                           value="<?php echo $v['prix']; ?>">
+                                           step="0.01">
                                     <label for="price">Prix(€)</label>
                                 </div>
                             </span>
@@ -152,15 +154,14 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea id="textarea1" name="description"
-                                          class="materialize-textarea"><?php echo $v['description']; ?></textarea>
+                                          class="materialize-textarea"></textarea>
                                 <label for="textarea1">Description</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="date" type="date" name="date"
-                                       class="datepicker"
-                                       value="<?php echo date('d F, Y', $v['timestamp']); ?>">
+                                       class="datepicker">
                                 <label for="date">Date de l'événement</label>
                             </div>
                         </div>
@@ -168,15 +169,14 @@
                 <?php } ?>
                 <div class="card-action">
                     <div class="input-field" style="margin: 10px">
-                        <?php if(Bitfield::has($data['session']->permissions, PERMISSION_MODIFY_ACTIVITY)) { ?>
-                            <input type="submit" class="btn" value="Modifier">
-                        <?php }
-                        if(Bitfield::has($data['session']->permissions, PERMISSION_DELETE_ACTIVITY)) { ?>
-                            <input type="submit" class="btn" value="Supprimer">
+                        <?php if(Bitfield::has($data['session']->permissions,
+                                               PERMISSION_CREATE_ACTIVITY)) { ?>
+                            <input type="submit" class="btn" value="Ajouter">
                         <?php } ?>
                     </div>
                 </div>
             </form>
+
         </div>
     </div>
 </div>

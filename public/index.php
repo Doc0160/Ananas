@@ -140,7 +140,13 @@ $router->get('/suggestion/accept/:id/', function($id)
     $req->bindParam(":id", $id);
     $req->execute();
     $router->redirect('/suggestion_validation/');
-});
+    });
+
+$router->post('/activity/add/', function()
+    use ($router, $database) {
+        //$req = $database->prepare('INSERT INTO activity (visible)');
+        var_dump($_POST);
+    });
 
 require("../routes/connexion.php");
 require("../routes/inscription.php");
