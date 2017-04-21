@@ -24,7 +24,7 @@
                     </a>
                 <?php } ?>
                 
-                <a class="" href="<?php echo ROOTURL; ?>">
+                <a class="" href="<?php echo ROOTURL.'/'; ?>">
                     <img "alt="logo" src="<?php echo ROOTURL; ?>/logo.png" style="height:60px;">
                 </a>
                 <a id="main_title"

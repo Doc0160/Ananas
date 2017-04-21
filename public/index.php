@@ -122,19 +122,24 @@ if($session->has_data() &&
         });
 }
 
-$router->get('/suggestion/trash/:id/', function($id) use ($controller, $do_header, $view, $database) {
-    $req = $database->prepare('DELETE FROM activity_suggestion WHERE id = :id');
-    $id = (int) $id;
-    $req->bindParam(":id", $id);
-    $req->execute();
+$router->get('/suggestion/trash/:id/', function($id)
+    use ($router, $controller, $do_header, $view, $database) {
+        $req = $database->prepare('DELETE FROM activity_suggestion WHERE id = :id');
+        $id = (int) $id;
+        $req->bindParam(":id", $id);
+        $req->execute();
+        $router->redirect('/suggestion_validation/');
+        
 });
 
 
-$router->get('/suggestion/accept/:id/', function($id) use ($controller, $do_header, $view, $database) {
+$router->get('/suggestion/accept/:id/', function($id)
+    use ($router, $controller, $do_header, $view, $database) {
     $req = $database->prepare('UPDATE activity_suggestion SET visible = 1 WHERE id = :id');
     $id = (int) $id;
     $req->bindParam(":id", $id);
     $req->execute();
+    $router->redirect('/suggestion_validation/');
 });
 
 require("../routes/connexion.php");
